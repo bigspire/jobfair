@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.26, created on 2017-08-12 11:21:12
+=======
+<?php /* Smarty version 2.6.26, created on 2017-08-12 11:33:16
+>>>>>>> ba5af767a4de9deff3350e4c0b16f470612a3f08
          compiled from ../include/footer.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'capitalize', '../include/footer.tpl', 9, false),array('modifier', 'date_format', '../include/footer.tpl', 125, false),)), $this); ?>
@@ -24,9 +28,15 @@ if ($this->_sections['featured']['show']) {
 } else
     $this->_sections['featured']['total'] = 0;
 if ($this->_sections['featured']['show']):
+<<<<<<< HEAD
 
             for ($this->_sections['featured']['index'] = $this->_sections['featured']['start'], $this->_sections['featured']['iteration'] = 1;
                  $this->_sections['featured']['iteration'] <= $this->_sections['featured']['total'];
+=======
+
+            for ($this->_sections['featured']['index'] = $this->_sections['featured']['start'], $this->_sections['featured']['iteration'] = 1;
+                 $this->_sections['featured']['iteration'] <= $this->_sections['featured']['total'];
+>>>>>>> ba5af767a4de9deff3350e4c0b16f470612a3f08
                  $this->_sections['featured']['index'] += $this->_sections['featured']['step'], $this->_sections['featured']['iteration']++):
 $this->_sections['featured']['rownum'] = $this->_sections['featured']['iteration'];
 $this->_sections['featured']['index_prev'] = $this->_sections['featured']['index'] - $this->_sections['featured']['step'];
