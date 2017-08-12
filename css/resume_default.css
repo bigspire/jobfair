@@ -1,0 +1,121 @@
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; }
+ul { list-style: none; }
+body {font-family: Arial, Helvetica, sans-serif; font-size: 20px; line-height: 22px; color: #262626; min-height: 100%; position: relative;  margin:0; padding:0;}
+html { height: 100%; }
+#page { padding-top: 55px;}
+#content {font-family: Arial, Helvetica, sans-serif; font: 12px arial; line-height: 22px; height:95.5%;padding-bottom: 60px; position: relative; margin-left: 0px; padding-top: 0px; }
+.wrapper { margin: 0 30px; }
+.clear { clear: both; display: block; }
+.mfix { margin: 0 2px!important; }
+.hidden { overflow:hidden }
+.relative { position: relative; }
+a { cursor: pointer; }
+p { padding-top: 12px; }
+img { border-radius: 2px;}
+.inactive { color: #2B6893!important; }
+.noBorderB { border-bottom: none!important; }
+.nobg { background: none!important; }
+.nomargin { margin: 0!important; }
+.nopadding { padding: 0!important; }
+.displayNone { display: none; }
+.display { display: block!important; }
+.fullwidth { width: 100%; }
+.thisRow {  }
+.hand { cursor: pointer; }
+.floatL { display: block; float: left; }
+.floatR { display: block; float: right; }
+.legendLabel span { display: block; margin: 0 5px; }
+.legendColorBox { padding-left: 10px; }
+button, input[type=submit], input[type=image], input[type=reset] { cursor: pointer; }
+.with { width: 326px; }
+.without { width: 100px; }
+
+/* # Typography
+================================================== */
+/* === Headings === */
+
+h1 { font-size: 24px; }
+h2 { font-size: 22px; }
+h3 { font-size: 20px; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+
+
+/* === Text alignment === */
+.textL { text-align: left!important; }
+.textC { text-align: center; }
+.textR { text-align: right; }
+/* === Widget and widget head elements === */
+.widget {  margin-top: 25px; position: relative; }
+.widget .whead{ position: relative; }
+.widget .whead h6 { float: left; display: block; color:#262626; padding: 8px 14px 0px 2px; font-size: 18px; font-weight: bold;  }
+.widget .body { padding: 14px 16px; }
+.whead {  color: #636363;}
+
+.wheadLight {  color: #636363;background: #ffffff;}
+.wheadLight2 {  color: #636363;}
+.wGeneral .email { display: inline-block; font-size: 20px; line-height: 16px; color: #909090; }
+.wGeneral td a { line-height: 16px; }
+.wGeneral tbody td span { display: block; font-size: 20px; line-height: 16px; color: #909090; }
+.wGeneral tbody td strong { /* color: #4d7f12; */}
+.wGeneral .income { /* color: #932a2a; */}
+/* # Tables
+================================================== */
+table .selector, table .selector > span, .dataTables_length .selector, .dataTables_length .selector > span { height: 26px; line-height: 26px; }
+.dataTables_length .selector { margin-top: 1px; }
+table thead td.sortCol > div { cursor: pointer; position: relative; }
+.checkAll tbody tr td:first-child { width: 40px; padding: 0; vertical-align: middle; margin: 0;}
+.checkAll tbody tr td:first-child .checker, .checkAll tbody tr td:first-child .radio { margin: 0 auto; float: none; }
+/* ===== Simple table ===== */
+.justTable td { vertical-align: middle;  }
+.justTable tbody tr:first-child { border-top: none; }
+.justTable tbody tr:first-child td {  border-top-left-radius: 2px; border-radius-topleft: 2px; border-top-right-radius: 2px; border-radius-topright: 2px; } 
+/* ===== Default table ===== */
+.tDefault tbody td, .tDefault thead td { border: 1px solid #262626;}
+.tDefault tbody td:first-child, .tDefault thead td:first-child { border-left: none; }
+.checkAll thead td:first-child > img { vertical-align: middle; padding-bottom: 2px; }
+
+.tDefault tbody td { padding: 7px 11px; vertical-align: middle; }
+
+.tDefault tbody tr:first-child {}
+.tDefault tbody tr:nth-child(even) {  }
+
+
+
+.fileInfo span { display: block; }
+.tableActs { text-align: center; }
+.tableActs > a { margin: 0 2px; }
+.tableActs > .btn-group { display: inline-block; margin: 0 2px; }
+.itemActions { float: left; margin: 6px 0; }
+/* === Alternate table === */
+table{border: 1px solid #3d3d3d;}
+.tAlt thead tr td {text-align: center; border-right: 1px solid #3d3d3d;font-size: 18px;padding: 2px 10px;}
+.tAlt tbody tr td { font-size:20px;  border-top: 1px solid #3d3d3d;border-right: 1px solid #3d3d3d;padding: 10px; vertical-align: middle; }
+.tAlt tbody td:first-child, .tAlt thead td:first-child { border-left: none; }
+.ml0{ margin-left:0px!important;}
+.actionView{float:right; margin:5px 30px;}
+.bgNone{background: none; }
+.viewProfile{ margin-top:25px;}
+.viewProfile .userImg{ float:left;    border: 2px solid #666666;}
+.userDetails{ margin-left:20px;width:80%;}
+.userAddress{margin:4px 36px;}
+.userDetails h5{ font-size:20px;}
+.userDetails span { font-size:20px;}
+.userDetails span strong{ color:#2B2B2B;}
+strong.jobs{ color:#4D7F12!important;}
+h5.email { color:#909090;}
+h5.degree{/*color:#4D7F12;*/}
+.userAddress h5{ color:#5B5B5B;}
+.userAddress h4 { font-size:18px; color:#4D7F12;}
+span.totalExp{ color:#444444;}
+.tDisplay tbody td span{ display:inline-table; line-height:8px;}
+.topAction{ margin:15px 0;}
+.faqView{ cursor:pointer;}
+.uQuestions a{ margin-left:21px;}
+ul.themes li{border: 1px solid #DDDDDD;float: left;height: 54px;margin: 0 5px;padding: 2px;}
+ul.userNav span{ color:#f2f2f2; display:inline-block; margin-top:2px;}
+ul.userNav span a:hover{ text-decoration:underline;}
+ul.userNav span a:active{ text-decoration:underline;}
+input.twoFields{ width:43%!important; margin:0px 4px;} 
+.tAlt tbody tr td.textC{ text-align:center;}

@@ -1,0 +1,70 @@
+body {	background:#ffffff;	color: #414141;	font-family: myriad; font-size:13px;}
+.container{	width:940px;	*width:991px; margin:0 auto;}
+.headerLeft{	width:727px; *width:778px;	float:right;}
+.headerLeftTop .left{	width:284px; *width:304px;	float:left;	padding:13px 0 0;	color:#075669;}
+.headerLeftTop .right{	width:443px; *width:473px;	float:right;	padding:6px 0px 0 0;}
+ul.navList li a{color:#00425d; padding:13px 12px 16px; text-decoration:none; display:block; font-size:12px;}
+ul.navList li a.count{padding:11px 12px 16px;}
+.referFriend h2{color:#393939; font-size:24px; font-family:Arial, Helvetica, sans-serif; padding:8px 0 0 10px;}
+.referFriend  p{color:#393939; font-size:11px; font-family:Arial, Helvetica, sans-serif; padding:10px 50px 15px 15px; line-height:1.3;}
+#topHeader{	padding:5px 0 0;	}
+#category{	padding:25px 0 20px;}
+.categoryCol h2{	color:#393939;	font-size:14px;	text-transform:uppercase;	padding:14px 0 0 60px;	height:32px;	font-weight:bold;}
+.searchCol1 p, .searchCol2 p{padding:5px 0 0 0; color:#fff; font-style:italic;  font-size:12px; }
+.referFriend .form{position:absolute; bottom:3px; left:0; height:45px; width:225px; padding:14px 0 0 8px; float:left;}
+.headerLeftTop .left a{	color:#075669;	text-decoration:none; font:13px myriad; background:url(../images/bullet.png) no-repeat scroll right 5px transparent; padding:0 9px 0 0;}
+.headerLeftTop .right ul li{float:left; padding:0 0 0 11px;}
+.headerLeftTop .right ul li span{color:#075669; font-weight:bold; margin:7px 0 0; display:block;}
+.searchCol1 strong{font-size:16px; color:#fff; font-weight:bold; display:block; float:left; margin:0 0 5px 5px; text-transform:uppercase;}
+.searchCol1 span a{color:#043f4e;text-decoration:underline;}
+a.advancedRes{color: #043F4E; float: left; padding: 5px 14px; text-decoration: underline;}
+.innerPage h2{font: bold 15px myriad; color:#777777; margin-bottom:18px; float:left; width:auto;}
+.headerLeftTop .left ul li{float:left; padding:0 3px 0 3px; }
+.headerLeftTop .left li.last a{ background:none;}
+.qualification label{float:left;width:130px;  /*width:140px;*/ padding:2px 0 0 10px; color:#333333;  line-height:14px; font-family:Arial, Helvetica, sans-serif; }
+.searchResult p.totalResult{text-align:right; padding:0; font-size:14px; float:right; color:#414141;}
+ul.qualification li.clear label{background:#FFF; font-weight:bold; font-size:17px; width:auto;}
+ul.tabs li a{ background:url(../images/jrSteps_hi.png) no-repeat scroll left top transparent;    float: left; height:44px; }
+ul.tabs li a.personal {    background-position: 0 0;    width: 167px;}
+ul.tabs li a.qualification {    background-position:-168px 0;    width: 198px;}
+ul.tabs li a.experience {    background-position:-364px 0;       width: 223px;}
+ul.tabs li a.personal.selected {    background-position: 0 0;   }
+ul.tabs li a.qualification.selected {    background-position:-168px -44px;}
+ul.tabs li a.experience.selected {    background-position:-365px -88px; }
+ul.tabs li a.personal.deselected { background-position:0 -44px;}
+/***LATEST UPDATES***/
+a.modifySearch{color: #043F4E; float: right; font-size: 14px; margin-right: 16px; text-decoration: underline;}
+.rightCarousel h2 span a{font-size:12px; text-transform:none; font-weight:normal;}
+div.loginBg{background:url(../images/textBoxTopBg.png) no-repeat;width:104px; margin:0; background-color:transparent; float:left;}
+.headerLeftTop .right input{ height:27px; line-height:27px; border: 0; resize: none;  /*color:#a8a8a8;*/ color:#414141; font-size:12px; padding:0 0px; background-color:transparent; margin:0 5px; width:92px;}
+.freeJob{color:#ED6B2A; font-size:11px; font-weight:bold;}
+.searchJobs {  color: #444040;    cursor: pointer;    display: block;    float: left;    font-size: 11px;    margin:6px 0 3px 5px;    padding:3px 5px 4px;    text-shadow: none; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; /*background:url(../images/close_icon.png) no-repeat right 7px;*/ opacity:.9;}
+.searchResultTop{width: auto; float: left; margin-bottom:5px;}
+.searchResultTable tr.resultHead td{border:none; background:url(../images/searchResultBg.jpg) repeat-x; color:#075669; font-size:14px;}
+.adMsg span.errorMsg{font-family: myriad; font-size: 17px; padding: 4px 0 10px 3px;}
+.btnApply{*width:90px;}
+.btnSave{*width:76px;}
+.btnRefer{*width:100px;}
+button.apply{ *width:100px;}
+.shareInfo{width:520px; /*background:#fbfbfb;*/ position:absolute; padding:7px 0 3px 11px; height:20px; right:0; bottom:0; font-size:10px; color:#02a9d9; font-family:Arial, Helvetica, sans-serif;}
+.shareInfo a#sharing{/*width:244px; float:left;*/float:right; display:block; /*background:url(../images/shareIcon.png) no-repeat;*/ padding:0px 8px 0px 12px; text-align:right; }
+button.removeBtn{ *width:108px;}
+button.addBtn{ *width:110px;}
+
+/***DASHBOARD***/
+h1.pageTitle{ color: #4BBAE9; font-size: 30px; margin: 0 0 0px; padding: 0 0 3px; /*width:350px;*/}
+.profileComplete{ line-height:13px;}
+.profileResume .inner ul li{border-bottom:1px solid #CCCCCC; margin:0 0 20px; padding:0 0 5px;}
+.profileResume .inner ul li span a{color:#676779; text-decoration:underline; font-weight:bold;}
+.profileResume .inner ul li span{float:right; width:300px;}
+.profileName a{color:#676779; text-decoration:underline;}
+#pcColor a{color:#c34658; text-decoration:underline; font-size:11px;}
+/***PROFILE***/
+span.editProfile {/* float:right;*/ color:#D3D3D3;/* display:none;*/  cursor:pointer;}
+span.editProfile a{ vertical-align:middle;color:#F2FF00; font:12px myriad;}
+.profileBox h2{color:#fff; font-size:13px; font-weight:bold; margin:0 0 10px; float:none;}
+
+.loginTabs ul li a{ text-decoration:underline;  color:#0B678C;/* background:url(../images/bullet.png) no-repeat scroll right 5px transparent;*/ padding:0 2px 0 14px;}
+.loginTabs ul li.last a{ background:none;}
+/***Success,Error, ALert***/
+.successCenter{padding:12px 0 0 16px;}

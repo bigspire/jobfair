@@ -1,0 +1,38 @@
+/*
+ * SimpleModal Basic Modal Dialog
+ * http://www.ericmmartin.com/projects/simplemodal/
+ * http://code.google.com/p/simplemodal/
+ *
+ * Copyright (c) 2010 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Revision: $Id: basic.css 257 2010-07-27 23:06:56Z emartin24 $
+ */
+
+#basic-modal-content {display:none; /*background:url("../images/headerContainer_bg_overlay.jpg") repeat-x scroll 0 0 #FFFFFF;*/}
+
+/* Overlay */
+#simplemodal-overlay {background-color:#000; /*cursor:wait;*/}
+
+/* Container */
+#simplemodal-container {height:360px; width:600px; color:#bbb; background-color:#FFF;  border:2px solid #ffffff !important;   padding:12px; z-index:999999!important;}
+#simplemodal-container .simplemodal-data {padding:8px;}
+#simplemodal-container code {color: #3A3A3A; display: block; font-size: 13px; margin-bottom: 3px;  padding: 8px 6px 1px; line-height:22px;}
+#simplemodal-container strong{ font-weight:bold; font-size:13px; color:#468AEA;}
+#simplemodal-container strong.keywords{ color:#5DA337;}
+#simplemodal-container code.description{ border-left:3px solid #F99E36; -moz-box-shadow: inset 0 0 52px #FFD3A8; -webkit-box-shadow: inset 0 0 52px #FFD3A8; box-shadow: inset 0 0 52px #FFD3A8; font-weight:normal;}
+#simplemodal-container strong.desc{ color: #DD8E33;}
+#simplemodal-container a {color:#279ED0;}
+#simplemodal-container a.modalCloseImg {background:url(../images/x.png) no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-15px; right:-16px; cursor:pointer;}
+#simplemodal-container h3 {color: #65B43D; font: 22px myriad; border-bottom:1px solid #E5E5E5; margin-bottom:13px;}
+#basic-modal-content p.header{   color:#0986B8;  font-size: 13px;    font-weight: bold;    margin: 6px 0;}
+#basic-modal-content p.header span{ background:#F99E36; border-radius: 8px;  -moz-border-radius: 8px; -webkit-border-radius: 8px; color: #FFFFFF;    font-size: 13px;    padding: 0 4px;}
+#simplemodal-container .supportB h3 { color: #BC2825;  font-weight:bold;}
+.supportB p { color: #AA1311; font-size: 16px; line-height: 21px;}
+.supportB ul { margin-top:10px;}
+.supportB ul li{ font-weight:bold; color:#2D2D2D;}
+.supportB ul li span { font-size:17px; color:#C65B03;}
+.supportB ul li img{ vertical-align:middle; padding:4px 6px 8px 0;}
+#simplemodal-container h3.browser{ color: #56A32D; font-size: 20px;}

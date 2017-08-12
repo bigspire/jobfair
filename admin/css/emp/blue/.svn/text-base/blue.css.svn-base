@@ -1,0 +1,67 @@
+/***IMAGE BG***/
+body { font-family: Arial, Helvetica, sans-serif; background: url(../../../img/emp/backgrounds/body_blue.jpg); font-size: 12px; line-height: 22px; color: #5f5f5f; min-height: 100%; position: relative; }
+#top { background: url(../../../img/emp/backgrounds/top_blue.jpg) repeat-x 0 0; height: 24px; display: block; width: 100%; position: absolute; z-index: 10000; border-bottom: 1px solid #092941; }
+.logo { float: left; margin-top: 0px; font-size:12px; color:#92c0e5 }
+.topSearch { position: absolute; display: none; right: 30px; top: 58px; background: url(../../../img/emp/backgrounds/sidebar_blue.jpg); padding: 10px; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; }
+#sidebar { display: block; background: url(../../../img/emp/backgrounds/side_blue.jpg) repeat-y; min-height: 100%; position: absolute; z-index: 999; border-right: 1px solid #c3c3c3; }
+.mainNav { width: 100px; background: url(../../../img/emp/backgrounds/sidebar_blue.jpg); float: left; padding-top: 15px; position: relative; z-index: 99; padding-top: 18px; }
+.leftUser li { border-bottom: 1px solid #343434; border-top: 1px solid #545454; background: url(../../../img/emp/backgrounds/sidebar_blue.jpg);  }
+.user a > span { background: url(../../../img/emp/backgrounds/sidebar_blue.jpg); padding: 0 2px 2px 2px; position: absolute; right: -2px; top: 0; display: block; text-align: center; -webkit-border-bottom-left-radius: 2px;   }
+.nav li ul li { border-bottom: 1px solid #343434; border-top: 1px solid #545454; background: url(../../../img/emp/backgrounds/sidebar_blue.jpg);  }
+.subNav li a.this { background: url(../../../img/emp/backgrounds/body_blue.jpg); margin-right: -1px; color: #a64949; filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); padding-left: 10px; }
+.userList li.this a { background: url(../../../img/emp/backgrounds/body_blue.jpg); margin-right: -1px; border-top: 1px solid transparent; }
+.contentTop { height: 64px; padding: 0 30px; background: url(../../../img/emp/backgrounds/contentTop_blue.png) repeat-x; }
+ul.breadcrumbs li ul li { width: 180px; border-bottom: 1px solid #343434; text-align: left; border-top: 1px solid #545454; background: url(../../../img/emp/backgrounds/sidebar_blue.jpg); padding: 0; float: none; }
+.middleFree li > strong {  
+position: absolute; top: -6px; right: -6px; font-size: 11px; color: #f5f5f5; padding: 3px 5px; display: block; line-height: 12px; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; text-shadow: 0 1px #606060;
+background: url(../../../img/emp/backgrounds/sidebar_blue.jpg);
+}
+.tDark thead td { text-align: center; padding: 7px 12px; background: url(../../../img/emp/backgrounds/sidebar_blue.jpg); font-weight: bold; color: #f5f5f5; }
+.altMenu > li { background: url(../../../img/emp/backgrounds/sidebar_blue.jpg); }
+/***BORDER***/
+.nav { text-align: center; border-top: 1px solid #092941; margin-top: 10px; border-bottom: 1px solid #1c4564; }
+.nav li { border-top: 1px solid #1c4564; border-bottom: 1px solid #092941; position: relative; }
+.user { width: 100%; text-align: center; position: relative; padding-top: 16px;  border-top: 1px solid #173e5d; }
+ul.userNav li a.screen { background: url(../../../img/emp/icons/usernav/screen.png) no-repeat 9px 9px; background-color: #072439; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; box-shadow: 0 1px 0 #4e4e4e; -webkit-box-shadow: 0 1px 0 #4e4e4e; -moz-box-shadow: 0 1px 0 #4e4e4e }
+ul.userNav li a.settings { background: url(../../../img/emp/icons/usernav/settings.png) no-repeat 9px 9px;background-color: #072439; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; box-shadow: 0 1px 0 #4e4e4e; -webkit-box-shadow: 0 1px 0 #4e4e4e; -moz-box-shadow: 0 1px 0 #4e4e4e  }
+ul.userNav li a.profile { background: url(../../../img/emp/icons/usernav/profile.png) no-repeat 9px 9px; background-color: #072439; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; box-shadow: 0 1px 0 #4e4e4e; -webkit-box-shadow: 0 1px 0 #4e4e4e; -moz-box-shadow: 0 1px 0 #4e4e4e  }
+ul.userNav li a.messages { background: url(../../../img/emp/icons/usernav/messages.png) no-repeat 9px 10px; background-color: #072439; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; box-shadow: 0 1px 0 #4e4e4e; -webkit-box-shadow: 0 1px 0 #4e4e4e; -moz-box-shadow: 0 1px 0 #4e4e4e  }
+ul.userNav li a.logout { background: url(../../../img/emp/icons/usernav/logout.png) no-repeat 9px 9px;background-color: #072439; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; box-shadow: 0 1px 0 #4e4e4e; -webkit-box-shadow: 0 1px 0 #4e4e4e; -moz-box-shadow: 0 1px 0 #4e4e4e  }
+ul.userNav li a.search { background: url(../../../img/emp/icons/usernav/search.png) no-repeat 9px 9px;background-color: #072439; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; box-shadow: 0 1px 0 #4e4e4e; -webkit-box-shadow: 0 1px 0 #4e4e4e; -moz-box-shadow: 0 1px 0 #4e4e4e  }
+ul.userNav li a.sidebar { background: url(../../../img/emp/icons/usernav/sidebar.png) no-repeat 9px 9px; background-color: #072439; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; box-shadow: 0 1px 0 #4e4e4e; -webkit-box-shadow: 0 1px 0 #4e4e4e; -moz-box-shadow: 0 1px 0 #4e4e4e }
+ul.userNav li a.faq { background: url(../../../img/emp/icons/usernav/help.png) no-repeat scroll 7px 7px transparent; background-color: #072439; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; box-shadow: 0 1px 0 #4e4e4e; -webkit-box-shadow: 0 1px 0 #4e4e4e; -moz-box-shadow: 0 1px 0 #4e4e4e }
+ul.userNav li a.screen:hover,
+ul.userNav li a.settings:hover,
+ul.userNav li a.profile:hover,
+ul.userNav li a.messages:hover,
+ul.userNav li a.logout:hover,
+ul.userNav li a.search:hover,
+ul.userNav li a.sidebar:hover,
+ul.userNav li a.faq:hover { background-color: #062c49; }
+/*ul.userNav li a:active { background-color: #242424; }*/
+/* === Content top part === */
+
+
+.pageTitle { display: block; float: left; width:300px;color: #1A4363; font-size: 14px; font-weight: bold; margin: 21px 30px 21px 0; }
+.whead {  color: #20416A;
+background: #f8f8f8;
+background: -moz-linear-gradient(top,  #f8f8f8 0%, #e8e8e8 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#e8e8e8));
+background: -webkit-linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%);
+background: -o-linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%);
+background: -ms-linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%);
+background: linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#e8e8e8',GradientType=0 );
+}
+.loginPic span { display: block; color: #1D4868; font-size: 14px; margin-top: 10px; font-weight: bold; text-shadow: 0 1px 1px #ffffff; }
+.whead h6 a { color: #1D426F; font-size:15px;  text-decoration:none; }
+.whead h6 a:hover { text-decoration:underline; }
+ul.breadcrumbs li a { color: #25597C; text-decoration: none; padding: 3px 20px 3px 14px; display: block; background: url(../../../img/emp/icons/breadsArrow.png) no-repeat 100% 10px; height: 22px; line-height: 23px; }
+ul.breadcrumbs li a:hover, ul.breadcrumbs li.hover a { color: #2B6893; }
+ul.breadcrumbs li.current > a { color: #2B6893; background: none; }
+.breadLinks ul li a { color: #2B6893; padding: 3px 12px 3px 12px; display: block; }
+.tDefault thead td { text-align: center; font-size: 11px; padding: 3px 5px 2px 5px; color: #2B6893; background: #eee; }
+ul.userNav span a{ font-size:11px; background:none; background: none repeat scroll 0 0 transparent; color:#cccccc; display:inline; float: none; margin: 0; padding: 0;}
+.tDefault tbody tr:hover{ background:#E3EDF9;}
+.wGeneral thead tr td{ color:#25597C;}
+.itemActions label { float: left; margin: 2px 12px 0 4px; font-size: 11px;}

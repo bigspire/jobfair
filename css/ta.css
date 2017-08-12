@@ -1,0 +1,85 @@
+body {	background:#ffffff;	color: #414141;	/*font:12px/1.2 Arial, Helvetica, sans-serif;*/font-family: myriad; font-size:13px;}
+.container{	width:1050px; *width:1074px;	margin:0 auto;}
+.headerLeft{	width:827px;*width:874px;	float:right;}
+.headerLeftTop .left{	width:292px;*width:306px;	float:left;	padding:13px 0 0;	color:#075669;}
+.headerLeftTop .right{	width:535px; *width:568px;		float:right;	padding:6px 0 0 0;}
+.headerLeftTop .right{	float:right;	padding:6px 0 0 0;}
+ul.navList li a{color:#00425d; padding:13px 6px 16px; text-decoration:none; display:block; font-size:11px;}
+ul.navList li a.count{padding:8px 12px 16px;}
+.referFriend h2{color:#393939; font-size:18px; font-family:Arial, Helvetica, sans-serif; padding:8px 0 0 10px;}
+.referFriend  p{color:#393939; font-size:10px; font-family:Arial, Helvetica, sans-serif; padding:10px 50px 15px 15px; line-height:1.3;}
+#topHeader{margin: 0 auto; padding: 5px 0 0; width: 940px;}
+#category{margin: 0 auto; padding:25px 0 20px;width: 940px;}
+.recentAct,.searchResult,.innerPage{margin: 0 auto; width: 940px;}
+.categoryCol h2{	color:#393939;	font-size:12px;	text-transform:uppercase;	padding:14px 0 0 60px;	height:32px;	font-weight:bold;}
+.searchCol1 p, .searchCol2 p{padding:5px 0 0 0; color:#fff; font-style:italic;  font-size:11px;}
+#copyRight p a{ font-size:9px;}
+.referFriend .form{position:absolute; bottom:3px; left:0; height:45px; width:225px; padding:14px 0 0 4px; float:left;}
+button.referBtn{ padding:0 4px 0 0;}
+button.referBtn span{ padding:0 0 0 3px; font-size:10px;}
+.headerLeftTop .left a{	color:#075669;	text-decoration:none; font:9px myriad; background:url(../images/bullet.png) no-repeat scroll right 3px transparent; padding:0 9px 0 0;}
+.headerLeftTop .right ul li{float:left; padding:0 3px 0 7px;}
+.headerLeftTop .left li.last a{ background:none;}
+.headerLeftTop .right ul li span{color:#075669; font-weight:bold; margin:7px 0 0; display:block; font-size:10px;}
+.searchCol1 strong{font-size:13px; color:#fff; font-weight:bold; display:block; float:left; margin:0 0 5px 5px; text-transform:uppercase;}
+.searchCol1 span a{color:#043f4e;text-decoration:underline; font-size:11px;}
+a.advancedRes{color: #043F4E; float: left; padding: 5px 9px; text-decoration: underline; font-size:11px; width:182px;}
+.innerPage h2{font:bold 14px myriad; color:#777777; margin-bottom:8px; float:left; width:auto;}
+.headerLeftTop .left ul li{float:left; padding:0 3px; }
+.qualification label{float:left;width:130px;  /*width:140px;*/ padding:2px 0 0 10px; color:#333333; font-size:11px; line-height:14px;  font-family:Arial, Helvetica, sans-serif; }
+ul.qualification li.clear label{background:#FFF; font-weight:bold; font-size:14px; width:auto;}
+.searchResult p.totalResult{text-align:right; padding:0; font-size:11px; float:left; color:#414141;}
+ul.tabs li a{ background:url(../images/jrSteps_ta.png) no-repeat scroll left top transparent;    float: left; height:44px;}
+ul.tabs li a.personal {    background-position: 0 0;    width: 218px;}
+ul.tabs li a.qualification {    background-position:-218px 0;    width: 198px;width: 191px;}
+ul.tabs li a.experience {    background-position:-413px 0;     width: 203px;}
+ul.tabs li a.personal.selected {    background-position: 0 0;   }
+ul.tabs li a.qualification.selected {    background-position:-217px -44px;}
+ul.tabs li a.experience.selected {    background-position:-413px -88px; }
+ul.tabs li a.personal.deselected { background-position:0 -44px;}
+/***LATEST UPDATES***/
+a.modifySearch{color: #043F4E; float: right; font-size: 12px; margin-right: 16px; text-decoration: underline;}
+.rightCarousel h2 span a{font-size:11px; text-transform:none; font-weight:normal;}
+div.loginBg{background:url(../images/textBoxTopBg.png) no-repeat;width:104px; margin:0; background-color:transparent; float:left;}
+.headerLeftTop .right input{ height:27px; line-height:27px; border: 0; resize: none;  /*color:#a8a8a8;*/ color:#414141; font-size:12px; padding:0 0px; background-color:transparent; margin:0 5px; width:92px;}
+.freeJob{color:#ED6B2A; font-size:9px; font-weight:bold;}
+.searchJobs {  color: #444040;    cursor: pointer;    display: block;    float: left;    font-size: 11px;    margin:1px 0 3px 5px;    padding:3px 5px 4px;    text-shadow: none; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; /*background:url(../images/close_icon.png) no-repeat right 7px;*/ opacity:.9;}
+.searchResultTop{width: auto; float: left; margin-bottom:5px;}
+.searchResultTable tr.resultHead td{border:none; background:url(../images/searchResultBg.jpg) repeat-x; color:#075669; font-size:12px;}
+.adMsg span.errorMsg{font-family: myriad; font-size: 14px; padding: 6px 0 10px 3px;}
+span.help-blurb span.md .i { font-size:11px;}
+.adSearch label{width:148px;}
+.tooltip .tip_mid span{ font-size:11px;}
+button.big {background: transparent url(../images/big_btn_right_h.png) no-repeat scroll right top;clear: left; height:41px; width: 182px;}
+.btnApply{*width:82px;}
+.btnSave{*width:64px;}
+.btnRefer{*width:108px;}
+button.apply{ *width:90px;}
+.shareInfo{width:520px; /*background:#fbfbfb;*/ position:absolute; padding:7px 0 3px 11px; height:20px; right:0; bottom:0; font-size:10px; color:#02a9d9; font-family:Arial, Helvetica, sans-serif; }
+.shareInfo a#sharing{/*width:157px; *width:138px;*/float:right; display:block; /*background:url(../images/shareIcon.png) no-repeat;*/ padding:0px 8px 0px 12px; text-align:right; }
+button.resetBtn{ width:115px;}
+button.removeBtn{ *width:124px;}
+button.addBtn{ *width:202px;}
+.message span.errorMsg{ font-size:11px;}
+
+/***DASHBOARD***/
+h1.pageTitle{ color: #4BBAE9; font-size: 17px; font-weight:bold; margin: 0 0 0px; padding: 0 0 3px; /*width:350px;*/}
+.profileComplete{ line-height:13px;}
+.profileComplete p{ font-size:11px;}
+.profileResume .inner ul li{border-bottom:1px solid #CCCCCC; margin:0 0 13px; padding:0 0 5px;}
+.profileResume .inner ul li span{float:right; width:300px; font-size:11px;}
+.profileResume .inner ul li span a{color:#676779; text-decoration:underline; font-weight:bold; font-size:11px;}
+.profileName a{color:#676779; text-decoration:underline; font-size:11px;}
+#pcColor a{color:#c34658; text-decoration:underline; font-size:10px;}
+/***PROFILE***/
+span.editProfile {/* float:right;*/ color:#D3D3D3;/* display:none;*/ cursor:pointer;}
+span.editProfile a{ vertical-align:middle;color:#F2FF00; font:11px myriad; *font:10px myriad;}
+.profileBox h2{color:#fff; font-size:13px; font-weight:bold; margin:0 0 5px; float:none;}
+.profileBox p{ font-size:11px; width:200px;}
+.loginTabs ul li a{ text-decoration:underline;  color:#0B678C; /*background:url(../images/bullet.png) no-repeat scroll right 5px transparent; */padding:0 2px 0 14px;}
+.loginTabs ul li.last a{ background:none;}
+span.freeJob .welcomeName,span.completed{ font-size:12px; font-family:myriad, arial;}
+#personalDetails span.editProfile a{ font-size:11px;}
+#personalDetails span.editProfile{ margin:26px 13px;}
+/***Success,Error, ALert***/
+.successCenter{padding:6px 0 6px 16px;}

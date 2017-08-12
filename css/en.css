@@ -1,0 +1,73 @@
+.container{	width:940px; *width:960px; margin:0 auto;}
+.headerLeft{	/*width:727px;*/ width:659px; *width:659px; float:right;}
+.headerLeftTop .left{	/*width:282px; width:266px;*/width:174px; margin-left:15px;	float:left;	padding:13px 0 0;	color:#075669;}
+.headerLeftTop .right{	/*width:442px;*/ width:447px;	float:right;	padding:6px 3px 0 0;}
+ul.navList li a{color:#00425d; padding:13px 10px 14px; text-decoration:none; display:block; font:13px myriad, Arial;}
+ul.navList li a.count{padding:11px 12px 16px;}
+.referFriend h2{color:#393939; font:20px Myriad, arial; padding:8px 0 0 10px;}
+.referFriend  p{color:#393939; font:13px Myriad, arial; padding:10px 30px 15px 15px; line-height:1.3;}
+#topHeader{	padding:5px 0 0;	}
+#category{	padding:25px 0 20px;}
+.categoryCol h2{	color:#393939;	font: 16px myriad, Arial;	text-transform:uppercase;	padding:14px 0 0 54px;	height:32px;}
+.searchCol1 p, .searchCol2 p{padding:5px 0 0 0; color:#043F4E; font-style:;  font-size:13px;}
+.referFriend .form{position:absolute; bottom:3px; left:0; height:45px; width:225px; padding:14px 0 0 13px; float:left;}
+.headerLeftTop .left a{	color:#075669;	text-decoration:none; font:13px myriad, Arial; background:url(../images/bullet.png) no-repeat scroll right 5px transparent; padding:0 9px 0 0;}
+.headerLeftTop .left li.last a{ background:none;}
+.headerLeftTop .right ul li{float:left; padding:0 0 0 8px;}
+.headerLeftTop .right ul li span.login{color:#075669; font:bold 12px arial; margin:7px 0 0; display:block; }
+.searchCol1 strong{font-size:22px; color:#fff; font-family:myriad, arial; display:block; float:left; /*margin:0 0 5px 5px; text-transform:uppercase;*/}
+.searchCol1 span a{color:#043f4e;text-decoration:underline; font: 13px myriad, Arial;}
+a.advancedRes{color: #043F4E; float: left; padding: 5px 11px; text-decoration: underline; font-family:myriad, arial;}
+.innerPage h2{font-size:18px; color:#777777; margin-top:10px; font-family:myriad, arial; width:auto; float:left;}
+.headerLeftTop .left ul li{float:left; padding:0 4px 0 0; /*border-right:#075669 1px solid;*/ background:/*url(../images/bullet.gif) no-repeat right -2pxurl(../images/bullet_green.png) no-repeat scroll right -3px transparent;*/}
+.headerLeftTop .left ul li:last-child{ background:none;}
+.qualification label{float:left;width:113px;  /*width:140px;*/ padding:4px 4px 0 0; color:#333333; font-size:13px; line-height:14px; font-family:myriad, arial;}
+.searchResult p.totalResult{text-align:left; padding:0; font-size:14px; float:left; color:#414141; font-family:myriad, arial;}
+ul.qualification li.clear label{background:#FFF; font-weight:bold; font-size:17px; width:auto;}
+ul.tabs li a{ background:url(../images/jrSteps.png) no-repeat scroll left top transparent;    float: left; height:44px; }
+ul.tabs li a.personal {    background-position: 0 0;    width: 167px;}
+ul.tabs li a.qualification {    background-position:-168px 0;    width: 198px;}
+ul.tabs li a.experience {    background-position:-364px 0;       width: 223px;}
+ul.tabs li a.personal.selected {    background-position: 0 0;   }
+ul.tabs li a.qualification.selected {    background-position:-168px -44px;}
+ul.tabs li a.experience.selected {    background-position:-365px -88px; }
+ul.tabs li a.personal.deselected { background-position:0 -44px;}
+/***LATEST UPDATES***/
+a.modifySearch{color: #043F4E; float: right; font-size: 14px; margin-right: 16px; text-decoration: underline;}
+.rightCarousel h2 span a{font-size:12px; text-transform:none; font-weight:normal;}
+div.loginBg{background:url(../images/textBoxTopBg.png) no-repeat;/*width:104px;*/ width:122px; margin:0; background-color:transparent; float:left;}
+.headerLeftTop .right input{ height:27px; line-height:27px; border: 0; resize: none;  /*color:#a8a8a8;*/ color:#414141; font-size:12px; padding:0 0px; background-color:transparent; margin:0 5px; width:108px;}
+.freeJob{ color: #333333; font: 14px myriad, arial; }
+.searchJobs {  color: #444040;    cursor: pointer;  font-family:myriad, arial; display: block;    float: left;    font-size: 11px;    margin:1px 0 3px 5px;    padding:3px 5px 4px;    text-shadow: none; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; /*background:url(../images/close_icon.png) no-repeat right 7px;*/ opacity:.9;}
+.searchResultTop{width: auto; float: left; margin-bottom:5px;}
+.searchResultTable tr.resultHead td{border:none; background:url(../images/searchResultBg.jpg) repeat-x; color:#075669; font-size:14px;}
+.adMsg span.errorMsg{font-family: myriad, arial; font-size: 17px; padding: 4px 0 10px 3px;}
+.btnApply{*width:80px;}
+.btnSave{*width:76px;}
+.btnRefer{*width:100px;}
+button.apply{ *width:50px;}
+.shareInfo{width:891px; /*background:#fbfbfb;*/ position:absolute; padding:7px 10px 0 11px; height:22px; right:17px; bottom:2px; font-size:10px; color:#02a9d9; font-family:myriad, Arial, Helvetica, sans-serif; }
+/*.shareInfo a#sharing{/*width:267px; float:left;float:right; display:block; /*background:url(../images/shareIcon.png) no-repeat; padding:0px 8px 0px 12px; text-align:right; }*/
+button.removeBtn{ *width:111px;}
+button.addBtn{ *width:151px;}
+
+/***DASHBOARD***/
+h1.pageTitle{ color: #4BBAE9; font: 30px myriad, Arial; margin: 0 0 0px; padding: 0 0 3px; /*width:350px;*/}
+.profileComplete{ line-height:22px;}
+.profileResume .inner ul li{border-bottom:1px solid #CCCCCC; margin:0 0 20px; padding:0 0 5px;}
+.profileResume .inner ul li span{float:right; width:300px;}
+.profileResume .inner ul li span a{color:#676779; text-decoration:underline; font-weight:bold;}
+.profileName a{color:#676779; text-decoration:underline;}
+#pcColor a{color:#c34658; text-decoration:underline;font-size:12px;}
+/***PROFILE***/
+span.editProfile {/* float:right;*/ color:#D3D3D3;/* display:none;*/  cursor:pointer;}
+span.editProfile a{ vertical-align:middle;color:#fafafa; font:14px myriad, arial;}
+.profileBox h2{color:#fff; font-size:13px; font-weight:bold; margin:0 0 10px; float:none;}
+
+.loginTabs ul li a{ text-decoration:;  color:#0B678C;/*background:url(../images/bullet.png) no-repeat scroll right 5px transparent; */padding:0 2px 0 14px; font:13px myriad, Arial;}
+.loginTabs ul li a:hover{text-decoration:underline;}
+.loginTabs ul li.last a{ background:none;}
+/***Success,Error, ALert***/
+.successCenter{padding:12px 0 0 16px;}
+form.savedJobs .searchResultTable tr.resultHead td.col2{ width:215px;}
+form.savedJobs .searchResultTable td.col2{ width:215px;}

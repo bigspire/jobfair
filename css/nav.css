@@ -1,0 +1,179 @@
+/* === === === === === === === === ===
+Superfish Naivation
+=== === === === === === === === === */
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu { line-height: 1.0; }
+
+.sf-menu li ul {
+	position: absolute;
+	top: -999em;
+	width:180px; /* left offset of submenus need to match (see below) */
+}
+
+.sf-menu ul li { width: 100%; }
+.sf-menu li:hover { visibility: inherit; /* fixes IE7 'sticky bug' */ }
+.sf-menu li { float: left; position: relative; }
+.sf-menu a { display: block; position: relative; }
+
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left: 0;
+	top: 66px;    /* where to start sub menu (match height of button image) */
+	width: 180px;  /* how wide the sub-menus should be when javascript is disabled. don't forget left margin for level 3! */
+	z-index: 99;
+}
+
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top: -999em;
+}
+
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left: 180px; /* match ul width */
+	top: 0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top: -999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left: 180px; /* match ul width */ 
+	top: 0;
+}
+
+/* width of third level */
+
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left: 180px; /* match ul width */
+	top: 0;
+}
+
+.sf-menu li li ul a {
+	padding:5px 10px 5px 12px;				/* adjust arrow positioning when this is modified */
+}
+
+/*** CUSTOM SKIN ***/
+
+.sf-menu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	margin-bottom: 0;
+}
+
+/* top */
+.sf-menu a { text-decoration: none;}
+
+
+/* image replace v2 */
+
+#b1 { overflow: hidden;  width: 113px; height: 66px;}
+#b2 { overflow: hidden;  width: 134px; height: 66px;}
+#b3 { overflow: hidden;  width: 119px; height: 66px;}
+#b4 { overflow: hidden;  width: 103px; height: 66px;}
+#b5 { overflow: hidden;  width: 106px; height: 66px;}
+/* set button dimensions and hide top level text if it is scaled larger than those dimensions */
+
+#b1 span { background:transparent url(../images/on_company.jpg) no-repeat 0 0; }
+#b2 span { background:transparent url(../images/on_clientcenter.jpg) no-repeat 0 0; }
+#b3 span { background:transparent url(../images/on_information.jpg) no-repeat 0 0; }
+#b4 span { background:transparent url(../images/on_research.jpg) no-repeat 0 0; }
+#b5 span { background:transparent url(../images/on_contact.jpg) no-repeat 0 0; }
+
+a#b1:hover span { background-image: url(../images/off_company.jpg) }
+a#b2:hover span { background-image: url(../images/off_clientcenter.jpg) }
+a#b3:hover span { background-image: url(../images/off_information.jpg) }
+a#b4:hover span { background-image: url(../images/off_research.jpg) }
+a#b5:hover span { background-image: url(../images/off_contact.jpg) }
+
+/* keep top button in hover state while on sub menus */
+
+li:hover > a#b1 span, li.sfHover > a#b1 span { background-image: url(../images/off_company.jpg) }
+li:hover > a#b2 span, li.sfHover > a#b2 span { background-image: url(../images/off_clientcenter.jpg) }
+li:hover > a#b3 span, li.sfHover > a#b3 span { background-image: url(../images/off_information.jpg) }
+li:hover > a#b4 span, li.sfHover > a#b4 span { background-image: url(../images/off_research.jpg) }
+li:hover > a#b5 span, li.sfHover > a#b5 span { background-image: url(../images/off_contact.jpg) }
+
+#b1 span,
+#b2 span,
+#b3 span,
+#b4 span,
+#b5 span
+{  
+	cursor:pointer; 
+	display:block; /* display block actually makes it show up, position absolute makes it overlay the text */
+	height:100%; 
+	left:0; 
+	position:absolute; 
+	top:0;
+	width:100% 
+}
+
+/* subs */
+.sf-menu li ul a
+{
+	padding:5px 10px 5px 12px;					/* adjust arrow positioning when this is modified */
+}
+
+.sf-menu li ul a.sub { padding-left: 25px;}
+/* top */
+.sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text color */
+	color: #fff;
+	font-size: 12px;
+	text-indent: -999px;
+}
+/* subs */
+.sf-menu li ul a, .sf-menu li ul a:visited {
+	color: #fff;
+	font-size: 12px;
+	text-decoration: none;
+	text-indent: 0; /* we need to do this otherwise the value from the top level is inherited (bad) */
+}
+	
+/* background color - top level */
+.sf-menu li { /*background:#f0f0f0*/ }
+
+/* background - second level */
+.sf-menu li li {
+    background: #5f5f5f;
+    border-bottom: 1px solid #fff;
+    /* opacity */
+    opacity: .90;
+    -ms-filter: "alpha(opacity=90)"; 
+    -khtml-opacity: .90; 
+    -moz-opacity: .90;
+}
+
+
+/* background - third level */
+.sf-menu-menu li li li {
+    background-color: #5f5f5f;
+    /* opacity */
+    opacity: .90;
+    -ms-filter: "alpha(opacity=90)"; 
+    -khtml-opacity: .90; 
+    -moz-opacity: .90;
+}
+
+/* hover stuff - top level */
+.sf-menu li:hover, 
+.sf-menu li.sfHover,
+.sf-menu a:focus, 
+.sf-menu a:hover, 
+.sf-menu a:active { outline: 0; }
+
+/* hover for subs */
+.sf-menu li ul li:hover,
+.sf-menu li ul li.sfHover,
+.sf-menu li ul a:focus, 
+.sf-menu li ul a:hover, 
+.sf-menu li ul a:active { color:#fff; background:#96926f; outline:0;}
+

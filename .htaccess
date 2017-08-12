@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymlinks
+RewriteEngine on
+RewriteRule ^([a-zA-Z0-9_+-]+)$ htaccess.php?pagen=$1 
+RewriteRule ^([a-zA-Z0-9_+-]+)/$ htaccess.php?pagen=$1
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9:&=_-]+)/(.*)/$ htaccess.php?pagen=$1&pagenew=$2&$3=$4 
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9:&=_-]+)$ htaccess.php?pagen=$1&pagenew=$2
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9:&=_-]+)/$ htaccess.php?pagen=$1&pagenew=$2	
+</ifModule>
+<FilesMatch "(\.php|\.ini)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+<FilesMatch "(htaccess|index|package_expiry_alert|inactive_jobseekers|jobseeker_mail_alert|employer_loyalty_alert|GetHandleRESponse|job_mail_alert|feedback_notifications|resume_mail_alert|update_online_status|profile_complete_alert|jobfair_alert|logo_updates|job_feed)\.php$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+<FilesMatch "(job_feed)\.xml$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+ErrorDocument 404 /php/jobfac/page_not_found/ 
+ErrorDocument 403 /php/jobfac/page_not_found/ 
+php_value memory_limit -1

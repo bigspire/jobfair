@@ -1,0 +1,58 @@
+/* CSS Document */
+.fixed {/*position: fixed;*/ background: url(../img/topNav5.jpg) repeat; width: 100%; color: #eeeeee; border-bottom: 1px solid #fff; z-index: 999; }
+.content .title { background: url(../img/seablue.jpg) repeat-x; height: 36px; -moz-box-shadow: 0 1px 0 #fff; -webkit-box-shadow: 0 1px 0 #fff; box-shadow: 0 1px 0 #fff; }
+
+.userNav ul { margin-right: 2px; }
+.userNav ul li { display: inline; float: left; position: relative; cursor: pointer; border-right: 1px solid #3A9CBC; }
+.userNav ul li:first-child { border-left: 1px solid #3A9CBC; }
+.userNav ul li a { color: #eeeeee; text-decoration: none; display: block; float: left; }
+.userNav ul li:hover, .selected { background: #3B9FC6; }
+.userNav ul li.activeNav { background:  #3B9FC6!important; }
+.userNav ul li span { display: block; padding: 8px 14px 8px 8px; float: left; }
+.userNav ul li img { float: left; display: block; padding: 13px 2px 11px 14px; }
+
+.userNav ul li ul { position: absolute; left: -1px; display: none; top: 35px; margin-top: 0px; background:#3CA3C9; padding: 0 1px 1px 1px; border: 1px solid #399BBF; z-index: 100; }
+.userNav ul li ul li { display: block; float: none; border-top: 1px solid #399BBF; background: #3CA3C9; border-right: none; border-bottom: 1px solid #399BBF; }
+.userNav ul li ul li:first-child { border-left: none!important; }
+.userNav ul li ul li a { width: 125px; padding: 6px 10px 7px 36px; font-size: 11px; text-transform: none;  color: #EEEEEE; font-weight: normal; background-color: none; float: none; }
+.userNav ul li ul li a:hover { background-color: none; font-weight: normal; color: #EEEEEE; }
+.userNav ul li ul li:hover { background: #3B9FC6!important; }
+
+.middleNav ul li a.active {background: #B5EAFC none repeat scroll 0 0;border: 1px solid #95CFE2;color:#268FA4;font-weight: bold;}
+.stats_new a.grey.active { background: #B5EAFC none repeat scroll 0 0;    border: 1px solid #95CFE2;}
+
+
+/*****ADD BUTTON*******/
+.num a.blueNum { background-position: 0 -271px;  }
+.num a.blueNum:hover { background-position: 0 -251px; }
+.num a.blueNum:active { background-position: 0 -271px; }
+
+.stats_new a.grey.active { background: url(../img/count/skyblue.png) repeat-x 0 0; border: 1px solid #2797AA; color: #f7f7f7; }
+.stats_new a.grey:hover { background-position: 0 -41px; }
+.stats_new a.grey:active { background-position: 0 -82px; }
+
+.greyishBtn { background: url(../img/ui/seaBtn.png) repeat-x 0 0; border: 1px solid #306873; color: #fff; }
+.greyishBtn:hover { background-position: 0 -50px; }
+.greyishBtn:active { background-position: 0 -25px; }
+#footer { clear: both; /*height: 36px;*/ background: url(../img/topNav5.jpg) repeat; width: 100%; color: #eeeeee; margin-top: 42px; position: absolute; bottom: 0; }
+.backTo a:hover { background: #3B9FC6; }
+.backTo a { float: left; color: #eeeeee; font-size: 11px; border-right: 1px solid #3A9CBC; border-left: 1px solid #3A9CBC; }
+.ac_over {background-color: #4BB7D1!important;color: #FFFFFF;}
+
+
+.widget .head h5, .table h5{color:#3B9FC6}
+
+
+/* Left navigation subnav */
+
+ul.sub { border: 2px solid #41AEC6; border-top: none; background: url(../img/leftNavSub.png) repeat; }
+ul.sub li { border-bottom: 1px dotted #d5d5d5; padding: 1px; }
+ul.sub li a { background: url(../img/arrow.gif) no-repeat 8px 16px; border: none; font-family: Arial, Helvetica, sans-serif; color: #4CA8D1; font-size: 12px; padding: 8px 10px 8px 18px; }
+ul.sub li a:hover, .sub li a:active { font-style: normal!important; border: none!important; color: #4CA8D1!important; background: url(../img/arrow.gif) no-repeat 8px 16px!important; font-weight:bold; }
+ul.sub li ul { border: none; border-top: 1px solid #c9c9c9; }
+ul.sub li ul li { padding-left: 10px; }
+
+.leftNav ul li.reportMenu a:hover,.leftNav ul li.reportMenu a.active { background: url(../img/seablue.jpg) repeat-x; color: #fff; border: 1px solid #41AEC6; }
+
+/* for pagination */
+.SC_bold{background:#4EB8D2 !important}
