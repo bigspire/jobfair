@@ -1,6 +1,6 @@
 <?php
 define("HOST","localhost");
-define("USERNAME","jobfair");
-define("PASSWORD","fair678");
-define("DBASE","jobfac_dbase");
+define("USERNAME","root");
+define("PASSWORD","");
+define("DBASE","jobfair_jobfac_db");
 ?>
