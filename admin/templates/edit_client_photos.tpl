@@ -32,7 +32,7 @@
 </h5><div class="num"><span><span class="mandatory">*</span> fields are mandatory</span></div></div>
 					
                <div class="floatleft threeOne">
-                    <div class="rowElem noborder pb0"><label class="topLabel">Job Fair Title <span class="mandatory">*</span></label><div class="formBottom">
+                    <div class="rowElem noborder pb0"><label class="topLabel">Client Req. Title <span class="mandatory">*</span></label><div class="formBottom">
 							<select style="width:300px" name="client_id" tabindex="1">
 							<option value="">Choose any one</option>
 							{html_options options=$client selected=$client_id}					
