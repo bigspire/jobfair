@@ -98,6 +98,7 @@
 					{/if}
 						   	{if $client_req}
 							<li><a style="width:90px;" class="sTesti" href="client_req.php">Client Req. </a>{if $client_req_count}<span class="numberLeft">{$client_req_count}{/if}</span></li>
+							<li><a style="width:90px;" class="sTesti" href="client_photos.php">Client Photos</a></li>
 							{/if}                  
                         </ul>
 					</li>

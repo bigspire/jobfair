@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<?php /* Smarty version 2.6.26, created on 2017-08-12 11:21:14
-=======
-<?php /* Smarty version 2.6.26, created on 2017-08-12 11:33:17
->>>>>>> ba5af767a4de9deff3350e4c0b16f470612a3f08
+<?php /* Smarty version 2.6.26, created on 2017-08-14 19:44:44
          compiled from req_popup.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'nl2br', 'req_popup.tpl', 43, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'nl2br', 'req_popup.tpl', 44, false),)), $this); ?>
+testing by niki
 <!DOCTYPE html>
 <html lang="en">
   <head>

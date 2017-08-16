@@ -1,6 +1,6 @@
 <?php 
 define('MAINTENANCE',0);
-
+error_reporting(1);
 define('DEVELOPMENT_ENVIRONMENT',1);
 if (DEVELOPMENT_ENVIRONMENT == 1) {
     // error_reporting(E_ALL ^ E_NOTICE );

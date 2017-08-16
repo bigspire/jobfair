@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<?php /* Smarty version 2.6.26, created on 2017-08-12 11:21:12
-=======
-<?php /* Smarty version 2.6.26, created on 2017-08-12 11:33:16
->>>>>>> ba5af767a4de9deff3350e4c0b16f470612a3f08
+<?php /* Smarty version 2.6.26, created on 2017-08-14 19:44:44
          compiled from ../include/search.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'ss', '../include/search.tpl', 10, false),)), $this); ?>
