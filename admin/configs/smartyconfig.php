@@ -9,7 +9,7 @@ Date : 16-11-2016
 // error_reporting(E_ALL & ~E_NOTICE);
 
 date_default_timezone_set('Asia/Kolkata');
-// error_reporting(0);
+error_reporting(0);
 // ini_set('display_errors', '0');
 
 // smarty config

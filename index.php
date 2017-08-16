@@ -257,7 +257,7 @@ try{
 
 // display the home page
 $smarty->assign('dashboard_selected',"class='selected'");
-$smarty->assign('menu_count',$fn->get_menu_count());
+// $smarty->assign('menu_count',$fn->get_menu_count());
 // remove temp. images in uploaded in reg.
 $smarty->display('index.tpl');
 ?>
