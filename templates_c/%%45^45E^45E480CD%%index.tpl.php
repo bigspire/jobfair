@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<?php /* Smarty version 2.6.26, created on 2017-08-12 11:38:54
+=======
 <?php /* Smarty version 2.6.26, created on 2017-08-14 19:44:43
+>>>>>>> 9b5f8dc3a749bc8d89b1f4abb35cc2f2788f5e00
          compiled from index.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'capitalize', 'index.tpl', 119, false),array('modifier', 'truncate', 'index.tpl', 119, false),)), $this); ?>
