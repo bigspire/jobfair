@@ -79,5 +79,5 @@ $smarty->assign('data1', $data1);
 // assign page title
 $smarty->assign('page_title' , 'View Client Photos'); 
 // display smarty file
-$smarty->display('view_jobfair_photos.tpl');
+$smarty->display('view_client_photos.tpl');
 ?>

@@ -103,15 +103,15 @@
       			   {/if}
       				
 				<tr class="{$grade}">
-				<td><a href="view_jobfair_photos.php?id={$item.id}&get_jobfair_id={$item.jobfair_id}">{ucwords($item.title)}</a></td>	
+				<td><a href="view_jobfair_photos.php?get_jobfair_id={$item.jobfair_id}">{ucwords($item.title)}</a></td>	
 				<td>{$item.no_of_photos}</td>
 			   <td class="center">
 			   <img border="0" class="mr5 vmiddle tipS" original-title="{$item.status}" src="{$item.status_cls}">			
 			   </td>						
 				<td class="center">{$item.created_date}</td>
 				<td class="center">{$item.modified_date}</td>
- 				<td class="center"><img class="mr5 vmiddle" src="img/icons/dark/pencil.png"><a href="edit_jobfair_photos.php?id={$item.id}&get_jobfair_id={$item.jobfair_id}">Edit</a> &nbsp; 
- 				 <img  class="mr5 vmiddle" alt=""  width="12" height="12"  src="img/icons/dark/trash.png"><a id="{$item.id}"  value="#" class="bConfirm2" href="javascript:void(0)">Delete</a></td>
+ 				<td class="center"><img class="mr5 vmiddle" src="img/icons/dark/pencil.png"><a href="edit_jobfair_photos.php?get_jobfair_id={$item.jobfair_id}">Edit</a> &nbsp; 
+ 				 <img  class="mr5 vmiddle" alt=""  width="12" height="12"  src="img/icons/dark/trash.png"><a id="{$item.jobfair_id}"  value="#" class="bConfirm2" href="javascript:void(0)">Delete</a></td>
             </tr>
              {/if}
 				{/foreach}

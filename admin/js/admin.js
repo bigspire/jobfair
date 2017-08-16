@@ -179,6 +179,17 @@ function validate_search(search,qualification,specialization,min_exp,max_exp,min
 	});
 });
 
+/* function to show the alert message for photos remove */
+ $(document).ready(function(){
+	$(".bConfirmPhotos").click( function(){
+		var id = $(this).attr('id');
+		if(confirm("Are you sure you want to delete?")){
+			removePic = $("#remove").attr('value');
+			location.href = removePic+'?get_jobfair_id='+id;
+		}
+	});
+});
+
 /* function to show the alert message for record status updation */
  $(document).ready(function() {    
 	$(".sConfirm").click( function() {

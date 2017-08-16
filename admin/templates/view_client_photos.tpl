@@ -27,7 +27,7 @@
 					<div class="floatleft_view_odd">
 					 {foreach from=$data item=item key=key}
 					     <div class="rowElem_view"><label>Client Req. Title</label>
-						 <div class="formRight_view">{$item.position} ($item.company_name})</div>
+						 <div class="formRight_view">{$item.position} ({$item.company_name})</div>
 						 <div class="fix"></div></div>
                     <div class="rowElem_view"><label>Status</label>
 					<div class="formRight_view">{ucwords($item.status)}</div><div class="fix"></div></div>

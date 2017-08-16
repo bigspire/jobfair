@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-14 19:58:00
+/* Smarty version 3.1.29, created on 2017-08-16 17:23:06
   from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\jobfair_photos.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5991b3700fc502_30903071',
+  'unifunc' => 'content_59943222383dc8_63153828',
   'file_dependency' => 
   array (
     '928f0ded9331dbceb0c4a70cf96b1921dcfb3c8b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\jobfair_photos.tpl',
-      1 => 1502517722,
+      1 => 1502884370,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5991b3700fc502_30903071 ($_smarty_tpl) {
+function content_59943222383dc8_63153828 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 	
@@ -177,8 +177,7 @@ $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, "grade", 0);?>
       				
 				<tr class="<?php echo $_smarty_tpl->tpl_vars['grade']->value;?>
 ">
-				<td><a href="view_jobfair_photos.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-&get_jobfair_id=<?php echo $_smarty_tpl->tpl_vars['item']->value['jobfair_id'];?>
+				<td><a href="view_jobfair_photos.php?get_jobfair_id=<?php echo $_smarty_tpl->tpl_vars['item']->value['jobfair_id'];?>
 "><?php echo ucwords($_smarty_tpl->tpl_vars['item']->value['title']);?>
 </a></td>	
 				<td><?php echo $_smarty_tpl->tpl_vars['item']->value['no_of_photos'];?>
@@ -192,10 +191,9 @@ $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, "grade", 0);?>
 </td>
 				<td class="center"><?php echo $_smarty_tpl->tpl_vars['item']->value['modified_date'];?>
 </td>
- 				<td class="center"><img class="mr5 vmiddle" src="img/icons/dark/pencil.png"><a href="edit_jobfair_photos.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-&get_jobfair_id=<?php echo $_smarty_tpl->tpl_vars['item']->value['jobfair_id'];?>
+ 				<td class="center"><img class="mr5 vmiddle" src="img/icons/dark/pencil.png"><a href="edit_jobfair_photos.php?get_jobfair_id=<?php echo $_smarty_tpl->tpl_vars['item']->value['jobfair_id'];?>
 ">Edit</a> &nbsp; 
- 				 <img  class="mr5 vmiddle" alt=""  width="12" height="12"  src="img/icons/dark/trash.png"><a id="<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+ 				 <img  class="mr5 vmiddle" alt=""  width="12" height="12"  src="img/icons/dark/trash.png"><a id="<?php echo $_smarty_tpl->tpl_vars['item']->value['jobfair_id'];?>
 "  value="#" class="bConfirm2" href="javascript:void(0)">Delete</a></td>
             </tr>
              <?php }?>

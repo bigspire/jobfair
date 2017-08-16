@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-16 11:34:44
+/* Smarty version 3.1.29, created on 2017-08-16 17:50:34
   from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\edit_jobfair_photos.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5993e07c9876d4_62952971',
+  'unifunc' => 'content_5994389299df41_51084169',
   'file_dependency' => 
   array (
     '53f40d9ee8cc5cc5628e392ecca583e493de72ce' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\edit_jobfair_photos.tpl',
-      1 => 1502517722,
+      1 => 1502886030,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5993e07c9876d4_62952971 ($_smarty_tpl) {
+function content_5994389299df41_51084169 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 	
@@ -46,8 +46,7 @@ if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdoc
     	<div class="title"><h5>Edit Job Fair Photos</h5></div>
    	 
         <!-- Form begins -->
-	<form action="edit_jobfair_photos.php?id=<?php echo $_GET['id'];?>
-&get_jobfair_id=<?php echo $_GET['get_jobfair_id'];?>
+	<form action="edit_jobfair_photos.php?get_jobfair_id=<?php echo $_smarty_tpl->tpl_vars['get_jobfair_id']->value;?>
 " method="post" name="company" id="formID" class="mainForm" enctype="multipart/form-data" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"></div> 
 		<fieldset>
 		<div class="breadCrumb module">
@@ -76,13 +75,10 @@ if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdoc
 					     </div>
                </div>					
 					
-					<div class="floatleft threeOne">
-                <div class="rowElem noborder pb0"><label class="topLabel">Job Fair Photos <span class="mandatory">*</span> </label><div class="formBottom">
-					 <input name="photo" value="<?php echo $_SESSION['photo'];?>
-" type="file" tabindex="3" class="validate[required]" id="logo">
-					  <br>
-						<span class="error-message">
-						
+					
+					<div class="floatleft_view_odd">
+						<div class="">
+						<div class="formRight_view" style="width:100%">
 						<?php
 $_from = $_smarty_tpl->tpl_vars['data']->value;
 if (!is_array($_from) && !is_object($_from)) {
@@ -98,13 +94,22 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 $__foreach_item_0_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 ?>
 						<?php if ($_smarty_tpl->tpl_vars['item']->value['photo']) {?>
-						<br><img src="timthumb.php?src=uploads/photo/<?php echo $_smarty_tpl->tpl_vars['item']->value['photo'];?>
-&w=200&q=100">
+						<div align="center" style="border:2px dotted #e0e0e0; width:180px;float:left;padding:10px;margin:5px;">
+						<img src="timthumb.php?src=admin/uploads/photo/<?php echo $_smarty_tpl->tpl_vars['item']->value['photo'];?>
+&w=160&q=100">
+						<!-- br> <a href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+remove_jobfair_photos.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" class="bConfirmPhotos">Remove</a -->
 						
-						<?php } else {
-echo $_smarty_tpl->tpl_vars['photoErr']->value;?>
-
-						<?php }?> <?php
+						<br> <a id="<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+|<?php echo $_smarty_tpl->tpl_vars['item']->value['jobfair_id'];?>
+" value="javascript:void(0)" class="bConfirmPhotos" href="javascript:void(0)">Remove</a>
+						<input type="hidden" id="remove" value="remove_jobfair_photos.php">
+						
+					
+						</div>
+						<?php }?>
+						<?php
 $_smarty_tpl->tpl_vars['item'] = $__foreach_item_0_saved_local_item;
 }
 if ($__foreach_item_0_saved_item) {
@@ -113,11 +118,16 @@ $_smarty_tpl->tpl_vars['item'] = $__foreach_item_0_saved_item;
 if ($__foreach_item_0_saved_key) {
 $_smarty_tpl->tpl_vars['key'] = $__foreach_item_0_saved_key;
 }
-echo $_smarty_tpl->tpl_vars['attachmentuploadErr']->value;?>
-
-						</span>
-					</div><div class="fix"></div></div>
-					 </div>
+?>
+						</div>
+						</div>
+					</div>
+					
+					
+				
+					 
+					 
+					 
 					 
 					<div class="floatleft threeOne">
                     
