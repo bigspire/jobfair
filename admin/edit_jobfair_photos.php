@@ -18,18 +18,23 @@ include('classes/class.paging.php');
 // include menu count 
 include('menu_count.php');
 
-
-$getid = $_GET['id'];
+// image removal msg
+if($_GET['action'] == 'deleted'){
+	$success_msg = 'Jobfair photo removed successfully!';
+	$smarty->assign('success_msg',$success_msg);
+} 
+	
 $get_jobfair_id = $_GET['get_jobfair_id'];
-$smarty->assign('getid',$getid);
+$smarty->assign('get_jobfair_id',$get_jobfair_id);
 
 // validate url 
-if(($fun->isnumeric($getid)) || ($fun->is_empty($getid)) || ($getid == 0)){
+if(($fun->isnumeric($get_jobfair_id)) || ($fun->is_empty($get_jobfair_id)) || ($get_jobfair_id == 0)){
   header('Location:page_error.php');
 }
 // if id is not database then redirect to list page
-if($getid !=''){
-	$query = "CALL check_valid_jobfair_photos('".$getid."')";
+if($get_jobfair_id != ''){
+
+	$query = "CALL check_valid_jobfair_photos('".$get_jobfair_id."')";
 	try{
 		// calling mysql execute query function
 		if(!$result = $mysql->execute_query($query)){ 
@@ -51,7 +56,7 @@ if($getid !=''){
 
 // get database values
 if(empty($_POST)){
-	$query = "CALL get_jobfair_photos('$getid')";
+	$query = "CALL get_jobfair_photos('$get_jobfair_id')";
 	try{
 		// calling mysql exe_query function
 		if(!$result = $mysql->execute_query($query)){ 
@@ -72,45 +77,39 @@ if(empty($_POST)){
 		$mysql->next_query();
 	}catch(Exception $e){
 		echo 'Caught exception: ',  $e->getMessage(), "\n";
-	}
-	
-	$query = "CALL get_photos('$get_jobfair_id')";
-	try{
-		// calling mysql exe_query function
-		if(!$result = $mysql->execute_query($query)){ 
-			throw new Exception('Problem in executing get job fair photos');
-		}
-		$i = '0';
-		while($obj = $mysql->display_result($result))
-		{
- 			$data[] = $obj;
- 			$data[$i]['photo'] = $obj['photo'];
- 			$_SESSION['photo'] = $obj['photo'];
-			$smarty->assign('photo', $_SESSION['photo']);
-			$i++;
-		}  
-		
-		// free the memory
-		$mysql->clear_result($result);
-		// next query execution
-		$mysql->next_query();
-	}catch(Exception $e){
-		echo 'Caught exception: ',  $e->getMessage(), "\n";
-	}
+	}	
 }
-if(!empty($_POST)){
-	// Validating the required fields 
-	
-	// upload field validation
-	if(empty($_SESSION['photo'])){
-		$smarty->assign('photoErr', 'Please upload the photos');	
-		$test = 'error';		
+
+$query = "CALL get_photos('$get_jobfair_id')";
+try{
+	// calling mysql exe_query function
+	if(!$result = $mysql->execute_query($query)){ 
+		throw new Exception('Problem in executing get job fair photos');
 	}
+	$i = '0';
+	while($obj = $mysql->display_result($result))
+	{
+		$data[] = $obj;
+		$data[$i]['photo'] = $obj['photo'];
+		$_SESSION['photo'] = $obj['photo'];
+		$smarty->assign('photo', $_SESSION['photo']);
+		$i++;
+	}  
+		
+	// free the memory
+	$mysql->clear_result($result);
+	// next query execution
+	$mysql->next_query();
+}catch(Exception $e){
+	echo 'Caught exception: ',  $e->getMessage(), "\n";
+}	
 	
+if(!empty($_POST)){
+
 	// array for printing correct field name in error message
-	$fieldtype = array('1', '0', '1', '1');
+	$fieldtype = array('1','1');
 	$actualfield = array('job fair title','status');
-   $field = array('jobfair_id' => 'jobfair_idErr','status' => 'statusErr');
+    $field = array('jobfair_id' => 'jobfair_idErr','status' => 'statusErr');
 	$j = 0;
 	foreach ($field as $field => $er_var){ 
 		if($_POST[$field] == ''){
@@ -125,38 +124,15 @@ if(!empty($_POST)){
 		$j++;
 	}
 	
-	$req_size = 1048576;
-	// upload the file if attached
-	if(!empty($_FILES['photo']['name'])){
-		// upload directory
-		$uploaddir = 'uploads/photo/'; 
-		$attachmentsize = $_FILES['photo']['size'];
-		$attachmenttype = $_FILES['photo']['type'];		
-		// file extensions
-		$extensions = array('jpeg','jpg','png','gif','pdf','zip'); 
-		$attachment_ext = explode('/', $attachmenttype)	;
-		$attach_ext = end($attachment_ext); 
-		// checking the file extension is jpg,jpeg,pdf,zip or png
-		if($fun->extension_validation($attach_ext,$extensions) == true){		
-			$attachmentuploadErr = 'Attachment must be jpg, jpeg, png';
-			$test = 'error';
-		}
-		// checking the file size is less than 1 MB		
-		else if($fun->size_validation($attachmentsize,$req_size)){
-			$attachmentuploadErr = 'Attachment file size must be less than 1 MB';
-			$test = 'error';
-		}				
-	}	
-	$smarty->assign('attachmentuploadErr', $attachmentuploadErr);	
-	
 	// assigning the current date
 	$date = $fun->current_date();
 	
 	// assign admin user is as 1
 	$admin_users_id = 1;
 	if(empty($test)){
+		
 			// query to insert into database. 
-			$query = "CALL edit_jobfair_photos('".$getid."','".$mysql->real_escape_str($_POST['jobfair_id'])."', 
+			$query = "CALL edit_jobfair_photos('".$get_jobfair_id."','".$mysql->real_escape_str($_POST['jobfair_id'])."', 
 				'".$mysql->real_escape_str($_POST['status'])."','".$admin_users_id."', '".$date."')";
 			// Calling the function that makes the insert
 			try{
@@ -174,25 +150,6 @@ if(!empty($_POST)){
 				echo 'Caught exception: ',  $e->getMessage(), "\n";
 			}
 		
-			// update the attached file
-			if(!empty($_FILES['photo']['name'])){
-				$new_file = $getid.'_'.$_FILES['photo']['name'];
-				// $smarty->assign('new_file',$_SESSION['new_file']);
-				// upload the file
-				$path = $uploaddir.$new_file;
-				move_uploaded_file($_FILES['photo']['tmp_name'], $path);
-				// query to update the file
-				$query = "CALL update_jobfair_photo('".$getid."','".$new_file."')";
-				try{
-					if(!$result = $mysql->execute_query($query)){
-						throw new Exception('Problem in updating job fair photo file');
-					}
-					// call the next result
-					$mysql->next_query();
-				}catch(Exception $e){
-					echo 'Caught exception: ',  $e->getMessage(), "\n";
-				}
-			}
 			if(!empty($affected_rows)){
 				// redirecting to view page
 				header("Location: jobfair_photos.php?current_status=updated&status=".$_POST['status']."");		

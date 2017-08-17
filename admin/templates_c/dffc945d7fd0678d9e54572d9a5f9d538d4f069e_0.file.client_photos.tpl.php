@@ -1,17 +1,31 @@
 <?php
+<<<<<<< HEAD:admin/templates_c/dffc945d7fd0678d9e54572d9a5f9d538d4f069e_0.file.client_photos.tpl.php
 /* Smarty version 3.1.29, created on 2017-08-16 15:02:06
   from "F:\xampp\htdocs\jobfair_svn\jobfair\admin\templates\client_photos.tpl" */
+=======
+/* Smarty version 3.1.29, created on 2017-08-17 18:01:12
+  from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\client_photos.tpl" */
+>>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/5c0f2e5596f627011bbeef9f8e8170bcea772a78_0.file.client_photos.tpl.php
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
+<<<<<<< HEAD:admin/templates_c/dffc945d7fd0678d9e54572d9a5f9d538d4f069e_0.file.client_photos.tpl.php
   'unifunc' => 'content_5994111613ec43_90940891',
+=======
+  'unifunc' => 'content_59958c90b4e8b3_35787504',
+>>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/5c0f2e5596f627011bbeef9f8e8170bcea772a78_0.file.client_photos.tpl.php
   'file_dependency' => 
   array (
     'dffc945d7fd0678d9e54572d9a5f9d538d4f069e' => 
     array (
+<<<<<<< HEAD:admin/templates_c/dffc945d7fd0678d9e54572d9a5f9d538d4f069e_0.file.client_photos.tpl.php
       0 => 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\templates\\client_photos.tpl',
       1 => 1502873971,
+=======
+      0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\client_photos.tpl',
+      1 => 1502973068,
+>>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/5c0f2e5596f627011bbeef9f8e8170bcea772a78_0.file.client_photos.tpl.php
       2 => 'file',
     ),
   ),
@@ -22,8 +36,13 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
+<<<<<<< HEAD:admin/templates_c/dffc945d7fd0678d9e54572d9a5f9d538d4f069e_0.file.client_photos.tpl.php
 function content_5994111613ec43_90940891 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
+=======
+function content_59958c90b4e8b3_35787504 ($_smarty_tpl) {
+if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
+>>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/5c0f2e5596f627011bbeef9f8e8170bcea772a78_0.file.client_photos.tpl.php
 ?>
 	
    
@@ -61,7 +80,7 @@ if (!is_callable('smarty_function_html_options')) require_once 'F:\\xampp\\htdoc
                     <ul>
                         <li class="firstB"><a href="#">Dashboard</a> </li>
                         <li><a href="client_req.php">Client Req.</a></li>                                           
-                        <li>List Client Photos</li>
+                        <li>List Client Req. Photos</li>
                     </ul>
 							<div class="num"><a class="blueNum" href="add_client_photos.php" title="Add Client Photos">Add Client Photos</a></div>
                 </div>
@@ -73,7 +92,7 @@ if (!is_callable('smarty_function_html_options')) require_once 'F:\\xampp\\htdoc
 	<div class="widget">      
 	   	<div class="table">
 		
-            <div class="head"><h5 class="iFrames">List Client Photos</h5>
+            <div class="head"><h5 class="iFrames">List Client Req. Photos</h5>
 		
 		<a class="jsRedirect btn14 mr10 mt5" val="client_photos.php" style="float:right" title="" href="client_photos.php"> Reset</a>
 <a class="btn14 mr10 mt5" style="float:right" title="" href="javascript:submit_search(document.searchFrm, &#39;company&#39;);">
@@ -205,10 +224,9 @@ $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, "grade", 0);?>
 </td>
 				<td class="center"><?php echo $_smarty_tpl->tpl_vars['item']->value['modified_date'];?>
 </td>
- 				<td class="center"><img class="mr5 vmiddle" src="img/icons/dark/pencil.png"><a href="edit_client_photos.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-&get_client_id=<?php echo $_smarty_tpl->tpl_vars['item']->value['client_id'];?>
+ 				<td class="center"><img class="mr5 vmiddle" src="img/icons/dark/pencil.png"><a href="edit_client_photos.php?get_client_id=<?php echo $_smarty_tpl->tpl_vars['item']->value['client_id'];?>
 ">Edit</a> &nbsp; 
- 				 <img  class="mr5 vmiddle" alt=""  width="12" height="12"  src="img/icons/dark/trash.png"><a id="<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+ 				 <img  class="mr5 vmiddle" alt=""  width="12" height="12"  src="img/icons/dark/trash.png"><a id="<?php echo $_smarty_tpl->tpl_vars['item']->value['client_id'];?>
 "  value="#" class="bConfirm2" href="javascript:void(0)">Delete</a></td>
             </tr>
              <?php }?>

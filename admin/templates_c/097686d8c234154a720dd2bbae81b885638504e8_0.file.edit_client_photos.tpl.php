@@ -1,17 +1,31 @@
 <?php
+<<<<<<< HEAD:admin/templates_c/097686d8c234154a720dd2bbae81b885638504e8_0.file.edit_client_photos.tpl.php
 /* Smarty version 3.1.29, created on 2017-08-16 15:02:10
   from "F:\xampp\htdocs\jobfair_svn\jobfair\admin\templates\edit_client_photos.tpl" */
+=======
+/* Smarty version 3.1.29, created on 2017-08-17 17:52:27
+  from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\edit_client_photos.tpl" */
+>>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/aa19824856064e529ac2a29b2619ed59fac0879d_0.file.edit_client_photos.tpl.php
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
+<<<<<<< HEAD:admin/templates_c/097686d8c234154a720dd2bbae81b885638504e8_0.file.edit_client_photos.tpl.php
   'unifunc' => 'content_5994111a9c1bc5_84543225',
+=======
+  'unifunc' => 'content_59958a837183f1_16504040',
+>>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/aa19824856064e529ac2a29b2619ed59fac0879d_0.file.edit_client_photos.tpl.php
   'file_dependency' => 
   array (
     '097686d8c234154a720dd2bbae81b885638504e8' => 
     array (
+<<<<<<< HEAD:admin/templates_c/097686d8c234154a720dd2bbae81b885638504e8_0.file.edit_client_photos.tpl.php
       0 => 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\templates\\edit_client_photos.tpl',
       1 => 1502873971,
+=======
+      0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\edit_client_photos.tpl',
+      1 => 1502972534,
+>>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/aa19824856064e529ac2a29b2619ed59fac0879d_0.file.edit_client_photos.tpl.php
       2 => 'file',
     ),
   ),
@@ -22,8 +36,13 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
+<<<<<<< HEAD:admin/templates_c/097686d8c234154a720dd2bbae81b885638504e8_0.file.edit_client_photos.tpl.php
 function content_5994111a9c1bc5_84543225 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
+=======
+function content_59958a837183f1_16504040 ($_smarty_tpl) {
+if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
+>>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/aa19824856064e529ac2a29b2619ed59fac0879d_0.file.edit_client_photos.tpl.php
 ?>
 	
    
@@ -41,13 +60,17 @@ if (!is_callable('smarty_function_html_options')) require_once 'F:\\xampp\\htdoc
 <?php if ($_smarty_tpl->tpl_vars['EXIST_MSG']->value) {?>
    <div id="flashMessage" class="nNote nFailure hideit dismiss"><?php echo $_smarty_tpl->tpl_vars['EXIST_MSG']->value;?>
 </div>
+<?php }
+if ($_smarty_tpl->tpl_vars['success_msg']->value) {?>
+   <div id="flashMessage" class="nNote nFailure hideit dismiss"><?php echo $_smarty_tpl->tpl_vars['success_msg']->value;?>
+</div>
+   
 <?php }?>
 
     	<div class="title"><h5>Edit Client Req. Photos</h5></div>
    	 
         <!-- Form begins -->
-	<form action="edit_client_photos.php?id=<?php echo $_GET['id'];?>
-&get_client_id=<?php echo $_GET['get_client_id'];?>
+	<form action="edit_client_photos.php?get_client_id=<?php echo $_smarty_tpl->tpl_vars['get_client_id']->value;?>
 " method="post" name="company" id="formID" class="mainForm" enctype="multipart/form-data" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"></div> 
 		<fieldset>
 		<div class="breadCrumb module">
@@ -64,7 +87,7 @@ if (!is_callable('smarty_function_html_options')) require_once 'F:\\xampp\\htdoc
 </h5><div class="num"><span><span class="mandatory">*</span> fields are mandatory</span></div></div>
 					
                <div class="floatleft threeOne">
-                    <div class="rowElem noborder pb0"><label class="topLabel">Job Fair Title <span class="mandatory">*</span></label><div class="formBottom">
+                    <div class="rowElem noborder pb0"><label class="topLabel">Client Req. Title <span class="mandatory">*</span></label><div class="formBottom">
 							<select style="width:300px" name="client_id" tabindex="1">
 							<option value="">Choose any one</option>
 							<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['client']->value,'selected'=>$_smarty_tpl->tpl_vars['client_id']->value),$_smarty_tpl);?>
@@ -76,13 +99,9 @@ if (!is_callable('smarty_function_html_options')) require_once 'F:\\xampp\\htdoc
 					     </div>
                </div>					
 					
-					<div class="floatleft threeOne">
-                <div class="rowElem noborder pb0"><label class="topLabel">Client Req. Photos <span class="mandatory">*</span> </label><div class="formBottom">
-					 <input name="photo" value="<?php echo $_SESSION['photo'];?>
-" type="file" tabindex="3" class="validate[required]" id="logo">
-					  <br>
-						<span class="error-message">
-						
+					<div class="floatleft_view_odd">
+						<div class="">
+						<div class="formRight_view" style="width:100%">
 						<?php
 $_from = $_smarty_tpl->tpl_vars['data']->value;
 if (!is_array($_from) && !is_object($_from)) {
@@ -98,13 +117,19 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 $__foreach_item_0_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 ?>
 						<?php if ($_smarty_tpl->tpl_vars['item']->value['photo']) {?>
-						<br><img src="timthumb.php?src=uploads/req_photo/<?php echo $_smarty_tpl->tpl_vars['item']->value['photo'];?>
-&w=200&q=100">
+						<div align="center" style="border:2px dotted #e0e0e0; width:180px;float:left;padding:10px;margin:5px;">
+						<img src="timthumb.php?src=admin/uploads/req_photo/<?php echo $_smarty_tpl->tpl_vars['item']->value['photo'];?>
+&w=160&q=100">
 						
-						<?php } else {
-echo $_smarty_tpl->tpl_vars['photoErr']->value;?>
-
-						<?php }?> <?php
+						<br> <a id="<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+|<?php echo $_smarty_tpl->tpl_vars['item']->value['req_id'];?>
+" value="javascript:void(0)" class="bConfirmPhotos1" href="javascript:void(0)">Remove</a>
+						<input type="hidden" id="remove" value="remove_client_photos.php">
+						
+					
+						</div>
+						<?php }?>
+						<?php
 $_smarty_tpl->tpl_vars['item'] = $__foreach_item_0_saved_local_item;
 }
 if ($__foreach_item_0_saved_item) {
@@ -113,11 +138,10 @@ $_smarty_tpl->tpl_vars['item'] = $__foreach_item_0_saved_item;
 if ($__foreach_item_0_saved_key) {
 $_smarty_tpl->tpl_vars['key'] = $__foreach_item_0_saved_key;
 }
-echo $_smarty_tpl->tpl_vars['attachmentuploadErr']->value;?>
-
-						</span>
-					</div><div class="fix"></div></div>
-					 </div>
+?>
+						</div>
+						</div>
+					</div>
 					 
 					<div class="floatleft threeOne">
                     

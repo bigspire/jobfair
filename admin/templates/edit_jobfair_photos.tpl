@@ -13,10 +13,15 @@
    <div id="flashMessage" class="nNote nFailure hideit dismiss">{$EXIST_MSG}</div>
 {/if}
 
+{if $success_msg}
+   <div id="flashMessage" class="nNote nFailure hideit dismiss">{$success_msg}</div>
+   
+{/if}
+
     	<div class="title"><h5>Edit Job Fair Photos</h5></div>
    	 
         <!-- Form begins -->
-	<form action="edit_jobfair_photos.php?id={$smarty.get.id}&get_jobfair_id={$smarty.get.get_jobfair_id}" method="post" name="company" id="formID" class="mainForm" enctype="multipart/form-data" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"></div> 
+	<form action="edit_jobfair_photos.php?get_jobfair_id={$get_jobfair_id}" method="post" name="company" id="formID" class="mainForm" enctype="multipart/form-data" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"></div> 
 		<fieldset>
 		<div class="breadCrumb module">
                     <ul>
@@ -42,21 +47,36 @@
 					     </div>
                </div>					
 					
-					<div class="floatleft threeOne">
-                <div class="rowElem noborder pb0"><label class="topLabel">Job Fair Photos <span class="mandatory">*</span> </label><div class="formBottom">
-					 <input name="photo" value="{$smarty.session.photo}" type="file" tabindex="3" class="validate[required]" id="logo">
-					  <br>
-						<span class="error-message">
-						
+					
+					<div class="floatleft_view_odd">
+						<div class="">
+						<div class="formRight_view" style="width:100%">
 						{foreach from=$data item=item key=key}
 						{if $item.photo}
+<<<<<<< HEAD
 						<br><img src="timthumb.php?src=admin/uploads/photo/{$item.photo}&w=200&q=100">
+=======
+						<div align="center" style="border:2px dotted #e0e0e0; width:180px;float:left;padding:10px;margin:5px;">
+						<img src="timthumb.php?src=admin/uploads/photo/{$item.photo}&w=160&q=100">
+						<!-- br> <a href="{$url}remove_jobfair_photos.php?id={$item.id}" class="bConfirmPhotos">Remove</a -->
 						
-						{else}{$photoErr}
-						{/if} {/foreach}{$attachmentuploadErr}
-						</span>
-					</div><div class="fix"></div></div>
-					 </div>
+						<br> <a id="{$item.id}|{$item.jobfair_id}" value="javascript:void(0)" class="bConfirmPhotos" href="javascript:void(0)">Remove</a>
+						<input type="hidden" id="remove" value="remove_jobfair_photos.php">
+>>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c
+						
+					
+						</div>
+						{/if}
+						{/foreach}
+						</div>
+						</div>
+					</div>
+					
+					
+				
+					 
+					 
+					 
 					 
 					<div class="floatleft threeOne">
                     

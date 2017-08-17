@@ -12,7 +12,7 @@
    <div id="flashMessage" class="nNote nFailure hideit dismiss">{$EXIST_MSG}</div>
 {/if}
   
-  <div class="title"><h5>Add Client Photos</h5></div>
+  <div class="title"><h5>Add Client Req. Photos</h5></div>
    	
 	   <div class="fix"></div>
         <!-- Form begins -->
@@ -26,7 +26,7 @@
                     </ul>				
 	   </div>
 			<div class="widget first">
-                    <div class="head"><h5 class="iList">Add Client Photos	
+                    <div class="head"><h5 class="iList">Add Client Req. Photos	
 				
 
 </h5><div class="num"><span><span class="mandatory">*</span> fields are mandatory</span></div></div>
@@ -44,7 +44,7 @@
                </div>					
 					
 					<div class="floatleft threeOne">
-                <div class="rowElem noborder pb0"><label class="topLabel">Client Photos <span class="mandatory">*</span> </label><div class="formBottom">
+                <div class="rowElem noborder pb0"><label class="topLabel">Client Req. Photos <span class="mandatory">*</span> </label><div class="formBottom">
 					 <input name="req_photo" value="{$smarty.post.req_photo}" type="file" tabindex="3" class="validate[required]" id="logo">
 					  <br>
 						<span class="error-message">{$req_photoErr} {$attachmentuploadErr}</span>

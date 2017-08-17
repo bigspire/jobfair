@@ -25,22 +25,26 @@
 			<div class="widget first">
              <div class="head"><h5 class="iList">View Job Fair Photo Details</h5></div>
 					<div class="floatleft_view_odd">
-					 {foreach from=$data item=item key=key}
-					     <div class="rowElem_view"><label>Title</label><div class="formRight_view">{ucwords($item.title)}</div><div class="fix"></div></div>
-                    <div class="rowElem_view"><label>Status</label><div class="formRight_view">{ucwords($item.status)}</div><div class="fix"></div></div>
-					{/foreach}                    
+					 
+					     <div class="rowElem_view"><label>Title</label><div class="formRight_view">{ucwords($data.title)}</div><div class="fix"></div></div>
+                    <div class="rowElem_view"><label>Status</label><div class="formRight_view">{ucwords($status)}</div><div class="fix"></div></div>
+					                  
                     </div>
-					<div class="floatleft_view_even">
-						<div class="rowElem_view"><label>Job Fair Photos</label>
+					
+					
+					<div class="floatleft_view_odd">
+						<div class="">
+						<div class="formRight_view" style="width:100%">
 						{foreach from=$data1 item=item key=key}
 						{if $item.photo}
-						<div class="formRight_view">
-						<img src="timthumb.php?src=uploads/photo/{$item.photo}&h=100&q=100">
+						<div align="center" style="border:2px dotted #e0e0e0; width:180px;float:left;padding:10px;margin:5px;">
+						<img src="timthumb.php?src=admin/uploads/photo/{$item.photo}&w=160&q=100">
 						</div>
 						{/if}
 						{/foreach}
 						</div>
-						</div>	
+						</div>
+					</div>	
 					
 			</div>
 			

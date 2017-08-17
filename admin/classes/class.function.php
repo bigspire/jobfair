@@ -136,7 +136,7 @@ class fun{
 	public function change_status($status){
 		if($status == '1'){
 			$st = 'Active';
-		}else{	
+		}else if($status == '2'){	
 	 		$st = 'Inactive';
 		}
 		return $st;

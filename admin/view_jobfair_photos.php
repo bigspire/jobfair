@@ -20,7 +20,7 @@ include('menu_count.php');
 $id = $_GET['id'];
 $get_jobfair_id = $_GET['get_jobfair_id'];
 // select and execute query and fetch the result
-$query = "CALL view_jobfair_photos('".$id."')"; 
+$query = "CALL view_jobfair_photos('".$get_jobfair_id."')"; 
 try{
 	if(!$result = $mysql->execute_query($query)){
 		throw new Exception('Problem in executing view page');
@@ -28,15 +28,9 @@ try{
 	// check record exists
 	if($result->num_rows){
 		// calling mysql fetch_result function
-		$i = '0';
-		while($obj = $mysql->display_result($result)){  
-			$data[] = $obj;
-			$data[$i]['created_date'] = $fun->date_time_format($obj['created_date']);
-			$data[$i]['modified_date'] = $fun->date_time_format($obj['modified_date']);
-			$data[$i]['status'] = $fun->change_status($obj['status']);
-			// $data[$i]['photo'] = $fun->change_status($obj['photo']);
-			$i++;	
-		}
+		$obj = $mysql->display_result($result); 
+		$smarty->assign('status', $fun->change_status($obj['status'])); 	
+		$smarty->assign('data', $obj); 	
 	}else{
 		header('Location:page_error.php');
 	}
@@ -73,7 +67,6 @@ $c_c = $mysql->close_connection();
 
 // here assign smarty variables
 $smarty->assign('id' , $_GET['id']); 
-$smarty->assign('data', $data); 
 $smarty->assign('data1', $data1); 
 // assign page title
 $smarty->assign('page_title' , 'View Job Fair Photos'); 
