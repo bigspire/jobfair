@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-16 11:34:44
-  from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\edit_jobfair_photos.tpl" */
+/* Smarty version 3.1.29, created on 2017-08-16 15:02:10
+  from "F:\xampp\htdocs\jobfair_svn\jobfair\admin\templates\edit_client_photos.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5993e07c9876d4_62952971',
+  'unifunc' => 'content_5994111a9c1bc5_84543225',
   'file_dependency' => 
   array (
-    '53f40d9ee8cc5cc5628e392ecca583e493de72ce' => 
+    '097686d8c234154a720dd2bbae81b885638504e8' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\edit_jobfair_photos.tpl',
-      1 => 1502517722,
+      0 => 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\templates\\edit_client_photos.tpl',
+      1 => 1502873971,
       2 => 'file',
     ),
   ),
@@ -22,8 +22,8 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5993e07c9876d4_62952971 ($_smarty_tpl) {
-if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
+function content_5994111a9c1bc5_84543225 ($_smarty_tpl) {
+if (!is_callable('smarty_function_html_options')) require_once 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 	
    
@@ -43,41 +43,41 @@ if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdoc
 </div>
 <?php }?>
 
-    	<div class="title"><h5>Edit Job Fair Photos</h5></div>
+    	<div class="title"><h5>Edit Client Req. Photos</h5></div>
    	 
         <!-- Form begins -->
-	<form action="edit_jobfair_photos.php?id=<?php echo $_GET['id'];?>
-&get_jobfair_id=<?php echo $_GET['get_jobfair_id'];?>
+	<form action="edit_client_photos.php?id=<?php echo $_GET['id'];?>
+&get_client_id=<?php echo $_GET['get_client_id'];?>
 " method="post" name="company" id="formID" class="mainForm" enctype="multipart/form-data" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"></div> 
 		<fieldset>
 		<div class="breadCrumb module">
                     <ul>
                         <li class="firstB"><a href="">Dashboard</a> </li>
-                        <li><a href="jobfair_photos.php">Job Fair Photos</a></li>                                           
-                        <li>Edit Job Fair Photos</li>
+                        <li><a href="client_photos.php">Client Req. Photos</a></li>                                           
+                        <li>Edit Client Req. Photos</li>
                     </ul>					
 	    </div>
 			<div class="widget first">
-                    <div class="head"><h5 class="iList">Edit Job Fair Photos	
+                    <div class="head"><h5 class="iList">Edit Client Req. Photos	
 					
 
 </h5><div class="num"><span><span class="mandatory">*</span> fields are mandatory</span></div></div>
 					
                <div class="floatleft threeOne">
                     <div class="rowElem noborder pb0"><label class="topLabel">Job Fair Title <span class="mandatory">*</span></label><div class="formBottom">
-							<select style="width:300px" name="jobfair_id" tabindex="1">
+							<select style="width:300px" name="client_id" tabindex="1">
 							<option value="">Choose any one</option>
-							<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['jobfair']->value,'selected'=>$_smarty_tpl->tpl_vars['jobfair_id']->value),$_smarty_tpl);?>
+							<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['client']->value,'selected'=>$_smarty_tpl->tpl_vars['client_id']->value),$_smarty_tpl);?>
 					
 							</select> <br>
-							<span class="error-message"><?php echo $_smarty_tpl->tpl_vars['jobfair_idErr']->value;?>
+							<span class="error-message"><?php echo $_smarty_tpl->tpl_vars['client_idErr']->value;?>
 </span>
 					      </div><div class="fix"></div>
 					     </div>
                </div>					
 					
 					<div class="floatleft threeOne">
-                <div class="rowElem noborder pb0"><label class="topLabel">Job Fair Photos <span class="mandatory">*</span> </label><div class="formBottom">
+                <div class="rowElem noborder pb0"><label class="topLabel">Client Req. Photos <span class="mandatory">*</span> </label><div class="formBottom">
 					 <input name="photo" value="<?php echo $_SESSION['photo'];?>
 " type="file" tabindex="3" class="validate[required]" id="logo">
 					  <br>
@@ -98,7 +98,7 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 $__foreach_item_0_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 ?>
 						<?php if ($_smarty_tpl->tpl_vars['item']->value['photo']) {?>
-						<br><img src="timthumb.php?src=uploads/photo/<?php echo $_smarty_tpl->tpl_vars['item']->value['photo'];?>
+						<br><img src="timthumb.php?src=uploads/req_photo/<?php echo $_smarty_tpl->tpl_vars['item']->value['photo'];?>
 &w=200&q=100">
 						
 						<?php } else {
@@ -138,7 +138,7 @@ echo $_smarty_tpl->tpl_vars['attachmentuploadErr']->value;?>
 					<br><br><br><br><br><br>
 					
 					<div class="m10">
-				    <a href="jobfair_photos.php"><input type="button" class="jsRedirect greyishBtn submitForm" val="jobfair_photos.php" value="Cancel"></a>
+				    <a href="client_photos.php"><input type="button" class="jsRedirect greyishBtn submitForm" val="client_photos.php" value="Cancel"></a>
 						<input type="submit" class="greyishBtn submitForm" value="Submit">
                         <div class="fix"></div>
  				   </div>

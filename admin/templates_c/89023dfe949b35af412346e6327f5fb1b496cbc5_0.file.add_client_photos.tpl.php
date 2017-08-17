@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-15 01:33:18
-  from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\add_client_photos.tpl" */
+/* Smarty version 3.1.29, created on 2017-08-16 15:08:39
+  from "F:\xampp\htdocs\jobfair_svn\jobfair\admin\templates\add_client_photos.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_599202066c3e29_13634438',
+  'unifunc' => 'content_5994129fe73f31_69159098',
   'file_dependency' => 
   array (
-    'fade7abd1b13c37dac526020e3a3781fe4211e3d' => 
+    '89023dfe949b35af412346e6327f5fb1b496cbc5' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\add_client_photos.tpl',
-      1 => 1502740984,
+      0 => 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\templates\\add_client_photos.tpl',
+      1 => 1502873971,
       2 => 'file',
     ),
   ),
@@ -22,8 +22,8 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_599202066c3e29_13634438 ($_smarty_tpl) {
-if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
+function content_5994129fe73f31_69159098 ($_smarty_tpl) {
+if (!is_callable('smarty_function_html_options')) require_once 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 	
    

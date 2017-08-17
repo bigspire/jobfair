@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-13 17:28:42
+/* Smarty version 3.1.29, created on 2017-08-16 14:58:54
   from "F:\xampp\htdocs\jobfair_svn\jobfair\admin\templates\include\menu.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_59903ef24d8095_85918508',
+  'unifunc' => 'content_599410561c1691_62200434',
   'file_dependency' => 
   array (
     'd7f5758a1a2042a9131b328729ae3addb32816cb' => 
     array (
       0 => 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\templates\\include\\menu.tpl',
-      1 => 1485231482,
+      1 => 1502873971,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_59903ef24d8095_85918508 ($_smarty_tpl) {
+function content_599410561c1691_62200434 ($_smarty_tpl) {
 ?>
 
 
@@ -130,6 +130,7 @@ if ($_smarty_tpl->tpl_vars['obj']->value['contact_register']) {?>(<?php echo $_s
 						   	<?php if ($_smarty_tpl->tpl_vars['client_req']->value) {?>
 							<li><a style="width:90px;" class="sTesti" href="client_req.php">Client Req. </a><?php if ($_smarty_tpl->tpl_vars['client_req_count']->value) {?><span class="numberLeft"><?php echo $_smarty_tpl->tpl_vars['client_req_count']->value;
 }?></span></li>
+							<li><a style="width:90px;" class="sTesti" href="client_photos.php">Client Photos</a></li>
 							<?php }?>                  
                         </ul>
 					</li>

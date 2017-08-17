@@ -50,7 +50,7 @@
 						
 						{foreach from=$data item=item key=key}
 						{if $item.photo}
-						<br><img src="timthumb.php?src=uploads/photo/{$item.photo}&w=200&q=100">
+						<br><img src="timthumb.php?src=admin/uploads/photo/{$item.photo}&w=200&q=100">
 						
 						{else}{$photoErr}
 						{/if} {/foreach}{$attachmentuploadErr}
