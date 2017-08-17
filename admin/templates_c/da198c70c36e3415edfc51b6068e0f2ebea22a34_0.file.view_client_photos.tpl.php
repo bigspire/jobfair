@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-16 15:00:52
+/* Smarty version 3.1.29, created on 2017-08-17 16:23:56
   from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\view_client_photos.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_599410cc6ac0b8_41653354',
+  'unifunc' => 'content_599575c4b479a0_89005841',
   'file_dependency' => 
   array (
     'da198c70c36e3415edfc51b6068e0f2ebea22a34' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\view_client_photos.tpl',
-      1 => 1502875848,
+      1 => 1502967233,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_599410cc6ac0b8_41653354 ($_smarty_tpl) {
+function content_599575c4b479a0_89005841 ($_smarty_tpl) {
 ?>
 	
    
@@ -53,8 +53,25 @@ function content_599410cc6ac0b8_41653354 ($_smarty_tpl) {
 			<div class="widget first">
              <div class="head"><h5 class="iList">View Client Photo Details</h5></div>
 					<div class="floatleft_view_odd">
-					 <?php
-$_from = $_smarty_tpl->tpl_vars['data']->value;
+					 
+					     <div class="rowElem_view"><label>Client Req. Title</label>
+						 <div class="formRight_view"><?php echo $_smarty_tpl->tpl_vars['position']->value;?>
+ (<?php echo $_smarty_tpl->tpl_vars['company_name']->value;?>
+)</div>
+						 <div class="fix"></div></div>
+                    <div class="rowElem_view"><label>Status</label>
+					<div class="formRight_view"><?php echo ucwords($_smarty_tpl->tpl_vars['status']->value);?>
+</div><div class="fix"></div></div>
+					                  
+                    </div>
+					
+					
+						
+					<div class="floatleft_view_odd">
+						<div class="">
+						<div class="formRight_view" style="width:100%">
+						<?php
+$_from = $_smarty_tpl->tpl_vars['data1']->value;
 if (!is_array($_from) && !is_object($_from)) {
 settype($_from, 'array');
 }
@@ -67,15 +84,13 @@ foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_var
 $_smarty_tpl->tpl_vars['item']->_loop = true;
 $__foreach_item_0_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 ?>
-					     <div class="rowElem_view"><label>Client Req. Title</label>
-						 <div class="formRight_view"><?php echo $_smarty_tpl->tpl_vars['item']->value['position'];?>
- (<?php echo $_smarty_tpl->tpl_vars['item']->value['company_name'];?>
-)</div>
-						 <div class="fix"></div></div>
-                    <div class="rowElem_view"><label>Status</label>
-					<div class="formRight_view"><?php echo ucwords($_smarty_tpl->tpl_vars['item']->value['status']);?>
-</div><div class="fix"></div></div>
-					<?php
+						<?php if ($_smarty_tpl->tpl_vars['item']->value['photo']) {?>
+						<div align="center" style="border:2px dotted #e0e0e0; width:180px;float:left;padding:10px;margin:5px;">
+						<img src="timthumb.php?src=admin/uploads/req_photo/<?php echo $_smarty_tpl->tpl_vars['item']->value['photo'];?>
+&w=160&q=100">
+						</div>
+						<?php }?>
+						<?php
 $_smarty_tpl->tpl_vars['item'] = $__foreach_item_0_saved_local_item;
 }
 if ($__foreach_item_0_saved_item) {
@@ -84,42 +99,10 @@ $_smarty_tpl->tpl_vars['item'] = $__foreach_item_0_saved_item;
 if ($__foreach_item_0_saved_key) {
 $_smarty_tpl->tpl_vars['key'] = $__foreach_item_0_saved_key;
 }
-?>                    
-                    </div>
-					<div class="floatleft_view_even">
-						<div class="rowElem_view"><label>Client Photos</label>
-						<?php
-$_from = $_smarty_tpl->tpl_vars['data1']->value;
-if (!is_array($_from) && !is_object($_from)) {
-settype($_from, 'array');
-}
-$__foreach_item_1_saved_item = isset($_smarty_tpl->tpl_vars['item']) ? $_smarty_tpl->tpl_vars['item'] : false;
-$__foreach_item_1_saved_key = isset($_smarty_tpl->tpl_vars['key']) ? $_smarty_tpl->tpl_vars['key'] : false;
-$_smarty_tpl->tpl_vars['item'] = new Smarty_Variable();
-$_smarty_tpl->tpl_vars['key'] = new Smarty_Variable();
-$_smarty_tpl->tpl_vars['item']->_loop = false;
-foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['item']->value) {
-$_smarty_tpl->tpl_vars['item']->_loop = true;
-$__foreach_item_1_saved_local_item = $_smarty_tpl->tpl_vars['item'];
-?>
-						<?php if ($_smarty_tpl->tpl_vars['item']->value['photo']) {?>
-						<div class="formRight_view">
-						<img src="timthumb.php?src=uploads/req_photo/<?php echo $_smarty_tpl->tpl_vars['item']->value['photo'];?>
-&h=100&q=100">
-						</div>
-						<?php }?>
-						<?php
-$_smarty_tpl->tpl_vars['item'] = $__foreach_item_1_saved_local_item;
-}
-if ($__foreach_item_1_saved_item) {
-$_smarty_tpl->tpl_vars['item'] = $__foreach_item_1_saved_item;
-}
-if ($__foreach_item_1_saved_key) {
-$_smarty_tpl->tpl_vars['key'] = $__foreach_item_1_saved_key;
-}
 ?>
 						</div>
-						</div>	
+						</div>
+					</div>	
 					
 			</div>
 			

@@ -13,6 +13,11 @@
    <div id="flashMessage" class="nNote nFailure hideit dismiss">{$EXIST_MSG}</div>
 {/if}
 
+{if $success_msg}
+   <div id="flashMessage" class="nNote nFailure hideit dismiss">{$success_msg}</div>
+   
+{/if}
+
     	<div class="title"><h5>Edit Job Fair Photos</h5></div>
    	 
         <!-- Form begins -->

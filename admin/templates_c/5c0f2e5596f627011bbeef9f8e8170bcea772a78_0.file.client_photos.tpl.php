@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-15 02:05:34
+/* Smarty version 3.1.29, created on 2017-08-17 16:59:28
   from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\client_photos.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_59920996988401_00880054',
+  'unifunc' => 'content_59957e182f2729_62379958',
   'file_dependency' => 
   array (
     '5c0f2e5596f627011bbeef9f8e8170bcea772a78' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\client_photos.tpl',
-      1 => 1502742929,
+      1 => 1502969359,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_59920996988401_00880054 ($_smarty_tpl) {
+function content_59957e182f2729_62379958 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 	
@@ -205,10 +205,9 @@ $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, "grade", 0);?>
 </td>
 				<td class="center"><?php echo $_smarty_tpl->tpl_vars['item']->value['modified_date'];?>
 </td>
- 				<td class="center"><img class="mr5 vmiddle" src="img/icons/dark/pencil.png"><a href="edit_client_photos.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-&get_client_id=<?php echo $_smarty_tpl->tpl_vars['item']->value['client_id'];?>
+ 				<td class="center"><img class="mr5 vmiddle" src="img/icons/dark/pencil.png"><a href="edit_client_photos.php?get_client_id=<?php echo $_smarty_tpl->tpl_vars['item']->value['client_id'];?>
 ">Edit</a> &nbsp; 
- 				 <img  class="mr5 vmiddle" alt=""  width="12" height="12"  src="img/icons/dark/trash.png"><a id="<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+ 				 <img  class="mr5 vmiddle" alt=""  width="12" height="12"  src="img/icons/dark/trash.png"><a id="<?php echo $_smarty_tpl->tpl_vars['item']->value['client_id'];?>
 "  value="#" class="bConfirm2" href="javascript:void(0)">Delete</a></td>
             </tr>
              <?php }?>

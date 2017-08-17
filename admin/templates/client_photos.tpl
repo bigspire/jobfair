@@ -117,8 +117,8 @@
 			   </td>						
 				<td class="center">{$item.created_date}</td>
 				<td class="center">{$item.modified_date}</td>
- 				<td class="center"><img class="mr5 vmiddle" src="img/icons/dark/pencil.png"><a href="edit_client_photos.php?id={$item.id}&get_client_id={$item.client_id}">Edit</a> &nbsp; 
- 				 <img  class="mr5 vmiddle" alt=""  width="12" height="12"  src="img/icons/dark/trash.png"><a id="{$item.id}"  value="#" class="bConfirm2" href="javascript:void(0)">Delete</a></td>
+ 				<td class="center"><img class="mr5 vmiddle" src="img/icons/dark/pencil.png"><a href="edit_client_photos.php?get_client_id={$item.client_id}">Edit</a> &nbsp; 
+ 				 <img  class="mr5 vmiddle" alt=""  width="12" height="12"  src="img/icons/dark/trash.png"><a id="{$item.client_id}"  value="#" class="bConfirm2" href="javascript:void(0)">Delete</a></td>
             </tr>
              {/if}
 				{/foreach}

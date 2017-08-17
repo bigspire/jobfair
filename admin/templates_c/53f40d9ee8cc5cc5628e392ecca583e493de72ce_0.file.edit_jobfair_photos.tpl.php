@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-16 17:50:34
+/* Smarty version 3.1.29, created on 2017-08-17 17:44:29
   from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\edit_jobfair_photos.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5994389299df41_51084169',
+  'unifunc' => 'content_599588a526f717_06773369',
   'file_dependency' => 
   array (
     '53f40d9ee8cc5cc5628e392ecca583e493de72ce' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\edit_jobfair_photos.tpl',
-      1 => 1502886030,
+      1 => 1502972062,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5994389299df41_51084169 ($_smarty_tpl) {
+function content_599588a526f717_06773369 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 	
@@ -41,6 +41,12 @@ if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdoc
 <?php if ($_smarty_tpl->tpl_vars['EXIST_MSG']->value) {?>
    <div id="flashMessage" class="nNote nFailure hideit dismiss"><?php echo $_smarty_tpl->tpl_vars['EXIST_MSG']->value;?>
 </div>
+<?php }?>
+
+<?php if ($_smarty_tpl->tpl_vars['success_msg']->value) {?>
+   <div id="flashMessage" class="nNote nFailure hideit dismiss"><?php echo $_smarty_tpl->tpl_vars['success_msg']->value;?>
+</div>
+   
 <?php }?>
 
     	<div class="title"><h5>Edit Job Fair Photos</h5></div>

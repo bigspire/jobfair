@@ -18,6 +18,12 @@ include('classes/class.paging.php');
 // include menu count 
 include('menu_count.php');
 
+// image removal msg
+if($_GET['action'] == 'deleted'){
+	$success_msg = 'Jobfair photo removed successfully!';
+	$smarty->assign('success_msg',$success_msg);
+} 
+	
 $get_jobfair_id = $_GET['get_jobfair_id'];
 $smarty->assign('get_jobfair_id',$get_jobfair_id);
 
@@ -26,7 +32,7 @@ if(($fun->isnumeric($get_jobfair_id)) || ($fun->is_empty($get_jobfair_id)) || ($
   header('Location:page_error.php');
 }
 // if id is not database then redirect to list page
-if($get_jobfair_id !=''){
+if($get_jobfair_id != ''){
 
 	$query = "CALL check_valid_jobfair_photos('".$get_jobfair_id."')";
 	try{

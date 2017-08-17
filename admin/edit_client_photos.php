@@ -18,17 +18,23 @@ include('classes/class.paging.php');
 // include menu count 
 include('menu_count.php');
 
-$getid = $_GET['id'];
-$get_jobfair_id = $_GET['get_jobfair_id'];
-$smarty->assign('getid',$getid);
+// image removal msg
+if($_GET['action'] == 'deleted'){
+	$success_msg = 'Client Req. photo removed successfully!';
+	$smarty->assign('success_msg',$success_msg);
+} 
+
+$get_client_id = $_GET['get_client_id'];
+$smarty->assign('get_client_id',$get_client_id);
+
 
 // validate url 
-if(($fun->isnumeric($getid)) || ($fun->is_empty($getid)) || ($getid == 0)){
+if(($fun->isnumeric($get_client_id)) || ($fun->is_empty($get_client_id)) || ($get_client_id == 0)){
   header('Location:page_error.php');
 }
 // if id is not database then redirect to list page
-if($getid !=''){
-	$query = "CALL check_valid_client_req_photos('".$getid."')";
+if($get_client_id != ''){
+	$query = "CALL check_valid_client_req_photos('".$get_client_id."')";
 	try{
 		// calling mysql execute query function
 		if(!$result = $mysql->execute_query($query)){ 
@@ -50,15 +56,13 @@ if($getid !=''){
 
 // get database values
 if(empty($_POST)){
-	$query = "CALL get_client_req_photos('$getid')";
+	$query = "CALL get_client_req_photos('$get_client_id')";
 	try{
 		// calling mysql exe_query function
 		if(!$result = $mysql->execute_query($query)){ 
 			throw new Exception('Problem in executing get client req. photos');
 		}
 		$row = $mysql->display_result($result);
-		/*$_SESSION['photo'] = $row['photo'];
-		$smarty->assign('photo', $_SESSION['photo']);*/
 		$smarty->assign('rows',$row);
 		// assign the db values into session
 		foreach($row as $key => $record){
@@ -73,7 +77,7 @@ if(empty($_POST)){
 		echo 'Caught exception: ',  $e->getMessage(), "\n";
 	}
 	
-	$query = "CALL get_req_photos('$get_jobfair_id')";
+	$query = "CALL get_req_photos('$get_client_id')";
 	try{
 		// calling mysql exe_query function
 		if(!$result = $mysql->execute_query($query)){ 
@@ -98,16 +102,9 @@ if(empty($_POST)){
 	}
 }
 if(!empty($_POST)){
-	// Validating the required fields 
-	
-	// upload field validation
-	if(empty($_SESSION['photo'])){
-		$smarty->assign('photoErr', 'Please upload the photos');	
-		$test = 'error';		
-	}
 	
 	// array for printing correct field name in error message
-	$fieldtype = array('1', '0', '1', '1');
+	$fieldtype = array('1', '1');
 	$actualfield = array('Client Req. title','status');
    $field = array('client_id' => 'client_idErr','status' => 'statusErr');
 	$j = 0;
@@ -124,31 +121,6 @@ if(!empty($_POST)){
 		$j++;
 	}
 	
-	$req_size = 1048576;
-	// upload the file if attached
-	if(!empty($_FILES['req_photo']['name'])){
-		// upload directory
-		$uploaddir = 'uploads/req_photo/'; 
-		$attachmentsize = $_FILES['req_photo']['size'];
-		$attachmenttype = $_FILES['req_photo']['type'];		
-		// file extensions
-		$extensions = array('jpeg','jpg','png','gif','pdf','zip'); 
-		$attachment_ext = explode('/', $attachmenttype)	;
-		$attach_ext = end($attachment_ext); 
-		// checking the file extension is jpg,jpeg,pdf,zip or png
-		if($fun->extension_validation($attach_ext,$extensions) == true){		
-			$attachmentuploadErr = 'Attachment must be jpg, jpeg, png';
-			$test = 'error';
-		}
-		// checking the file size is less than 1 MB		
-		else if($fun->size_validation($attachmentsize,$req_size)){
-			$attachmentuploadErr = 'Attachment file size must be less than 1 MB';
-			$test = 'error';
-		}				
-	}	
-	$smarty->assign('attachmentuploadErr', $attachmentuploadErr);	
-	
-	
 	// assigning the current date
 	$date = $fun->current_date();
 	
@@ -156,7 +128,7 @@ if(!empty($_POST)){
 	$admin_users_id = 1;
 	if(empty($test)){
 			// query to insert into database. 
-			$query = "CALL edit_client_req_photos('".$getid."','".$mysql->real_escape_str($_POST['client_id'])."', 
+			$query = "CALL edit_client_req_photos('".$get_client_id."','".$mysql->real_escape_str($_POST['client_id'])."', 
 				'".$mysql->real_escape_str($_POST['status'])."','".$admin_users_id."', '".$date."')";
 			// Calling the function that makes the insert
 			try{
@@ -174,25 +146,6 @@ if(!empty($_POST)){
 				echo 'Caught exception: ',  $e->getMessage(), "\n";
 			}
 		
-			// update the attached file
-			if(!empty($_FILES['photo']['name'])){
-				$new_file = $getid.'_'.$_FILES['photo']['name'];
-				// $smarty->assign('new_file',$_SESSION['new_file']);
-				// upload the file
-				$path = $uploaddir.$new_file;
-				move_uploaded_file($_FILES['photo']['tmp_name'], $path);
-				// query to update the file
-				$query = "CALL update_client_req_photo('".$getid."','".$new_file."')";
-				try{
-					if(!$result = $mysql->execute_query($query)){
-						throw new Exception('Problem in updating client req. photo file');
-					}
-					// call the next result
-					$mysql->next_query();
-				}catch(Exception $e){
-					echo 'Caught exception: ',  $e->getMessage(), "\n";
-				}
-			}
 			if(!empty($affected_rows)){
 				// redirecting to view page
 				header("Location: client_photos.php?current_status=updated&status=".$_POST['status']."");		
