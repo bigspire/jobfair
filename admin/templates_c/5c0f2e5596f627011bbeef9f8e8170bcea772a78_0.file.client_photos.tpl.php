@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-17 16:59:28
+/* Smarty version 3.1.29, created on 2017-08-17 18:01:12
   from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\client_photos.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_59957e182f2729_62379958',
+  'unifunc' => 'content_59958c90b4e8b3_35787504',
   'file_dependency' => 
   array (
     '5c0f2e5596f627011bbeef9f8e8170bcea772a78' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\client_photos.tpl',
-      1 => 1502969359,
+      1 => 1502973068,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_59957e182f2729_62379958 ($_smarty_tpl) {
+function content_59958c90b4e8b3_35787504 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 	
@@ -61,7 +61,7 @@ if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdoc
                     <ul>
                         <li class="firstB"><a href="#">Dashboard</a> </li>
                         <li><a href="client_req.php">Client Req.</a></li>                                           
-                        <li>List Client Photos</li>
+                        <li>List Client Req. Photos</li>
                     </ul>
 							<div class="num"><a class="blueNum" href="add_client_photos.php" title="Add Client Photos">Add Client Photos</a></div>
                 </div>
@@ -73,7 +73,7 @@ if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdoc
 	<div class="widget">      
 	   	<div class="table">
 		
-            <div class="head"><h5 class="iFrames">List Client Photos</h5>
+            <div class="head"><h5 class="iFrames">List Client Req. Photos</h5>
 		
 		<a class="jsRedirect btn14 mr10 mt5" val="client_photos.php" style="float:right" title="" href="client_photos.php"> Reset</a>
 <a class="btn14 mr10 mt5" style="float:right" title="" href="javascript:submit_search(document.searchFrm, &#39;company&#39;);">

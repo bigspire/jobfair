@@ -9,7 +9,7 @@
 <!-- Content wrapper -->
 <div class="wrapper">
 <div id="container" class="content nNote">	
-    	<div class="title"><h5>View Client Photos</h5></div>
+    	<div class="title"><h5>View Client Req. Photos</h5></div>
         <!-- Form begins -->
 	<form action="client_photos.php" method="post" name="company" id="formID" class="mainForm" enctype="multipart/form-data" accept-charset="utf-8">
 	<div style="display:none;"><input type="hidden" name="_method" value="POST"></div> 
@@ -18,12 +18,12 @@
                <ul>
                    <li class="firstB"><a href="#">Dashboard</a> </li>                               
                    <li><a href="client_photos.php">Client Photos</a></li>
-                   <li>View Client Photos</li>
+                   <li>View Client Req. Photos</li>
 					</ul>	
 			</div>
 			
 			<div class="widget first">
-             <div class="head"><h5 class="iList">View Client Photo Details</h5></div>
+             <div class="head"><h5 class="iList">View Client Req. Photo Details</h5></div>
 					<div class="floatleft_view_odd">
 					 
 					     <div class="rowElem_view"><label>Client Req. Title</label>

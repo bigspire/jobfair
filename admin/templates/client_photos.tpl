@@ -30,9 +30,9 @@
                     <ul>
                         <li class="firstB"><a href="#">Dashboard</a> </li>
                         <li><a href="client_req.php">Client Req.</a></li>                                           
-                        <li>List Client Photos</li>
+                        <li>List Client Req. Photos</li>
                     </ul>
-							<div class="num"><a class="blueNum" href="add_client_photos.php" title="Add Client Photos">Add Client Photos</a></div>
+							<div class="num"><a class="blueNum" href="add_client_photos.php" title="Add Client Photos">Add Client Req. Photos</a></div>
                 </div>
 		
 	
@@ -42,7 +42,7 @@
 	<div class="widget">      
 	   	<div class="table">
 		
-            <div class="head"><h5 class="iFrames">List Client Photos</h5>
+            <div class="head"><h5 class="iFrames">List Client Req. Photos</h5>
 		
 		<a class="jsRedirect btn14 mr10 mt5" val="client_photos.php" style="float:right" title="" href="client_photos.php"> Reset</a>
 <a class="btn14 mr10 mt5" style="float:right" title="" href="javascript:submit_search(document.searchFrm, &#39;company&#39;);">
