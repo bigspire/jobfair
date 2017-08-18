@@ -844,15 +844,15 @@ class timthumb {
 		if($docRoot && $_SERVER['DOCUMENT_ROOT'] != '/'){ $docRoot = preg_replace('/\/$/', '', $docRoot); }
 		
 		$this->debug(3, "Doc root is: " . $docRoot);
-<<<<<<< HEAD
+
 
 		$this->docRoot = $docRoot.'/jobfair_svn/jobfair/';
 
 		$this->docRoot = $docRoot.'/2017/jobfair_jobfac/jobfair/';
 
-=======
+
 		$this->docRoot = $docRoot.'/jobfair_svn/jobfair/';
->>>>>>> badfcb0eb9ccf59546d9db069a1e4b3d70ed3a46
+
 
 	}
 	protected function getLocalImagePath($src){

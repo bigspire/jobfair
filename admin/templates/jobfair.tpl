@@ -123,7 +123,9 @@
 				 		 <td>{$item.jobfair_date}</td>
 						 <td>{ucwords($item.location)} </td>
 						 <td>{ucwords($item.partner)}</td>
-						 <td align="center">{$item.reg}</td>
+						 <td align="center">
+						 	<a href="jobfair.php?action=export&id={$item.id}" val="jobfair.php?action=export&id={$item.id}" class="btn btn-warning jsRedirect" >{$item.reg}</a>
+						</td>
 						 <td class="center">
 						 <img border="0" class="mr5 vmiddle tipS" original-title="{$item.status}" src="{$item.status_cls}">			
 						 </td>						

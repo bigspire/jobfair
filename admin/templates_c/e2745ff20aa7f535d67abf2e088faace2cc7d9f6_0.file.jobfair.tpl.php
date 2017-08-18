@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-18 11:18:46
+/* Smarty version 3.1.29, created on 2017-08-18 17:56:34
   from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\jobfair.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_59967fbea93c63_25530591',
+  'unifunc' => 'content_5996dcfaca7c64_55963442',
   'file_dependency' => 
   array (
     'e2745ff20aa7f535d67abf2e088faace2cc7d9f6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\jobfair.tpl',
-      1 => 1502517722,
+      1 => 1503059179,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_59967fbea93c63_25530591 ($_smarty_tpl) {
+function content_5996dcfaca7c64_55963442 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 	
@@ -229,8 +229,12 @@ $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, "grade", 0);?>
  </td>
 						 <td><?php echo ucwords($_smarty_tpl->tpl_vars['item']->value['partner']);?>
 </td>
-						 <td align="center"><?php echo $_smarty_tpl->tpl_vars['item']->value['reg'];?>
-</td>
+						 <td align="center">
+						 	<a href="jobfair.php?action=export&id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" val="jobfair.php?action=export&id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" class="btn btn-warning jsRedirect" ><?php echo $_smarty_tpl->tpl_vars['item']->value['reg'];?>
+</a>
+						</td>
 						 <td class="center">
 						 <img border="0" class="mr5 vmiddle tipS" original-title="<?php echo $_smarty_tpl->tpl_vars['item']->value['status'];?>
 " src="<?php echo $_smarty_tpl->tpl_vars['item']->value['status_cls'];?>
