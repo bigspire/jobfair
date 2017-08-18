@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-16 15:08:39
+/* Smarty version 3.1.29, created on 2017-08-17 18:21:21
   from "F:\xampp\htdocs\jobfair_svn\jobfair\admin\templates\add_client_photos.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5994129fe73f31_69159098',
+  'unifunc' => 'content_59959149d06c79_76747154',
   'file_dependency' => 
   array (
     '89023dfe949b35af412346e6327f5fb1b496cbc5' => 
     array (
       0 => 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\templates\\add_client_photos.tpl',
-      1 => 1502873971,
+      1 => 1502973476,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5994129fe73f31_69159098 ($_smarty_tpl) {
+function content_59959149d06c79_76747154 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 	
@@ -42,7 +42,7 @@ if (!is_callable('smarty_function_html_options')) require_once 'F:\\xampp\\htdoc
 </div>
 <?php }?>
   
-  <div class="title"><h5>Add Client Photos</h5></div>
+  <div class="title"><h5>Add Client Req. Photos</h5></div>
    	
 	   <div class="fix"></div>
         <!-- Form begins -->
@@ -56,7 +56,7 @@ if (!is_callable('smarty_function_html_options')) require_once 'F:\\xampp\\htdoc
                     </ul>				
 	   </div>
 			<div class="widget first">
-                    <div class="head"><h5 class="iList">Add Client Photos	
+                    <div class="head"><h5 class="iList">Add Client Req. Photos	
 				
 
 </h5><div class="num"><span><span class="mandatory">*</span> fields are mandatory</span></div></div>
@@ -76,7 +76,7 @@ if (!is_callable('smarty_function_html_options')) require_once 'F:\\xampp\\htdoc
                </div>					
 					
 					<div class="floatleft threeOne">
-                <div class="rowElem noborder pb0"><label class="topLabel">Client Photos <span class="mandatory">*</span> </label><div class="formBottom">
+                <div class="rowElem noborder pb0"><label class="topLabel">Client Req. Photos <span class="mandatory">*</span> </label><div class="formBottom">
 					 <input name="req_photo" value="<?php echo $_POST['req_photo'];?>
 " type="file" tabindex="3" class="validate[required]" id="logo">
 					  <br>

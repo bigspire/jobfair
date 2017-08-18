@@ -53,14 +53,21 @@
 						<div class="formRight_view" style="width:100%">
 						{foreach from=$data item=item key=key}
 						{if $item.photo}
+<<<<<<< HEAD
 
 
 						<div align="center" style="border:2px dotted #e0e0e0; width:180px;float:left;padding:10px;margin:5px;">
+=======
+						<div align="center" style="display:block;border:2px dotted #e0e0e0; width:180px;float:left;padding:10px;margin:5px;">
+>>>>>>> badfcb0eb9ccf59546d9db069a1e4b3d70ed3a46
 						<img src="timthumb.php?src=admin/uploads/photo/{$item.photo}&w=160&q=100">
 						
 						<br> <a id="{$item.id}|{$item.jobfair_id}" value="javascript:void(0)" class="bConfirmPhotos" href="javascript:void(0)">Remove</a>
 						<input type="hidden" id="remove" value="remove_jobfair_photos.php">
+<<<<<<< HEAD
 
+=======
+>>>>>>> badfcb0eb9ccf59546d9db069a1e4b3d70ed3a46
 						
 					
 						</div>

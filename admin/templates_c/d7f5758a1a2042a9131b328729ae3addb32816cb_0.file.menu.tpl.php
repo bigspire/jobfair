@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-16 14:58:54
+/* Smarty version 3.1.29, created on 2017-08-17 18:17:47
   from "F:\xampp\htdocs\jobfair_svn\jobfair\admin\templates\include\menu.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_599410561c1691_62200434',
+  'unifunc' => 'content_599590731a9060_89958061',
   'file_dependency' => 
   array (
     'd7f5758a1a2042a9131b328729ae3addb32816cb' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_599410561c1691_62200434 ($_smarty_tpl) {
+function content_599590731a9060_89958061 ($_smarty_tpl) {
 ?>
 
 

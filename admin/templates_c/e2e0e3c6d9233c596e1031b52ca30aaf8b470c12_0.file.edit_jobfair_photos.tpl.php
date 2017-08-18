@@ -1,31 +1,17 @@
 <?php
-<<<<<<< HEAD:admin/templates_c/e2e0e3c6d9233c596e1031b52ca30aaf8b470c12_0.file.edit_jobfair_photos.tpl.php
-/* Smarty version 3.1.29, created on 2017-08-16 15:18:04
+/* Smarty version 3.1.29, created on 2017-08-17 18:20:28
   from "F:\xampp\htdocs\jobfair_svn\jobfair\admin\templates\edit_jobfair_photos.tpl" */
-=======
-/* Smarty version 3.1.29, created on 2017-08-17 17:44:29
-  from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\edit_jobfair_photos.tpl" */
->>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/53f40d9ee8cc5cc5628e392ecca583e493de72ce_0.file.edit_jobfair_photos.tpl.php
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-<<<<<<< HEAD:admin/templates_c/e2e0e3c6d9233c596e1031b52ca30aaf8b470c12_0.file.edit_jobfair_photos.tpl.php
-  'unifunc' => 'content_599414d46756d7_75889060',
-=======
-  'unifunc' => 'content_599588a526f717_06773369',
->>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/53f40d9ee8cc5cc5628e392ecca583e493de72ce_0.file.edit_jobfair_photos.tpl.php
+  'unifunc' => 'content_5995911422c407_97734724',
   'file_dependency' => 
   array (
     'e2e0e3c6d9233c596e1031b52ca30aaf8b470c12' => 
     array (
-<<<<<<< HEAD:admin/templates_c/e2e0e3c6d9233c596e1031b52ca30aaf8b470c12_0.file.edit_jobfair_photos.tpl.php
       0 => 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\templates\\edit_jobfair_photos.tpl',
-      1 => 1502876857,
-=======
-      0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\edit_jobfair_photos.tpl',
-      1 => 1502972062,
->>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/53f40d9ee8cc5cc5628e392ecca583e493de72ce_0.file.edit_jobfair_photos.tpl.php
+      1 => 1502974225,
       2 => 'file',
     ),
   ),
@@ -36,13 +22,8 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-<<<<<<< HEAD:admin/templates_c/e2e0e3c6d9233c596e1031b52ca30aaf8b470c12_0.file.edit_jobfair_photos.tpl.php
-function content_599414d46756d7_75889060 ($_smarty_tpl) {
+function content_5995911422c407_97734724 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
-=======
-function content_599588a526f717_06773369 ($_smarty_tpl) {
-if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
->>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/53f40d9ee8cc5cc5628e392ecca583e493de72ce_0.file.edit_jobfair_photos.tpl.php
 ?>
 	
    
@@ -119,17 +100,12 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 $__foreach_item_0_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 ?>
 						<?php if ($_smarty_tpl->tpl_vars['item']->value['photo']) {?>
-<<<<<<< HEAD:admin/templates_c/e2e0e3c6d9233c596e1031b52ca30aaf8b470c12_0.file.edit_jobfair_photos.tpl.php
-						<br><img src="timthumb.php?src=admin/uploads/photo/<?php echo $_smarty_tpl->tpl_vars['item']->value['photo'];?>
-&w=200&q=100">
-=======
-						<div align="center" style="border:2px dotted #e0e0e0; width:180px;float:left;padding:10px;margin:5px;">
+						<div align="center" style="display:block;border:2px dotted #e0e0e0; width:180px;float:left;padding:10px;margin:5px;">
 						<img src="timthumb.php?src=admin/uploads/photo/<?php echo $_smarty_tpl->tpl_vars['item']->value['photo'];?>
 &w=160&q=100">
 						<!-- br> <a href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
 remove_jobfair_photos.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " class="bConfirmPhotos">Remove</a -->
->>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/53f40d9ee8cc5cc5628e392ecca583e493de72ce_0.file.edit_jobfair_photos.tpl.php
 						
 						<br> <a id="<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 |<?php echo $_smarty_tpl->tpl_vars['item']->value['jobfair_id'];?>
