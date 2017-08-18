@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2017-08-18 17:27:41
-         compiled from jobfair_popup.tpl */ ?>
+<?php /* Smarty version 2.6.26, created on 2017-08-18 19:06:30
+         compiled from req_popup.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'ucwords', 'jobfair_popup.tpl', 35, false),array('modifier', 'nl2br', 'jobfair_popup.tpl', 104, false),array('modifier', 'date_format', 'jobfair_popup.tpl', 108, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'ucwords', 'req_popup.tpl', 35, false),array('modifier', 'nl2br', 'req_popup.tpl', 91, false),array('modifier', 'date_format', 'req_popup.tpl', 98, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,10 +33,10 @@ css/jquery.bxslider.css" rel="stylesheet">
 <?php $_from = $this->_tpl_vars['fair_data']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['item']):
 ?>
-  <?php if ($this->_tpl_vars['item']['title']): ?>
+  <?php if ($this->_tpl_vars['item']['company_name']): ?>
 <span class="bx-pager-item" style="margin:10px;font-size:17px;">
 <a href="" data-slide-index="<?php echo $this->_tpl_vars['key']; ?>
-" class="bx-pager-link"><?php echo ((is_array($_tmp=$this->_tpl_vars['item']['title'])) ? $this->_run_mod_handler('ucwords', true, $_tmp) : ucwords($_tmp)); ?>
+" class="bx-pager-link"><?php echo ((is_array($_tmp=$this->_tpl_vars['item']['company_name'])) ? $this->_run_mod_handler('ucwords', true, $_tmp) : ucwords($_tmp)); ?>
 </a>
 </span>
 <?php endif; ?>
@@ -48,32 +48,19 @@ css/jquery.bxslider.css" rel="stylesheet">
   <?php $_from = $this->_tpl_vars['fair_data']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['item']):
 ?>
-  <?php if ($this->_tpl_vars['item']['title']): ?>
+  <?php if ($this->_tpl_vars['item']['company_name']): ?>
 	<div class="slide container">
       <!-- Example row of columns -->	 
 	 <div class="row">
 	   <!-- Partner logo -->
-	   <?php if ($this->_tpl_vars['item']['partner_logo']): ?>
-        <div class="col-sm-11" style="text-align:center">		
-		<div class="col-sm-4 compLogo" style="margin-left:70px;">
-		<img src="<?php echo $this->_tpl_vars['url']; ?>
-/images/popup/jobsfactory_logo.png">
-        </div>
-		<div class="col-sm-1 amper">&</div>
-		<div class="col-sm-4 colLogo">
-		<!-- height should be 40px -->
-		<img src="<?php echo $this->_tpl_vars['url']; ?>
-admin/timthumb.php?src=uploads/<?php echo $this->_tpl_vars['item']['partner_logo']; ?>
-&h=70&q=100">
-		</div>        
-        </div>
-        <?php else: ?>
+	   <?php if ($this->_tpl_vars['item']['client_logo']): ?>   
 		
 		<!-- No partner logo -->
 		<div class="col-sm-11" style="text-align:center">		
 		<div class="compLogo">
 		<img src="<?php echo $this->_tpl_vars['url']; ?>
-/images/popup/jobsfactory_logo.png">
+admin/timthumb.php?src=uploads/req_logo/<?php echo $this->_tpl_vars['item']['client_logo']; ?>
+&h=70&q=100">
         </div>		        
         </div>
         <?php endif; ?>
@@ -83,7 +70,8 @@ admin/timthumb.php?src=uploads/<?php echo $this->_tpl_vars['item']['partner_logo
 	  
 	  <div class="row" style="text-align:center;">
 	  <div class="col-sm-11">
-	  <h2><span class="jobfair_title" style="clear:both;width:"><?php echo $this->_tpl_vars['item']['title']; ?>
+	  <h2><span class="jobfair_title" style="clear:both;width:"><?php echo $this->_tpl_vars['item']['position']; ?>
+, <?php echo $this->_tpl_vars['item']['work_loc']; ?>
 </span></h2>
           <p class="fair_desc"><?php echo $this->_tpl_vars['item']['description']; ?>
  </p>
@@ -111,9 +99,7 @@ registration/" onsubmit="return validate_form()" method="post" class="theForm fo
 " id="inputPassword" class="mobile form-control" placeholder="Mobile No.">    		
        <input type="submit" class="btn btn-warning regBtn"   id="close_modal" value="Submit">
       </form>
-        <h2>Eligibility</h2>
-	<p>Any degree, 10th, 12th, Diploma, ITI
-  </p>
+       
          <!-- <p><a class="btn btn-warning regBtn" href="#" role="button">Submit &raquo;</a>
 		 </p>-->
         </div>
@@ -121,47 +107,63 @@ registration/" onsubmit="return validate_form()" method="post" class="theForm fo
           <h2>Venue</h2>
           <p><?php echo ((is_array($_tmp=$this->_tpl_vars['item']['venue'])) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
  <br>
-		  Contact No. - 9600776677<br>
+		  
+		  Contact Email: <?php echo $this->_tpl_vars['item']['email_address']; ?>
+
+
+		  Contact No: <?php echo $this->_tpl_vars['item']['contact_no']; ?>
+<br>
 		  </p>
 		  <h2>Date</h2>
-          <p><?php echo ((is_array($_tmp=$this->_tpl_vars['item']['jobfair_date'])) ? $this->_run_mod_handler('date_format', true, $_tmp) : smarty_modifier_date_format($_tmp)); ?>
+          <p><?php echo ((is_array($_tmp=$this->_tpl_vars['item']['drive_date'])) ? $this->_run_mod_handler('date_format', true, $_tmp) : smarty_modifier_date_format($_tmp)); ?>
 <br>
 		  Timing: 09:00 AM Onwards </p>
-		
+		 
+		 <h2>Job Description</h2>
+		<p>
+		  No. of Openings: <?php echo $this->_tpl_vars['item']['no_vacancy']; ?>
+</p>
+		  <p>
+		  Qualifiation: <?php echo $this->_tpl_vars['item']['qualification']; ?>
+</p>
+		   <p>
+		  Salary: <?php echo $this->_tpl_vars['item']['salary']; ?>
+</p>
+		 
           <!--p  style="margin-top:20px;"><a class="btn btn-info" href="#" role="button">Show Direction &raquo;</a></p-->
        </div>
 	   
 	   <div class="col-sm-4">
 	   
-	   <?php if ($this->_tpl_vars['data'] != ''): ?>
-          <?php if ($this->_tpl_vars['recent'] == 1): ?>
-		  <h2><span class="">Participating Companies..</span></h2>
-          <?php elseif ($this->_tpl_vars['recent'] == 2): ?>
-          <h2><span class="">Last Jobfair Companies..</span></h2>
-		  <?php endif; ?>
-          <p><?php $_smarty_tpl_vars = $this->_tpl_vars;
-$this->_smarty_include(array('smarty_include_tpl_file' => '../include/popup_company.tpl', 'smarty_include_vars' => array()));
-$this->_tpl_vars = $_smarty_tpl_vars;
-unset($_smarty_tpl_vars);
- ?></p>
-		 <?php endif; ?>
+	   <?php if ($this->_tpl_vars['item']['position'] != ''): ?>
 		
 		<div>
+				  <h2><span class="">Drive Gallery</span></h2>
+
 		 <p><?php $_smarty_tpl_vars = $this->_tpl_vars;
-$this->_smarty_include(array('smarty_include_tpl_file' => '../include/popup_gallery.tpl', 'smarty_include_vars' => array()));
+$this->_smarty_include(array('smarty_include_tpl_file' => '../include/popup_drives.tpl', 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?></p>
 		</div>
-		
+		 <?php endif; ?>
+		 
+		 
           <!--p style="margin-top:25px;"><a class="btn btn-primary" href="#" role="button">View All &raquo;</a></p-->
        </div>
 	   
 
       </div>
-	  
+	
+	<div class="row">  
+	   <h2>About <?php echo $this->_tpl_vars['item']['company_name']; ?>
+</h2>
+		<p><?php echo $this->_tpl_vars['item']['company_name']; ?>
+</p>
+    </div>
 	 
-<!--div class="row">
+	 
+	<!--div class="row">
         <div class="col-sm-12">
           <!--h2><span class="">Note *</span></h2-->
 		  <!--h2>Eligibility</h2>
@@ -171,13 +173,14 @@ unset($_smarty_tpl_vars);
 </p-->
 		 <!--p><a class="btn  btn-warning" href="#" role="button">View more details &raquo;</a></p>
 		  </ul>
-		  </div>
+	  </div>
 		 
       </div-->
 	<input type="hidden" value="<?php echo $this->_tpl_vars['item']['id']; ?>
 " id="jobfair_<?php echo $this->_tpl_vars['key']; ?>
 ">
 	</div>
+	
 	<?php endif; ?>
 	<?php endforeach; endif; unset($_from); ?>
 	
@@ -201,7 +204,7 @@ js/jquery.bxslider.min.js"></script>
 
 	
 <?php if ($this->_tpl_vars['key'] > '1'): ?>
-<?php echo '	
+<?php echo '
 <script type="text/javascript">
 $(document).ready(function(){
 		  $(\'.slider1\').bxSlider({
@@ -311,17 +314,7 @@ $(document).ready(function(){
 		
 
 $(document).ready(function(){		
-		 $(\'.slider2\').bxSlider({
-			slideWidth: 100,
-			minSlides: 3,
-			maxSlides: 3,
-			slideMargin: 10,
-			auto:true,
-			controls:false,
-			autoHover:true,
-			speed:500,
-			pager:false
-		  });
+		
 		  
 		  $(\'.slider3\').bxSlider({
 			slideWidth: 250,

@@ -26,6 +26,19 @@
     <![endif]-->
   </head>
   <body>
+  
+  <div align="center" style="margin-top:10px;">
+<div id="bx-pager2" class="bx-pager2">
+{foreach from=$fair_data item=item key=key}
+  {if $item.title}
+<span class="bx-pager-item" style="margin:10px;font-size:17px;">
+<a href="" data-slide-index="{$key}" class="bx-pager-link">{$item.title|ucwords}</a>
+</span>
+{/if}
+{/foreach}
+</div>
+</div>
+
   <div class="slider1"> 
   {foreach from=$fair_data item=item key=key}
   {if $item.title}
@@ -161,6 +174,7 @@ $(document).ready(function(){
 			autoHover:true,
 			controls:false,
 			pager:true,
+			pagerCustom: '#bx-pager2',
 			// adaptiveHeight: true,
 			onSlideNext: function(){
 			// do mind-blowing JS stuff here
@@ -294,4 +308,8 @@ p{margin:0 0 5px}
 {/literal}
 
 </body>
+
+
+
+
 </html>
