@@ -1,31 +1,17 @@
 <?php
-<<<<<<< HEAD:admin/templates_c/097686d8c234154a720dd2bbae81b885638504e8_0.file.edit_client_photos.tpl.php
-/* Smarty version 3.1.29, created on 2017-08-16 15:02:10
+/* Smarty version 3.1.29, created on 2017-08-17 18:21:57
   from "F:\xampp\htdocs\jobfair_svn\jobfair\admin\templates\edit_client_photos.tpl" */
-=======
-/* Smarty version 3.1.29, created on 2017-08-17 17:52:27
-  from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\edit_client_photos.tpl" */
->>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/aa19824856064e529ac2a29b2619ed59fac0879d_0.file.edit_client_photos.tpl.php
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-<<<<<<< HEAD:admin/templates_c/097686d8c234154a720dd2bbae81b885638504e8_0.file.edit_client_photos.tpl.php
-  'unifunc' => 'content_5994111a9c1bc5_84543225',
-=======
-  'unifunc' => 'content_59958a837183f1_16504040',
->>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/aa19824856064e529ac2a29b2619ed59fac0879d_0.file.edit_client_photos.tpl.php
+  'unifunc' => 'content_5995916daa7c76_28575460',
   'file_dependency' => 
   array (
     '097686d8c234154a720dd2bbae81b885638504e8' => 
     array (
-<<<<<<< HEAD:admin/templates_c/097686d8c234154a720dd2bbae81b885638504e8_0.file.edit_client_photos.tpl.php
       0 => 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\templates\\edit_client_photos.tpl',
-      1 => 1502873971,
-=======
-      0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\edit_client_photos.tpl',
-      1 => 1502972534,
->>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/aa19824856064e529ac2a29b2619ed59fac0879d_0.file.edit_client_photos.tpl.php
+      1 => 1502973476,
       2 => 'file',
     ),
   ),
@@ -36,13 +22,8 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-<<<<<<< HEAD:admin/templates_c/097686d8c234154a720dd2bbae81b885638504e8_0.file.edit_client_photos.tpl.php
-function content_5994111a9c1bc5_84543225 ($_smarty_tpl) {
+function content_5995916daa7c76_28575460 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
-=======
-function content_59958a837183f1_16504040 ($_smarty_tpl) {
-if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
->>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c:admin/templates_c/aa19824856064e529ac2a29b2619ed59fac0879d_0.file.edit_client_photos.tpl.php
 ?>
 	
    
