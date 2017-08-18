@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-18 11:39:03
-  from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\view_client_photos.tpl" */
+/* Smarty version 3.1.29, created on 2017-08-18 13:07:03
+  from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\view_jobfair_photos.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5996847f576da3_94204802',
+  'unifunc' => 'content_5996991f051f69_62901260',
   'file_dependency' => 
   array (
-    'da198c70c36e3415edfc51b6068e0f2ebea22a34' => 
+    '3e5efc2e440e143ac7d02add6a95710e4e76ef17' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\view_client_photos.tpl',
-      1 => 1502973200,
+      0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\view_jobfair_photos.tpl',
+      1 => 1502888729,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5996847f576da3_94204802 ($_smarty_tpl) {
+function content_5996991f051f69_62901260 ($_smarty_tpl) {
 ?>
 	
    
@@ -37,36 +37,31 @@ function content_5996847f576da3_94204802 ($_smarty_tpl) {
 <!-- Content wrapper -->
 <div class="wrapper">
 <div id="container" class="content nNote">	
-    	<div class="title"><h5>View Client Req. Photos</h5></div>
+    	<div class="title"><h5>View Job Fair Photos</h5></div>
         <!-- Form begins -->
-	<form action="client_photos.php" method="post" name="company" id="formID" class="mainForm" enctype="multipart/form-data" accept-charset="utf-8">
+	<form action="jobfair_photos.php" method="post" name="company" id="formID" class="mainForm" enctype="multipart/form-data" accept-charset="utf-8">
 	<div style="display:none;"><input type="hidden" name="_method" value="POST"></div> 
 	 <fieldset>
 			<div class="breadCrumb module">
                <ul>
                    <li class="firstB"><a href="#">Dashboard</a> </li>                               
-                   <li><a href="client_photos.php">Client Photos</a></li>
-                   <li>View Client Req. Photos</li>
+                   <li><a href="jobfair_photos.php">Job Fair Photos</a></li>
+                   <li>View Job Fair Photos</li>
 					</ul>	
 			</div>
 			
 			<div class="widget first">
-             <div class="head"><h5 class="iList">View Client Req. Photo Details</h5></div>
+             <div class="head"><h5 class="iList">View Job Fair Photo Details</h5></div>
 					<div class="floatleft_view_odd">
 					 
-					     <div class="rowElem_view"><label>Client Req. Title</label>
-						 <div class="formRight_view"><?php echo $_smarty_tpl->tpl_vars['position']->value;?>
- (<?php echo $_smarty_tpl->tpl_vars['company_name']->value;?>
-)</div>
-						 <div class="fix"></div></div>
-                    <div class="rowElem_view"><label>Status</label>
-					<div class="formRight_view"><?php echo ucwords($_smarty_tpl->tpl_vars['status']->value);?>
+					     <div class="rowElem_view"><label>Title</label><div class="formRight_view"><?php echo ucwords($_smarty_tpl->tpl_vars['data']->value['title']);?>
+</div><div class="fix"></div></div>
+                    <div class="rowElem_view"><label>Status</label><div class="formRight_view"><?php echo ucwords($_smarty_tpl->tpl_vars['status']->value);?>
 </div><div class="fix"></div></div>
 					                  
                     </div>
 					
 					
-						
 					<div class="floatleft_view_odd">
 						<div class="">
 						<div class="formRight_view" style="width:100%">
@@ -86,7 +81,7 @@ $__foreach_item_0_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 ?>
 						<?php if ($_smarty_tpl->tpl_vars['item']->value['photo']) {?>
 						<div align="center" style="border:2px dotted #e0e0e0; width:180px;float:left;padding:10px;margin:5px;">
-						<img src="timthumb.php?src=admin/uploads/req_photo/<?php echo $_smarty_tpl->tpl_vars['item']->value['photo'];?>
+						<img src="timthumb.php?src=admin/uploads/photo/<?php echo $_smarty_tpl->tpl_vars['item']->value['photo'];?>
 &w=160&q=100">
 						</div>
 						<?php }?>
@@ -107,7 +102,7 @@ $_smarty_tpl->tpl_vars['key'] = $__foreach_item_0_saved_key;
 			</div>
 			
 			<div class="m10">
-				<a href="client_photos.php"><input type="button" val="client_photos.php" class="jsRedirect greyishBtn submitForm" value="Back"></a>
+				<a href="jobfair_photos.php"><input type="button" val="jobfair_photos.php" class="jsRedirect greyishBtn submitForm" value="Back"></a>
 				<div class="fix"></div>
  				</div>
        </fieldset>

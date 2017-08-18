@@ -14,7 +14,7 @@
 {/if}
 
 {if $success_msg}
-   <div id="flashMessage" class="nNote nFailure hideit dismiss">{$success_msg}</div>
+   <div id="flashMessage" class="nNote nSuccess hideit dismiss">{$success_msg}</div>
    
 {/if}
 
@@ -53,16 +53,14 @@
 						<div class="formRight_view" style="width:100%">
 						{foreach from=$data item=item key=key}
 						{if $item.photo}
-<<<<<<< HEAD
-						<br><img src="timthumb.php?src=admin/uploads/photo/{$item.photo}&w=200&q=100">
-=======
+
+
 						<div align="center" style="border:2px dotted #e0e0e0; width:180px;float:left;padding:10px;margin:5px;">
 						<img src="timthumb.php?src=admin/uploads/photo/{$item.photo}&w=160&q=100">
-						<!-- br> <a href="{$url}remove_jobfair_photos.php?id={$item.id}" class="bConfirmPhotos">Remove</a -->
 						
 						<br> <a id="{$item.id}|{$item.jobfair_id}" value="javascript:void(0)" class="bConfirmPhotos" href="javascript:void(0)">Remove</a>
 						<input type="hidden" id="remove" value="remove_jobfair_photos.php">
->>>>>>> 30cc881e0ab6b7cdf64b315feb18a97b426d901c
+
 						
 					
 						</div>
@@ -71,13 +69,7 @@
 						</div>
 						</div>
 					</div>
-					
-					
-				
-					 
-					 
-					 
-					 
+
 					<div class="floatleft threeOne">
                     
 					<div class="rowElem noborder pb0"><label class="topLabel">Status <span class="mandatory">*</span></label><div class="formBottom">

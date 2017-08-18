@@ -69,13 +69,13 @@
          <div class="dataTables_wrapper" id="example_wrapper"> <table cellspacing="0" cellpadding="0" border="0" id="example" class="display">
             <thead>
               <tr>
-					<th class="ui-state-default" rowspan="1" colspan="1" style="width: 150px;">
+					<th class="ui-state-default" rowspan="1" colspan="1" style="width: 200px;">
 					<a href="jobfair_photos.php?field=title&order={$order}&page={$smarty.get.page}&keyword={$keyword}&status={$status}">
 					<div class="DataTables_sort_wrapper">Job Fair Title<span class="DataTables_sort_icon css_right {$sort_field_title}"></span></div></a></th>
 					
-					<th class="ui-state-default" rowspan="1" colspan="1" style="width: 150px;">
+					<th class="ui-state-default" rowspan="1" colspan="1" style="width: 100px;">
 					<a href="jobfair_photos.php?field=no_of_photos&order={$order}&page={$smarty.get.page}&keyword={$keyword}&status={$status}">
-					<div class="DataTables_sort_wrapper">No.of Photos<span class="DataTables_sort_icon css_right {$sort_field_no_of_photos}"></span></div></th>	
+					<div class="DataTables_sort_wrapper">No. of Photos<span class="DataTables_sort_icon css_right {$sort_field_no_of_photos}"></span></div></th>	
 					
 					<th class="ui-state-default" rowspan="1" colspan="1" style="width: 35px;">
 					<a href="jobfair_photos.php?field=status&order={$order}&page={$smarty.get.page}&keyword={$keyword}&status={$status}">
@@ -103,8 +103,8 @@
       			   {/if}
       				
 				<tr class="{$grade}">
-				<td><a href="view_jobfair_photos.php?get_jobfair_id={$item.jobfair_id}">{ucwords($item.title)}</a></td>	
-				<td>{$item.no_of_photos}</td>
+				<td><a href="view_jobfair_photos.php?get_jobfair_id={$item.jobfair_id}">{ucwords($item.title)} ({$item.jobfair_date})</a></td>	
+				<td class="center">{$item.no_of_photos}</td>
 			   <td class="center">
 			   <img border="0" class="mr5 vmiddle tipS" original-title="{$item.status}" src="{$item.status_cls}">			
 			   </td>						
