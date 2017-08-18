@@ -27,7 +27,7 @@ if(!empty($_POST)){
 	}
 	
 	// array for printing correct field name in error message
-	$fieldtype = array('1', '0', '1', '1');
+	$fieldtype = array('1', '1');
 	$actualfield = array('job fair title','status');
    $field = array('jobfair_id' => 'jobfair_idErr', 'status' => 'statusErr');
 	$j = 0;
@@ -44,7 +44,7 @@ if(!empty($_POST)){
 		$j++;
 	}
 	
-	$req_size = 1048576;
+	$req_size = 3145728;
 	// upload the file if attached
 	if(!empty($_FILES['photo']['name'])){
 		// upload directory
@@ -60,9 +60,9 @@ if(!empty($_POST)){
 			$attachmentuploadErr = 'Attachment must be jpg, jpeg, png';
 			$test = 'error';
 		}
-		// checking the file size is less than 1 MB		
+		// checking the file size is less than 3 MB		
 		else if($fun->size_validation($attachmentsize,$req_size)){
-			$attachmentuploadErr = 'Attachment file size must be less than 1 MB';
+			$attachmentuploadErr = 'Attachment file size must be less than 3 MB';
 			$test = 'error';
 		}				
 	}	
@@ -105,13 +105,15 @@ if(!empty($_POST)){
 					if(!$result = $mysql->execute_query($query)){
 						throw new Exception('Problem in updating job fair photo file');
 					}
+					$obj = $mysql->display_result($result);
+					$affected_rows = $obj['affected_rows'];
 					// call the next result
 					$mysql->next_query();
 				}catch(Exception $e){
 					echo 'Caught exception: ',  $e->getMessage(), "\n";
 				}
 			}
-			if(!empty($last_id)){
+			if(!empty($last_id) && !empty($affected_rows)){
 				// redirecting to list page
 				header("Location: jobfair_photos.php?current_status=created&status=".$_POST['status']."");		
 			}

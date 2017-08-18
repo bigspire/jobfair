@@ -110,7 +110,8 @@ try{
 		$data[$i]['status_cls'] = $fun->status_cls($obj['status']);
 		$data[$i]['created_date'] = $fun->date_time_format($obj['created_date']);
 		$data[$i]['modified_date'] = $fun->date_time_format($obj['modified_date']);
-			    $i++;
+		$data[$i]['jobfair_date'] = $fun->format_date($obj['jobfair_date']);
+		$i++;
  		$pno[]=$paging->print_no();
  		$smarty->assign('pno',$pno);
 	}

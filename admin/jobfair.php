@@ -117,7 +117,7 @@ try{
 		$data[$i]['jobfair'] = $obj['jobfair_date'];
 		$data[$i]['created_date'] = $fun->date_time_format($obj['created_date']);
 		$data[$i]['modified_date'] = $fun->date_time_format($obj['modified_date']);
-	   $i++;
+	    $i++;
  		$pno[]=$paging->print_no();
  		$smarty->assign('pno',$pno);
 	}
@@ -136,8 +136,43 @@ try{
 
 	// free the memory
 	$mysql->clear_result($result);
+	// call the next result
+	$mysql->next_query();
 }catch(Exception $e){
 	echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
+
+// get current date 
+$current_date = $fun->display_date();
+// call to export the excel data
+if($_GET['action'] == 'export'){ 
+	include('classes/class.excel.php');
+	$excelObj = new libExcel();
+	
+	// fetch all records
+	$query = "CALL get_jobfair_reg_details('".$_GET['id']."')";
+
+	try{
+		if(!$result = $mysql->execute_query($query)){
+			throw new Exception('Problem in executing job fair excel page');
+		}
+		// calling mysql fetch_result function
+		$i = '0';
+		while($obj = $mysql->display_result($result))
+		{
+			$dataexcl[] = $obj;
+			$i++;
+		}
+		// free the memory
+		$mysql->clear_result($result);
+	}catch(Exception $e){
+		echo 'Caught exception: ',  $e->getMessage(), "\n";
+	}
+	
+	// function to print the excel header
+	$excelObj->printHeader($header = array('Name','Email','Mobile','Degree','Spec.','Registered On') ,$col = array('A','B','C','D','E','F'));  
+	// function to print the excel data
+	$excelObj->printCell($dataexcl, $count,$col = array('A','B','C','D','E','F'), $field = array('full_name','email_id','mobile_no1','course_name','specialization','created_date'),'Jobfair_'.$current_date);
 }
 
 // calling mysql close db connection function

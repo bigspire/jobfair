@@ -13,7 +13,7 @@
    <div id="flashMessage" class="nNote nFailure hideit dismiss">{$EXIST_MSG}</div>
 {/if}
 {if $success_msg}
-   <div id="flashMessage" class="nNote nFailure hideit dismiss">{$success_msg}</div>
+   <div id="flashMessage" class="nNote nSuccess hideit dismiss">{$success_msg}</div>
    
 {/if}
 
