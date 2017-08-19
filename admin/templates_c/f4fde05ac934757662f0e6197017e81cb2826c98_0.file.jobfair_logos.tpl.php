@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-18 17:50:27
+/* Smarty version 3.1.29, created on 2017-08-19 15:46:43
   from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\jobfair_logos.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5996db8bc55c58_07769436',
+  'unifunc' => 'content_5998100b16ff24_98474826',
   'file_dependency' => 
   array (
     'f4fde05ac934757662f0e6197017e81cb2826c98' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\jobfair_logos.tpl',
-      1 => 1502517722,
+      1 => 1503137798,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5996db8bc55c58_07769436 ($_smarty_tpl) {
+function content_5998100b16ff24_98474826 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 	
@@ -82,8 +82,8 @@ if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdoc
 			
 			 
 			<div class="dataTables_filter" id="example_filter"><label>Search: 
-			 <input name="search" type="text" class="ac_input" placeholder="eg: infosys, tcs, wipro" value="<?php echo $_GET['search'];?>
-" autocomplete="off" tabindex="1" id="search">			 	
+			 <input name="search" type="text" id="searchNC" class="ac_input" placeholder="eg: infosys, tcs, wipro" value="<?php echo $_GET['search'];?>
+" autocomplete="off" tabindex="1">			 	
 		<input type="hidden" name="data[Company][webroot]" id="webroot" value="jobfair_logos.php"><input type="hidden" name="data[Company][hdnSubmit]" id="CompanyHdnSubmit">				
 
 
@@ -187,9 +187,9 @@ $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, "grade", 0);?>
 ">
 				<td><?php echo ucwords($_smarty_tpl->tpl_vars['item']->value['company_name']);?>
 </td>		
-				<td><img src="timthumb.php?src=uploads/logo/<?php echo $_smarty_tpl->tpl_vars['item']->value['logo'];?>
-&h=25&q=100">
-				</td>
+				<td><img src="timthumb.php?src=admin/uploads/logo/<?php echo $_smarty_tpl->tpl_vars['item']->value['logo'];?>
+&h=100&q=100"></td>
+
 				<td><?php echo ucwords($_smarty_tpl->tpl_vars['item']->value['title']);?>
 </td>	
 			   <td class="center">

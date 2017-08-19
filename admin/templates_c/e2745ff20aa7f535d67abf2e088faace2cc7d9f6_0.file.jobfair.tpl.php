@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-18 17:56:34
+/* Smarty version 3.1.29, created on 2017-08-19 15:32:26
   from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\jobfair.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5996dcfaca7c64_55963442',
+  'unifunc' => 'content_59980cb2b82268_02924165',
   'file_dependency' => 
   array (
     'e2745ff20aa7f535d67abf2e088faace2cc7d9f6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\jobfair.tpl',
-      1 => 1503059179,
+      1 => 1503136942,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5996dcfaca7c64_55963442 ($_smarty_tpl) {
+function content_59980cb2b82268_02924165 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 	
@@ -81,7 +81,7 @@ if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdoc
 			<a class="btn14 mr10 mt5" style="float:right" title="" href="javascript:submit_search(document.searchFrm, 'jobfair');"><img src="img/icons/dark/magnify.png" class="vmiddle" alt=""> Search</a>
 			<div class="dataTables_filter" id="example_filter"><label>Search: 
 			 	
-				<input name="search" id="search" type="text" class="ac_input" placeholder="eg: infosys, tcs, wipro" value="<?php echo $_GET['search'];?>
+				<input name="search" id="searchNC" type="text" class="ac_input" placeholder="eg: infosys, tcs, wipro" value="<?php echo $_GET['search'];?>
 " autocomplete="off" tabindex="1">
 			 
  				<input name="date_from" value="<?php echo $_GET['date_from'];?>

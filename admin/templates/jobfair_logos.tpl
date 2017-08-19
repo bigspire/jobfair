@@ -51,7 +51,7 @@
 			
 			 
 			<div class="dataTables_filter" id="example_filter"><label>Search: 
-			 <input name="search" type="text" class="ac_input" placeholder="eg: infosys, tcs, wipro" value="{$smarty.get.search}" autocomplete="off" tabindex="1" id="search">			 	
+			 <input name="search" type="text" id="searchNC" class="ac_input" placeholder="eg: infosys, tcs, wipro" value="{$smarty.get.search}" autocomplete="off" tabindex="1">			 	
 		<input type="hidden" name="data[Company][webroot]" id="webroot" value="jobfair_logos.php"><input type="hidden" name="data[Company][hdnSubmit]" id="CompanyHdnSubmit">				
 
 
@@ -107,8 +107,8 @@
       				
 				<tr class="{$grade}">
 				<td>{ucwords($item.company_name)}</td>		
-				<td><img src="timthumb.php?src=uploads/logo/{$item.logo}&h=25&q=100">
-				</td>
+				<td><img src="timthumb.php?src=admin/uploads/logo/{$item.logo}&h=100&q=100"></td>
+
 				<td>{ucwords($item.title)}</td>	
 			   <td class="center">
 			   <img border="0" class="mr5 vmiddle tipS" original-title="{$item.status}" src="{$item.status_cls}">			
