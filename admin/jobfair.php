@@ -172,7 +172,7 @@ if($_GET['action'] == 'export'){
 	// function to print the excel header
 	$excelObj->printHeader($header = array('Name','Email','Mobile','Degree','Spec.','Registered On') ,$col = array('A','B','C','D','E','F'));  
 	// function to print the excel data
-	$excelObj->printCell($dataexcl, $i,$col = array('A','B','C','D','E','F'), $field = array('full_name','email_id','mobile_no1','course_name','specialization','created_date'),'Jobseekers'.date('ddmmyy'));
+	$excelObj->printCell($dataexcl, $i,$col = array('A','B','C','D','E','F'), $field = array('full_name','email_id','mobile_no1','course_name','specialization','created_date'),"jobfair_registrations_".date("dmY"));
 }
 
 // calling mysql close db connection function
