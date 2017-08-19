@@ -36,7 +36,7 @@
                 </div>
 		
 	
-	<form action="jobfair_logos.php" onsubmit="return submit_search(this, &#39;company&#39;)" id="searchNC" name="searchFrm" method="post" class="" accept-charset="utf-8">
+	<form action="jobfair_logos.php" onsubmit="return submit_search(this, &#39;company&#39;)"  name="searchFrm" method="post" class="" accept-charset="utf-8">
 	<div style="display:none;"><input type="hidden" name="_method" value="POST"></div>		
 			
 	<div class="widget">      
@@ -107,7 +107,7 @@
       				
 				<tr class="{$grade}">
 				<td>{ucwords($item.company_name)}</td>		
-				<td><img src="timthumb.php?src=admin/uploads/logo/{$item.logo}&h=100&q=100"></td>
+				<td class="center"><img src="timthumb.php?src=admin/uploads/logo/{$item.logo}&h=30&q=100"></td>
 
 				<td>{ucwords($item.title)}</td>	
 			   <td class="center">

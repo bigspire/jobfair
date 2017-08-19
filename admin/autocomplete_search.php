@@ -11,6 +11,7 @@ include('classes/class.mysql.php');
 $mysql->connect_database();
 // include function validation class
 include('classes/class.function.php');
+error_reporting(0);
 
 //get search term
 $keyword = $_GET['q'];
