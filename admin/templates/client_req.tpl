@@ -130,8 +130,10 @@
 				 <td>{$item.position}</td>
 				 <td>{$item.drive_date}</td>
 				 <td>{$item.work_loc}</td>
-				 <!--<td>{$item.no_vacancy}</td>-->		
-				 <td align="center">{$item.reg}</td>						
+				<td align="center">
+						 	<a href="client_req.php?action=export&id={$item.id}" val="client_req.php?action=export&id={$item.id}" class="btn btn-warning jsRedirect" >{$item.reg}</a>
+						</td>	
+				 						
              <td align="center">{$item.start_date}</td>
 			    <td align="center">{$item.end_date}</td>
 				 <td class="center">

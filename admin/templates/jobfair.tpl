@@ -50,7 +50,7 @@
 			<a class="btn14 mr10 mt5" style="float:right" title="" href="javascript:submit_search(document.searchFrm, 'jobfair');"><img src="img/icons/dark/magnify.png" class="vmiddle" alt=""> Search</a>
 			<div class="dataTables_filter" id="example_filter"><label>Search: 
 			 	
-				<input name="search" id="search" type="text" class="ac_input" placeholder="eg: infosys, tcs, wipro" value="{$smarty.get.search}" autocomplete="off" tabindex="1">
+				<input name="search" id="searchNC" type="text" class="ac_input" placeholder="eg: infosys, tcs, wipro" value="{$smarty.get.search}" autocomplete="off" tabindex="1">
 			 
  				<input name="date_from" value="{$smarty.get.date_from}" type="text" class="datepic" placeholder="From Date" id="">
  				<input name="date_to" value="{$smarty.get.date_to}" type="text" class="datepic" placeholder="To Date"  id="">

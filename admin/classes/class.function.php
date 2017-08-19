@@ -20,6 +20,14 @@ class fun{
 		return $stat;
 	} 
 	
+	// function to convert database date field into d/M/Y format 
+	public function created_date_format_reg($created_date){
+		if(($created_date != '') && ($created_date != '0000-00-00')){
+			$c_d = date('d/m/Y h:i', strtotime($created_date));
+			return $c_d;
+		}
+	}
+	
 	// function to convert database date field into d-M-Y format 
 	public function created_date_format($created_date){
 		if(($created_date != '') && ($created_date != '0000-00-00')){

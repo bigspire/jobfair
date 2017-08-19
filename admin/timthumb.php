@@ -846,12 +846,12 @@ class timthumb {
 		$this->debug(3, "Doc root is: " . $docRoot);
 
 
-		$this->docRoot = $docRoot.'/jobfair_svn/jobfair/';
+		
 
 		$this->docRoot = $docRoot.'/2017/jobfair_jobfac/jobfair/';
 
 
-		$this->docRoot = $docRoot.'/jobfair_svn/jobfair/';
+		
 
 
 	}
