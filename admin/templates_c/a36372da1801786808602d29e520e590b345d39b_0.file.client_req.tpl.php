@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-18 16:13:15
+/* Smarty version 3.1.29, created on 2017-08-19 12:08:13
   from "C:\xampp\htdocs\2017\jobfair_jobfac\jobfair\admin\templates\client_req.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5996c4c3908ce7_98868012',
+  'unifunc' => 'content_5997dcd58715d5_79484894',
   'file_dependency' => 
   array (
     'a36372da1801786808602d29e520e590b345d39b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\templates\\client_req.tpl',
-      1 => 1502517722,
+      1 => 1503124625,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5996c4c3908ce7_98868012 ($_smarty_tpl) {
+function content_5997dcd58715d5_79484894 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\jobfair_jobfac\\jobfair\\admin\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 	
@@ -257,10 +257,13 @@ $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, "grade", 0);?>
 </td>
 				 <td><?php echo $_smarty_tpl->tpl_vars['item']->value['work_loc'];?>
 </td>
-				 <!--<td><?php echo $_smarty_tpl->tpl_vars['item']->value['no_vacancy'];?>
-</td>-->		
-				 <td align="center"><?php echo $_smarty_tpl->tpl_vars['item']->value['reg'];?>
-</td>						
+				<td align="center">
+						 	<a href="client_req.php?action=export&id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" val="client_req.php?action=export&id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" class="btn btn-warning jsRedirect" ><?php echo $_smarty_tpl->tpl_vars['item']->value['reg'];?>
+</a>
+						</td>	
+				 						
              <td align="center"><?php echo $_smarty_tpl->tpl_vars['item']->value['start_date'];?>
 </td>
 			    <td align="center"><?php echo $_smarty_tpl->tpl_vars['item']->value['end_date'];?>

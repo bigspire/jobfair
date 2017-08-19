@@ -136,8 +136,42 @@ try{
 
 	// free the memory
 	$mysql->clear_result($result);
+	// call the next result
+	$mysql->next_query();
 }catch(Exception $e){
 	echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
+
+// call to export the excel data
+if($_GET['action'] == 'export'){ 
+	include('classes/class.excel.php');
+	$excelObj = new libExcel();
+	
+	// fetch all records
+	$query = "CALL get_client_reg_details('".$_GET['id']."')";
+
+	try{
+		if(!$result = $mysql->execute_query($query)){
+			throw new Exception('Problem in executing client req. excel page');
+		}
+		// calling mysql fetch_result function
+		$i = '0';
+		while($obj = $mysql->display_result($result))
+		{
+			$dataexcl[] = $obj;
+			$dataexcl[$i]['created_date'] = $fun->created_date_format_reg($obj['created_date']);
+			$i++;
+		}
+		// free the memory
+		$mysql->clear_result($result);
+	}catch(Exception $e){
+		echo 'Caught exception: ',  $e->getMessage(), "\n";
+	}
+	
+	// function to print the excel header
+	$excelObj->printHeader($header = array('Name','Email','Mobile','Degree','Spec.','Registered On') ,$col = array('A','B','C','D','E','F'));  
+	// function to print the excel data
+	$excelObj->printCell($dataexcl, $i,$col = array('A','B','C','D','E','F'), $field = array('full_name','email_id','mobile_no1','course_name','specialization','created_date'),'Jobseekers'.date('ddmmyy'));
 }
 
 // calling mysql close db connection function

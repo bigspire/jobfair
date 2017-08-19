@@ -142,8 +142,7 @@ try{
 	echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
 
-// get current date 
-$current_date = $fun->display_date();
+
 // call to export the excel data
 if($_GET['action'] == 'export'){ 
 	include('classes/class.excel.php');
@@ -161,6 +160,7 @@ if($_GET['action'] == 'export'){
 		while($obj = $mysql->display_result($result))
 		{
 			$dataexcl[] = $obj;
+			$dataexcl[$i]['created_date'] = $fun->created_date_format_reg($obj['created_date']);
 			$i++;
 		}
 		// free the memory
@@ -172,7 +172,7 @@ if($_GET['action'] == 'export'){
 	// function to print the excel header
 	$excelObj->printHeader($header = array('Name','Email','Mobile','Degree','Spec.','Registered On') ,$col = array('A','B','C','D','E','F'));  
 	// function to print the excel data
-	$excelObj->printCell($dataexcl, $count,$col = array('A','B','C','D','E','F'), $field = array('full_name','email_id','mobile_no1','course_name','specialization','created_date'),'Jobfair_'.$current_date);
+	$excelObj->printCell($dataexcl, $i,$col = array('A','B','C','D','E','F'), $field = array('full_name','email_id','mobile_no1','course_name','specialization','created_date'),'Jobseekers'.date('ddmmyy'));
 }
 
 // calling mysql close db connection function
