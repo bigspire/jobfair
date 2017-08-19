@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2017-08-18 19:12:23
+<?php /* Smarty version 2.6.26, created on 2017-08-18 19:28:34
          compiled from ../include/popup_drives.tpl */ ?>
 <div class="slider3">
 <?php $_from = $this->_tpl_vars['photo_data']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
