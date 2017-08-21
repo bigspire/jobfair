@@ -98,13 +98,7 @@
           <p>{$item.drive_date|date_format}<br>
 		  Timing: 09:00 AM Onwards </p>
 		 
-		 <h2>Job Description</h2>
-		<p>
-		  No. of Openings: {$item.no_vacancy}</p>
-		  <p>
-		  Qualifiation: {$item.qualification}</p>
-		   <p>
-		  Salary: {$item.salary}</p>
+		
 		 
           <!--p  style="margin-top:20px;"><a class="btn btn-info" href="#" role="button">Show Direction &raquo;</a></p-->
        </div>
@@ -127,11 +121,29 @@
 
       </div>
 	
-	<div class="row">  
-	   <h2>About {$item.company_name}</h2>
+<div class="row">  
+	  
+	   <div class="col-sm-4">
+	   
+	    <h2>Job Description</h2>
+		<p>
+		  No. of Openings: {$item.no_vacancy}</p>
+		  <p>
+		  Qualifiation: {$item.qualification}</p>
+		   <p>
+		  Salary: {$item.salary}</p>
+		  
+	   </div>
+		 <div class="col-sm-8">
+		 
+		  <h2>About {$item.company_name}</h2>
 		<p>{$item.company_name}</p>
+		
+		
+	   </div>
+	   
+		  
     </div>
-	 
 	 
 	<!--div class="row">
         <div class="col-sm-12">
