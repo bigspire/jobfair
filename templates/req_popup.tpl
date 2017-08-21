@@ -73,14 +73,16 @@
         </div>
         <div class="col-sm-4 rightBar">
           <h2>Pre-Register</h2>
-       <form action="{$url}registration/" onsubmit="return validate_form()" method="post" class="theForm form-prereg">
+       <form action="{$url}registration/" rel="{$key}" onsubmit="return validate_form({$key})" method="post" class="theForm form-prereg">
         <label for="inputEmail" class="sr-only">Full Name</label>
         <input type="text" name="full_name" required value="{$name}" id="inputEmail" class="full_name form-control" placeholder="Full Name" autofocus="">
         <label for="inputPassword" class="sr-only">Email Address</label>
         <input type="text" name="email" required value="{$email}" id="inputPassword" class="email form-control" placeholder="Email Address">   
 	<label for="inputPassword" class="sr-only">Mobile No.</label>
         <input type="text" name="mobile" required value="{$mobile}" id="inputPassword" class="mobile form-control" placeholder="Mobile No.">    		
-       <input type="submit" class="btn btn-warning regBtn"   id="close_modal" value="Submit">
+      	<input type="hidden" class="jobfair" value="{$item.id}" id="jobfair_{$key}">
+
+	  <input type="submit" onclick="return validate_form({$key})" rel="{$key}" class="btn btn-warning regBtn"   id="close_modal" value="Submit">
       </form>
        
          <!-- <p><a class="btn btn-warning regBtn" href="#" role="button">Submit &raquo;</a>
@@ -90,7 +92,7 @@
           <h2>Venue</h2>
           <p>{$item.venue|nl2br} <br>
 		  
-		  Contact Email: {$item.email_address}
+		  Contact Email: {$item.email_address}<br>
 
 		  Contact No: {$item.contact_no}<br>
 		  </p>
@@ -156,7 +158,6 @@
 	  </div>
 		 
       </div-->
-	<input type="hidden" value="{$item.id}" id="jobfair_{$key}">
 	</div>
 	
 	{/if}
@@ -233,7 +234,7 @@ $(document).ready(function(){
 {literal}
 <script type="text/javascript">
 	/* function to validate the form */
-	function validate_form(){ 
+	function validate_form(key){ 
 		/*
 		$(this).validate({
 		rules: {
@@ -264,11 +265,12 @@ $(document).ready(function(){
 		//full_name = $('.full_name').eq(1).val() ? $('.full_name').eq(1).val() : $('.full_name').eq(2).val();
 		//email = $('.email').eq(1).val() ? $('.email').eq(1).val() : $('.email').eq(2).val();
 		//phone = $('.mobile').eq(1).val() ? $('.mobile').eq(1).val() : $('.mobile').eq(2).val();
-		//fair = $('.mobile').eq(1).val() ? $('#jobfair_0').val() : $('#jobfair_1').val();
-		full_name = $('.full_name').val()
-		email = $('.email').val();
-		phone = $('.mobile').val() ;
-		fair = $('#jobfair_0').val();
+		//fair = $('.mobile').eq(1).val() ? $('#jobfair_0').val() : $('#jobfair_1').val();		
+		key = key+1;
+		full_name = $('.full_name').eq(key).val()
+		email = $('.email').eq(key).val();
+		phone = $('.mobile').eq(key).val();
+		fair = $('.jobfair').eq(key).val();
 		if(full_name != '' && email != '' && phone != ''){ 
 			self.parent.location.href = jQuery('.redirect_url').val()+'?name='+full_name+'&email='+email+'&fair='+fair
 			+'&mobile='+phone;

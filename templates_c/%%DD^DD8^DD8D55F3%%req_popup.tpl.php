@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2017-08-18 19:28:34
+<?php /* Smarty version 2.6.26, created on 2017-08-21 16:44:00
          compiled from req_popup.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'ucwords', 'req_popup.tpl', 35, false),array('modifier', 'nl2br', 'req_popup.tpl', 91, false),array('modifier', 'date_format', 'req_popup.tpl', 98, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'ucwords', 'req_popup.tpl', 35, false),array('modifier', 'truncate', 'req_popup.tpl', 35, false),array('modifier', 'nl2br', 'req_popup.tpl', 93, false),array('modifier', 'date_format', 'req_popup.tpl', 100, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,8 +35,9 @@ css/jquery.bxslider.css" rel="stylesheet">
 ?>
   <?php if ($this->_tpl_vars['item']['company_name']): ?>
 <span class="bx-pager-item" style="margin:10px;font-size:17px;">
-<a href="" data-slide-index="<?php echo $this->_tpl_vars['key']; ?>
-" class="bx-pager-link"><?php echo ((is_array($_tmp=$this->_tpl_vars['item']['company_name'])) ? $this->_run_mod_handler('ucwords', true, $_tmp) : ucwords($_tmp)); ?>
+<a href="#" title="<?php echo ((is_array($_tmp=$this->_tpl_vars['item']['company_name'])) ? $this->_run_mod_handler('ucwords', true, $_tmp) : ucwords($_tmp)); ?>
+" data-slide-index="<?php echo $this->_tpl_vars['key']; ?>
+" class="bx-pager-link"><?php echo ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['item']['company_name'])) ? $this->_run_mod_handler('ucwords', true, $_tmp) : ucwords($_tmp)))) ? $this->_run_mod_handler('truncate', true, $_tmp, 15) : smarty_modifier_truncate($_tmp, 15)); ?>
 </a>
 </span>
 <?php endif; ?>
@@ -87,7 +88,9 @@ images/pop_img2.jpg" >
         <div class="col-sm-4 rightBar">
           <h2>Pre-Register</h2>
        <form action="<?php echo $this->_tpl_vars['url']; ?>
-registration/" onsubmit="return validate_form()" method="post" class="theForm form-prereg">
+registration/" rel="<?php echo $this->_tpl_vars['key']; ?>
+" onsubmit="return validate_form(<?php echo $this->_tpl_vars['key']; ?>
+)" method="post" class="theForm form-prereg">
         <label for="inputEmail" class="sr-only">Full Name</label>
         <input type="text" name="full_name" required value="<?php echo $this->_tpl_vars['name']; ?>
 " id="inputEmail" class="full_name form-control" placeholder="Full Name" autofocus="">
@@ -97,7 +100,13 @@ registration/" onsubmit="return validate_form()" method="post" class="theForm fo
 	<label for="inputPassword" class="sr-only">Mobile No.</label>
         <input type="text" name="mobile" required value="<?php echo $this->_tpl_vars['mobile']; ?>
 " id="inputPassword" class="mobile form-control" placeholder="Mobile No.">    		
-       <input type="submit" class="btn btn-warning regBtn"   id="close_modal" value="Submit">
+      	<input type="hidden" class="jobfair" value="<?php echo $this->_tpl_vars['item']['id']; ?>
+" id="jobfair_<?php echo $this->_tpl_vars['key']; ?>
+">
+
+	  <input type="submit" onclick="return validate_form(<?php echo $this->_tpl_vars['key']; ?>
+)" rel="<?php echo $this->_tpl_vars['key']; ?>
+" class="btn btn-warning regBtn"   id="close_modal" value="Submit">
       </form>
        
          <!-- <p><a class="btn btn-warning regBtn" href="#" role="button">Submit &raquo;</a>
@@ -109,7 +118,7 @@ registration/" onsubmit="return validate_form()" method="post" class="theForm fo
  <br>
 		  
 		  Contact Email: <?php echo $this->_tpl_vars['item']['email_address']; ?>
-
+<br>
 
 		  Contact No: <?php echo $this->_tpl_vars['item']['contact_no']; ?>
 <br>
@@ -119,16 +128,7 @@ registration/" onsubmit="return validate_form()" method="post" class="theForm fo
 <br>
 		  Timing: 09:00 AM Onwards </p>
 		 
-		 <h2>Job Description</h2>
-		<p>
-		  No. of Openings: <?php echo $this->_tpl_vars['item']['no_vacancy']; ?>
-</p>
-		  <p>
-		  Qualifiation: <?php echo $this->_tpl_vars['item']['qualification']; ?>
-</p>
-		   <p>
-		  Salary: <?php echo $this->_tpl_vars['item']['salary']; ?>
-</p>
+		
 		 
           <!--p  style="margin-top:20px;"><a class="btn btn-info" href="#" role="button">Show Direction &raquo;</a></p-->
        </div>
@@ -155,13 +155,34 @@ unset($_smarty_tpl_vars);
 
       </div>
 	
-	<div class="row">  
-	   <h2>About <?php echo $this->_tpl_vars['item']['company_name']; ?>
+<div class="row">  
+	  
+	   <div class="col-sm-4">
+	   
+	    <h2>Job Description</h2>
+		<p>
+		  No. of Openings: <?php echo $this->_tpl_vars['item']['no_vacancy']; ?>
+</p>
+		  <p>
+		  Qualifiation: <?php echo $this->_tpl_vars['item']['qualification']; ?>
+</p>
+		   <p>
+		  Salary: <?php echo $this->_tpl_vars['item']['salary']; ?>
+</p>
+		  
+	   </div>
+		 <div class="col-sm-8">
+		 
+		  <h2>About <?php echo $this->_tpl_vars['item']['company_name']; ?>
 </h2>
 		<p><?php echo $this->_tpl_vars['item']['company_name']; ?>
 </p>
+		
+		
+	   </div>
+	   
+		  
     </div>
-	 
 	 
 	<!--div class="row">
         <div class="col-sm-12">
@@ -176,9 +197,6 @@ unset($_smarty_tpl_vars);
 	  </div>
 		 
       </div-->
-	<input type="hidden" value="<?php echo $this->_tpl_vars['item']['id']; ?>
-" id="jobfair_<?php echo $this->_tpl_vars['key']; ?>
-">
 	</div>
 	
 	<?php endif; ?>
@@ -261,7 +279,7 @@ $(document).ready(function(){
 <?php echo '
 <script type="text/javascript">
 	/* function to validate the form */
-	function validate_form(){ 
+	function validate_form(key){ 
 		/*
 		$(this).validate({
 		rules: {
@@ -292,11 +310,13 @@ $(document).ready(function(){
 		//full_name = $(\'.full_name\').eq(1).val() ? $(\'.full_name\').eq(1).val() : $(\'.full_name\').eq(2).val();
 		//email = $(\'.email\').eq(1).val() ? $(\'.email\').eq(1).val() : $(\'.email\').eq(2).val();
 		//phone = $(\'.mobile\').eq(1).val() ? $(\'.mobile\').eq(1).val() : $(\'.mobile\').eq(2).val();
-		//fair = $(\'.mobile\').eq(1).val() ? $(\'#jobfair_0\').val() : $(\'#jobfair_1\').val();
-		full_name = $(\'.full_name\').val()
-		email = $(\'.email\').val();
-		phone = $(\'.mobile\').val() ;
-		fair = $(\'#jobfair_0\').val();
+		//fair = $(\'.mobile\').eq(1).val() ? $(\'#jobfair_0\').val() : $(\'#jobfair_1\').val();		
+		key = key+1;
+		full_name = $(\'.full_name\').eq(key).val()
+		email = $(\'.email\').eq(key).val();
+		phone = $(\'.mobile\').eq(key).val();
+		fair = $(\'.jobfair\').eq(key).val();
+		alert(full_name);
 		if(full_name != \'\' && email != \'\' && phone != \'\'){ 
 			self.parent.location.href = jQuery(\'.redirect_url\').val()+\'?name=\'+full_name+\'&email=\'+email+\'&fair=\'+fair
 			+\'&mobile=\'+phone;
