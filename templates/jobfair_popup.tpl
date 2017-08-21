@@ -32,7 +32,7 @@
 {foreach from=$fair_data item=item key=key}
   {if $item.title}
 <span class="bx-pager-item" style="margin:10px;font-size:17px;">
-<a href="" data-slide-index="{$key}" class="bx-pager-link">{$item.title|ucwords}</a>
+<a href="#" title="{$item.title|ucwords}" data-slide-index="{$key}" class="bx-pager-link">{$item.title|ucwords|truncate:15}</a>
 </span>
 {/if}
 {/foreach}

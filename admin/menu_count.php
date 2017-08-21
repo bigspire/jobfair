@@ -45,7 +45,7 @@ try{
 }
 	
 // get user modules
-$query = "call get_user_modules('".$_SESSION['roles_id']."')";
+ $query = "call get_user_modules('".$_SESSION['roles_id']."')";
 try{
 	// calling mysql exe query function
 	if(!$result = $mysql->execute_query($query)){

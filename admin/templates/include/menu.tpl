@@ -148,17 +148,17 @@
 						
 				
 			<!--li class="iSearch"><a  class="" href="/jobfac_admin/search/" title=""><span>Search</span></a></li--> 
-						{if $tests}
-						<li class="iGlobe"><a class="" href="/administrator/online_tests/" title="Tests"><span>Tests</span></a><span class="numberMiddle">{$obj['test_total']}</span></li>	
+				{if $manage_online_test}
+						<li class="iGlobe"><a class="" href="../online_tests/" title="Tests"><span>Tests</span></a><span class="numberMiddle">{$obj['test_total']}</span></li>	
 						{/if}
 	
 							
 				
 				
-			 {if $inbox}
-			<li class="iInbox"><a class="" href="/administrator/inbox/?type=en" title="Inbox"><span>Inbox</span></a><span class="numberMiddle">{$count_inbox}</span></li>
-			 {/if}		
-			
+			 {if $knowledge_centre  neq '' || $employment_news neq ''  }
+			<li class="iInbox"><a class="" href="../inbox/?type=en" title="Inbox"><span>Inbox</span></a><span class="numberMiddle">{$count_inbox}</span></li>
+			 {/if}	
+			 
 		
 			{if $reports}
 			<li class="iReport"><a class="" href="/administrator/reports/jobseekers/location/" title="Reports"><span>Reports</span></a></li>
