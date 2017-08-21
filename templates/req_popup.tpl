@@ -41,26 +41,26 @@
 
   <div class="slider1"> 
   {foreach from=$fair_data item=item key=key}
-  {if $item.company_name}
+  {if $item.position}
 	<div class="slide container">
-      <!-- Example row of columns -->	 
-	 <div class="row">
-	   <!-- Partner logo -->
-	   {if $item.client_logo}   
-		
-		<!-- No partner logo -->
-		<div class="col-sm-11" style="text-align:center">		
-		<div class="compLogo">
-		<img src="{$url}admin/timthumb.php?src=uploads/req_logo/{$item.client_logo}&h=70&q=100">
-        </div>		        
-        </div>
-        {/if}
 	
-	
-	   </div>
+	 {if $item.client_logo}
+	{assign var="width" value="9"}
+	{else}
+	{assign var="width" value="11"}
+	   {/if}
 	  
 	  <div class="row" style="text-align:center;">
-	  <div class="col-sm-11">
+	   {if $item.client_logo}
+	  <div class="col-sm-2">
+	<div class="compLogo">
+				<img src="{$url}admin/timthumb.php?src=uploads/req_logo/{$item.client_logo}&h=70&q=100">
+
+        </div>	
+	  </div>
+	 {/if}  
+	  
+	  <div class="col-sm-{$width}">
 	  <h2><span class="jobfair_title" style="clear:both;width:">{$item.position}, {$item.work_loc}</span></h2>
           <p class="fair_desc">{$item.description} </p>
 	  </div>
@@ -160,7 +160,7 @@
       </div-->
 	</div>
 	
-	{/if}
+	 {/if}
 	{/foreach}
 	
 	

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-08-17 18:17:47
+/* Smarty version 3.1.29, created on 2017-08-21 16:59:16
   from "F:\xampp\htdocs\jobfair_svn\jobfair\admin\templates\include\menu.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_599590731a9060_89958061',
+  'unifunc' => 'content_599ac40ca99f70_44609516',
   'file_dependency' => 
   array (
     'd7f5758a1a2042a9131b328729ae3addb32816cb' => 
     array (
       0 => 'F:\\xampp\\htdocs\\jobfair_svn\\jobfair\\admin\\templates\\include\\menu.tpl',
-      1 => 1502873971,
+      1 => 1503311577,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_599590731a9060_89958061 ($_smarty_tpl) {
+function content_599ac40ca99f70_44609516 ($_smarty_tpl) {
 ?>
 
 
@@ -186,19 +186,19 @@ if ($_smarty_tpl->tpl_vars['obj']->value['contact_register']) {?>(<?php echo $_s
 						
 				
 			<!--li class="iSearch"><a  class="" href="/jobfac_admin/search/" title=""><span>Search</span></a></li--> 
-						<?php if ($_smarty_tpl->tpl_vars['tests']->value) {?>
-						<li class="iGlobe"><a class="" href="/administrator/online_tests/" title="Tests"><span>Tests</span></a><span class="numberMiddle"><?php echo $_smarty_tpl->tpl_vars['obj']->value['test_total'];?>
+				<?php if ($_smarty_tpl->tpl_vars['manage_online_test']->value) {?>
+						<li class="iGlobe"><a class="" href="../online_tests/" title="Tests"><span>Tests</span></a><span class="numberMiddle"><?php echo $_smarty_tpl->tpl_vars['obj']->value['test_total'];?>
 </span></li>	
 						<?php }?>
 	
 							
 				
 				
-			 <?php if ($_smarty_tpl->tpl_vars['inbox']->value) {?>
-			<li class="iInbox"><a class="" href="/administrator/inbox/?type=en" title="Inbox"><span>Inbox</span></a><span class="numberMiddle"><?php echo $_smarty_tpl->tpl_vars['count_inbox']->value;?>
+			 <?php if ($_smarty_tpl->tpl_vars['knowledge_centre']->value != '' || $_smarty_tpl->tpl_vars['employment_news']->value != '') {?>
+			<li class="iInbox"><a class="" href="../inbox/?type=en" title="Inbox"><span>Inbox</span></a><span class="numberMiddle"><?php echo $_smarty_tpl->tpl_vars['count_inbox']->value;?>
 </span></li>
-			 <?php }?>		
-			
+			 <?php }?>	
+			 
 		
 			<?php if ($_smarty_tpl->tpl_vars['reports']->value) {?>
 			<li class="iReport"><a class="" href="/administrator/reports/jobseekers/location/" title="Reports"><span>Reports</span></a></li>
