@@ -180,7 +180,7 @@
 	<script src="{$url}js/jquery.bxslider.min.js"></script>
 
 	
-{if $key gt '1'}
+{if $key gte '1'}
 {literal}
 <script type="text/javascript">
 $(document).ready(function(){
@@ -269,11 +269,17 @@ $(document).ready(function(){
 		//email = $('.email').eq(1).val() ? $('.email').eq(1).val() : $('.email').eq(2).val();
 		//phone = $('.mobile').eq(1).val() ? $('.mobile').eq(1).val() : $('.mobile').eq(2).val();
 		//fair = $('.mobile').eq(1).val() ? $('#jobfair_0').val() : $('#jobfair_1').val();		
-		// key = key+1;
-		full_name = $('.full_name').eq(key).val()
-		email = $('.email').eq(key).val();
-		phone = $('.mobile').eq(key).val();
-		fair = $('.jobfair').eq(key).val();
+		var new_key = key.split('-');
+		var val_key = 0;
+		if(parseInt(new_key[1], 0) > 1){
+			val_key = parseInt(new_key[0], 0)+parseInt(1, 0);
+		}else{
+			val_key = parseInt(new_key[0], 0);
+		}
+		full_name = $('.full_name').eq(val_key).val();
+		email = $('.email').eq(val_key).val();
+		phone = $('.mobile').eq(val_key).val();
+		fair = $('.jobfair').eq(val_key).val();
 		if(full_name != '' && email != '' && phone != ''){ 
 			self.parent.location.href = jQuery('.redirect_url').val()+'?name='+full_name+'&email='+email+'&fair='+fair
 			+'&mobile='+phone;
@@ -306,7 +312,7 @@ $(document).ready(function(){
 		  });
 		  // set the height of the bxslider for showing dots
 		  // $('.bx-viewport').eq(0).css('height', '420px');
-		  $('.bx-viewport').eq(2).css('height', '130px');
+		  $('.bx-viewport').eq(key).css('height', '130px');
 		  // $.fn.cycle.defaults.autoSelector = '.slideshow';
 		});
 </script>

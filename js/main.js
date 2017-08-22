@@ -6336,7 +6336,7 @@ jQuery(document).ready(function(){
 	$(document).ready(function(){
 		if($('#jobfairPopup').val() == '1'){
 			var src = jQuery(".root_url").val()+"jobfair_popup/";
-			$.modal('<iframe src="' + src + '" scrolling = "yes" height="510" width="820" style="border:0">', {
+			$.modal('<iframe src="' + src + '" scrolling = "no" height="510" width="820" style="border:0">', {
 				//closeHTML:"",
 				containerCss:{
 					backgroundColor:"#fff", 
@@ -6353,12 +6353,12 @@ jQuery(document).ready(function(){
 	$(document).ready(function(){
 		if($('#reqPopup').val() == '1'){
 			var src = jQuery(".root_url").val()+"req_popup/";
-			$.modal('<iframe src="' + src + '" scrolling = "yes" height="450" width="820" style="border:0">', {
+			$.modal('<iframe src="' + src + '" scrolling = "no" height="510" width="820" style="border:0">', {
 				//closeHTML:"",
 				containerCss:{
 					backgroundColor:"#fff", 
 					borderColor:"#fff", 
-					height:470, 
+					height:530, 
 					padding:0, 
 					width:830
 				},
