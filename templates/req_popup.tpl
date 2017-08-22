@@ -26,7 +26,7 @@
     <![endif]-->
   </head>
   <body>
-  
+  {if $fair_data|@count gt '1'}
   <div align="center" style="margin-top:10px;">
 <div id="bx-pager2" class="bx-pager2">
 {foreach from=$fair_data item=item key=key}
@@ -38,6 +38,7 @@
 {/foreach}
 </div>
 </div>
+{/if}
 
   <div class="slider1"> 
   {foreach from=$fair_data item=item key=key}
@@ -54,7 +55,7 @@
 	   {if $item.client_logo}
 	  <div class="col-sm-2">
 	<div class="compLogo">
-				<img src="{$url}admin/timthumb.php?src=uploads/req_logo/{$item.client_logo}&h=70&q=100">
+				<img src="{$url}admin/timthumb.php?src=uploads/req_logo/{$item.client_logo}&w=200&q=100">
 
         </div>	
 	  </div>
@@ -268,7 +269,7 @@ $(document).ready(function(){
 		//email = $('.email').eq(1).val() ? $('.email').eq(1).val() : $('.email').eq(2).val();
 		//phone = $('.mobile').eq(1).val() ? $('.mobile').eq(1).val() : $('.mobile').eq(2).val();
 		//fair = $('.mobile').eq(1).val() ? $('#jobfair_0').val() : $('#jobfair_1').val();		
-		key = key+1;
+		// key = key+1;
 		full_name = $('.full_name').eq(key).val()
 		email = $('.email').eq(key).val();
 		phone = $('.mobile').eq(key).val();

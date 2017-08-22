@@ -16,7 +16,7 @@ try{
 	while($row[] = $mysql_obj->fetch_assoc($result_data)){ 
 		// fetch logos for the jobfair		
 	}
-	$smarty->assign('fair_data', $row);
+	$smarty->assign('fair_data', array_filter($row));
 	
 }catch(Exception $e){
 		echo 'Caught exception: ',  $e->getMessage(), "\n";
