@@ -87,7 +87,7 @@
 					{/if}
 					
 					
-				{if $jobfair  || $client_req }	
+				{if $jobfair  || $client_req}	
 				<li class="dd activeNav"><a style="cursor:default;" href="javascript:void(0)"><img src="img/icons/topnav/tasks.png" alt=""><span>Job Fair</span></a>
 				  
 				   <ul class="menu_body">

@@ -129,7 +129,7 @@ $status = isset($_POST['status']) ? $_POST['status'] : ($_GET['status'] != '' ? 
 $smarty->assign('status', $status);
 
 // smarty drop down for State
-$query = "CALL get_jobfair_name()";
+$query = "CALL get_jobfair_name('')";
 try{
 	// calling mysql exe_query function
 	if(!$result = $mysql->execute_query($query)){

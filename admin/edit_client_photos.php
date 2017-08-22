@@ -156,25 +156,48 @@ if(!empty($_POST)){
 // smarty drop down array for status
 $smarty->assign('type', array('1' => 'Active', '2' => 'Inactive'));
 
-// smarty drop down for State
-$query = "CALL get_client_name()";
-try{
-	// calling mysql exe_query function
-	if(!$result = $mysql->execute_query($query)){
-		throw new Exception('Problem in executing get client');
+if($row['client_id'] != ''){
+	// smarty drop down for State
+	$query = "CALL get_client_name('".$row['client_id']."')";
+	try{
+		// calling mysql exe_query function
+		if(!$result = $mysql->execute_query($query)){
+			throw new Exception('Problem in executing get client');
+		}
+		$clients = array();
+		$client_id = array();
+		while($client = $mysql->display_result($result)){
+			$clients[$client['id']] = ucwords($client['company_name']).' ('. $fun->format_date($client['drive_date']).')';    		   
+			$client_id[] = $client['id'];    		   
+		}
+		$smarty->assign('client',$clients);
+		// free the memory
+		$mysql->clear_result($result);
+	}catch(Exception $e){
+		echo 'Caught exception: ',  $e->getMessage(), "\n";
 	}
-	$clients = array();
-	$client_id = array();
-	while($client = $mysql->display_result($result)){
-    	$clients[$client['id']] = ucwords($client['company_name']).' ('. $fun->format_date($client['drive_date']).')';    		   
-    	$client_id[] = $client['id'];    		   
-	}
-	$smarty->assign('client',$clients);
-	// free the memory
-	$mysql->clear_result($result);
-}catch(Exception $e){
-	echo 'Caught exception: ',  $e->getMessage(), "\n";
+}else{
+	// smarty drop down for State
+	$query = "CALL get_client_name('')";
+	try{
+		// calling mysql exe_query function
+		if(!$result = $mysql->execute_query($query)){
+			throw new Exception('Problem in executing get client');
+		}
+		$clients = array();
+		$client_id = array();
+		while($client = $mysql->display_result($result)){
+			$clients[$client['id']] = ucwords($client['company_name']).' ('. $fun->format_date($client['drive_date']).')';    		   
+			$client_id[] = $client['id'];    		   
+		}
+		$smarty->assign('client',$clients);
+		// free the memory
+		$mysql->clear_result($result);
+	}catch(Exception $e){
+		echo 'Caught exception: ',  $e->getMessage(), "\n";
+	}	
 }
+
 // closing mysql
 $mysql->close_connection();
 $smarty->assign('data', $data);

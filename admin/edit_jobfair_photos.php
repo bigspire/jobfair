@@ -160,26 +160,50 @@ if(!empty($_POST)){
 // smarty drop down array for status
 $smarty->assign('type', array('1' => 'Active', '2' => 'Inactive'));
 
-// smarty drop down for State
-$query = "CALL get_jobfair_name()";
-try{
-	// calling mysql exe_query function
-	if(!$result = $mysql->execute_query($query)){
-		throw new Exception('Problem in executing get jobfair');
+if($row['jobfair_id'] != ''){
+	// smarty drop down for State
+	$query = "CALL get_jobfair_name('".$row['jobfair_id']."')";
+	try{
+		// calling mysql exe_query function
+		if(!$result = $mysql->execute_query($query)){
+			throw new Exception('Problem in executing get jobfair');
+		}
+		$jobfairs = array();
+		$jobfair_id = array();
+		while($jobfair = $mysql->display_result($result)){
+			if(($jobfairs[$jobfair['id']] = $jobfair['title']) != '') {
+				$jobfairs[$jobfair['id']] = ucwords($jobfair['title']).' ('. $fun->format_date($jobfair['jobfair_date']).')';		   
+				$jobfair_id[] = $jobfair['id'];    
+			}		   
+		}
+		$smarty->assign('jobfair',$jobfairs);
+		// free the memory
+		$mysql->clear_result($result);
+	}catch(Exception $e){
+		echo 'Caught exception: ',  $e->getMessage(), "\n";
 	}
-	$jobfairs = array();
-	$jobfair_id = array();
-	while($jobfair = $mysql->display_result($result)){
-		if(($jobfairs[$jobfair['id']] = $jobfair['title']) != '') {
-    		$jobfairs[$jobfair['id']] = ucwords($jobfair['title']).' ('. $fun->format_date($jobfair['jobfair_date']).')';		   
-    		$jobfair_id[] = $jobfair['id'];    
-    	}		   
+}else{
+	// smarty drop down for State
+	$query = "CALL get_jobfair_name('')";
+	try{
+		// calling mysql exe_query function
+		if(!$result = $mysql->execute_query($query)){
+			throw new Exception('Problem in executing get jobfair');
+		}
+		$jobfairs = array();
+		$jobfair_id = array();
+		while($jobfair = $mysql->display_result($result)){
+			if(($jobfairs[$jobfair['id']] = $jobfair['title']) != '') {
+				$jobfairs[$jobfair['id']] = ucwords($jobfair['title']).' ('. $fun->format_date($jobfair['jobfair_date']).')';		   
+				$jobfair_id[] = $jobfair['id'];    
+			}		   
+		}
+		$smarty->assign('jobfair',$jobfairs);
+		// free the memory
+		$mysql->clear_result($result);
+	}catch(Exception $e){
+		echo 'Caught exception: ',  $e->getMessage(), "\n";
 	}
-	$smarty->assign('jobfair',$jobfairs);
-	// free the memory
-	$mysql->clear_result($result);
-}catch(Exception $e){
-	echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
 // closing mysql
 $mysql->close_connection();

@@ -55,6 +55,7 @@ try{
 	while($row = $mysql->display_result($result)){
 		$modules[$row['modules_id']] = strtolower(preg_replace("/[-\s]/",'_',$row['module_name'])); 
 	}
+	
 	$mysql->clear_result($result);
 	// call the next result
 	$mysql->next_query();

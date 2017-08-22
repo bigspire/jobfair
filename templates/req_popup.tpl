@@ -73,6 +73,7 @@
         </div>
         <div class="col-sm-4 rightBar">
           <h2>Pre-Register</h2>
+		  
        <form action="{$url}registration/" rel="{$key}" onsubmit="return validate_form({$key})" method="post" class="theForm form-prereg">
         <label for="inputEmail" class="sr-only">Full Name</label>
         <input type="text" name="full_name" required value="{$name}" id="inputEmail" class="full_name form-control" placeholder="Full Name" autofocus="">
@@ -84,6 +85,7 @@
 
 	  <input type="submit" onclick="return validate_form({$key})" rel="{$key}" class="btn btn-warning regBtn"   id="close_modal" value="Submit">
       </form>
+	  
        
          <!-- <p><a class="btn btn-warning regBtn" href="#" role="button">Submit &raquo;</a>
 		 </p>-->

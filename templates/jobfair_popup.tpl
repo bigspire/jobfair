@@ -84,17 +84,20 @@
         </div>
         <div class="col-sm-4 rightBar">
           <h2>Pre-Register</h2>
-       <form action="{$url}registration/" onsubmit="return validate_form({$key})"method="post" class="theForm form-prereg">
+       
+	   <form action="{$url}registration/" rel="{$key}"  onsubmit="return validate_form({$key})" method="post" class="theForm form-prereg">
         <label for="inputEmail" class="sr-only">Full Name</label>
         <input type="text" name="full_name" required value="{$name}" id="inputEmail" class="full_name form-control" placeholder="Full Name" autofocus="">
         <label for="inputPassword" class="sr-only">Email Address</label>
         <input type="text" name="email" required value="{$email}" id="inputPassword" class="email form-control" placeholder="Email Address">   
 	<label for="inputPassword" class="sr-only">Mobile No.</label>
+	<input type="text" name="mobile" required value="{$mobile}" id="inputPassword" class="mobile form-control" placeholder="Mobile No.">    		
+ 
       	<input type="hidden" class="jobfair" value="{$item.id}" id="jobfair_{$key}">
 
-		<input type="text" name="mobile" required value="{$mobile}" id="inputPassword" class="mobile form-control" placeholder="Mobile No.">    		
-       <input type="submit" onclick="return validate_form({$key})" class="btn btn-warning regBtn"   id="close_modal" value="Submit">
+		<input type="submit" onclick="return validate_form({$key})" rel="{$key}"  class="btn btn-warning regBtn"   id="close_modal" value="Submit">
       </form>
+	  
         <h2>Eligibility</h2>
 	<p>Any degree, 10th, 12th, Diploma, ITI
   </p>
@@ -310,8 +313,4 @@ p{margin:0 0 5px}
 {/literal}
 
 </body>
-
-
-
-
 </html>
