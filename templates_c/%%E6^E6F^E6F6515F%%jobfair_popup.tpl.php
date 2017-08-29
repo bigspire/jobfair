@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2017-08-22 15:16:18
+<?php /* Smarty version 2.6.26, created on 2017-08-29 13:10:28
          compiled from jobfair_popup.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'ucwords', 'jobfair_popup.tpl', 35, false),array('modifier', 'truncate', 'jobfair_popup.tpl', 35, false),array('modifier', 'nl2br', 'jobfair_popup.tpl', 109, false),array('modifier', 'date_format', 'jobfair_popup.tpl', 113, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'count', 'jobfair_popup.tpl', 31, false),array('modifier', 'ucwords', 'jobfair_popup.tpl', 38, false),array('modifier', 'truncate', 'jobfair_popup.tpl', 38, false),array('modifier', 'nl2br', 'jobfair_popup.tpl', 114, false),array('modifier', 'date_format', 'jobfair_popup.tpl', 118, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,6 +28,9 @@ css/jquery.bxslider.css" rel="stylesheet">
   </head>
   <body>
   
+  
+    <?php if (count($this->_tpl_vars['fair_data']) > '1'): ?>
+
   <div align="center" style="margin-top:10px;">
 <div id="bx-pager2" class="bx-pager2">
 <?php $_from = $this->_tpl_vars['fair_data']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
@@ -44,6 +47,8 @@ css/jquery.bxslider.css" rel="stylesheet">
 <?php endforeach; endif; unset($_from); ?>
 </div>
 </div>
+<?php endif; ?>
+
 
   <div class="slider1"> 
   <?php $_from = $this->_tpl_vars['fair_data']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
@@ -65,7 +70,7 @@ css/jquery.bxslider.css" rel="stylesheet">
 		<!-- height should be 40px -->
 		<img src="<?php echo $this->_tpl_vars['url']; ?>
 admin/timthumb.php?src=uploads/<?php echo $this->_tpl_vars['item']['partner_logo']; ?>
-&h=70&q=100">
+&w=200&q=100">
 		</div>        
         </div>
         <?php else: ?>
@@ -209,7 +214,7 @@ bootstrap/js/jquery-validate.bootstrap-tooltip.min.js"></script-->
 js/jquery.bxslider.min.js"></script>
 
 	
-<?php if ($this->_tpl_vars['key'] > '1'): ?>
+<?php if ($this->_tpl_vars['key'] >= '1'): ?>
 <?php echo '	
 <script type="text/javascript">
 $(document).ready(function(){
@@ -267,7 +272,7 @@ $(document).ready(function(){
 <?php echo '
 <script type="text/javascript">
 	/* function to validate the form */
-	function validate_form(){ 
+	function validate_form(key){ 
 		/*
 		$(this).validate({
 		rules: {
@@ -299,11 +304,17 @@ $(document).ready(function(){
 		//email = $(\'.email\').eq(1).val() ? $(\'.email\').eq(1).val() : $(\'.email\').eq(2).val();
 		//phone = $(\'.mobile\').eq(1).val() ? $(\'.mobile\').eq(1).val() : $(\'.mobile\').eq(2).val();
 		//fair = $(\'.mobile\').eq(1).val() ? $(\'#jobfair_0\').val() : $(\'#jobfair_1\').val();
-		key = key+1;
-		full_name = $(\'.full_name\').eq(key).val()
-		email = $(\'.email\').eq(key).val();
-		phone = $(\'.mobile\').eq(key).val();
-		fair = $(\'.jobfair\').eq(key).val();
+		var new_key = key.split(\'-\');
+		var val_key = 0;
+		if(parseInt(new_key[1], 0) > 1){
+			val_key = parseInt(new_key[0], 0)+parseInt(1, 0);
+		}else{
+			val_key = parseInt(new_key[0], 0);
+		}
+		full_name = $(\'.full_name\').eq(val_key).val();
+		email = $(\'.email\').eq(val_key).val();
+		phone = $(\'.mobile\').eq(val_key).val();
+		fair = $(\'.jobfair\').eq(val_key).val();
 		if(full_name != \'\' && email != \'\' && phone != \'\'){ 
 			self.parent.location.href = jQuery(\'.redirect_url\').val()+\'?name=\'+full_name+\'&email=\'+email+\'&fair=\'+fair
 			+\'&mobile=\'+phone;
@@ -346,7 +357,7 @@ $(document).ready(function(){
 		  });
 		  // set the height of the bxslider for showing dots
 		  // $(\'.bx-viewport\').eq(0).css(\'height\', \'420px\');
-		  $(\'.bx-viewport\').eq(2).css(\'height\', \'130px\');
+		  $(\'.bx-viewport\').eq(key).css(\'height\', \'130px\');
 		  // $.fn.cycle.defaults.autoSelector = \'.slideshow\';
 		});
 </script>

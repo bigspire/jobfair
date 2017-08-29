@@ -51,7 +51,7 @@ if(!empty($_POST)){
 	}	
 
 	// job fair date validation
-	if($_POST['drive_date'] <= date("d/m/Y")){
+	if($_POST['drive_date'] >= date("d/m/Y")){
 		$er['drive_dateErr'] = 'Please enter valid drive date'; 
 		$test = 'error';		
 	}

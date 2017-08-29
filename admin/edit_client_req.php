@@ -102,8 +102,9 @@ if(!empty($_POST)){
 		$er['emailErr'] = 'Please enter the valid email'; 
 		$test = 'error';		
 	}	
+	
 	// job fair date validation
-	if($_POST['job_drive_date'] <= date("d/m/Y")){
+	if($_POST['job_drive_date'] >= date("d/m/Y")){
 		$er['drive_dateErr'] = 'Please enter valid drive date'; 
 		$test = 'error';		
 	}
